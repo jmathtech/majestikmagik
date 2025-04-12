@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useState, useRef, useEffect } from 'react';
+import Link from 'next/link';
 
 export default function Home() {
   // State to manage mobile menu visibility
@@ -43,10 +44,10 @@ export default function Home() {
         <div className="flex items-center space-x-4">
           <div className="relative group">
             <Image src="/img/logo.png" alt="Majestik Magik Logo" width={50} height={50} className="transition-transform duration-500 group-hover:scale-125" />
-            
+
           </div>
           <div>
-            <h1 className="
+            <Link href="/"><h1 className="
               text-3xl font-bold
               bg-gradient-to-r from-white to-gray-800   // Default gradient
               hover:from-blue-400 hover:to-purple-950 // <-- New gradient colors on hover
@@ -56,6 +57,7 @@ export default function Home() {
             ">
               Majestik Magik
             </h1>
+            </Link>
           </div>
         </div>
 
@@ -289,7 +291,7 @@ export default function Home() {
               jamil.matheny@majestikmagik.com
             </a> | (804) 362-7561
           </p>
-          <p className="mt-4">405 E. Laburnum Ave. Richmond, VA 23222 </p>
+          <p className="mt-4">409 E. Laburnum Ave. Ste #3, Richmond, VA 23222 </p>
 
           <p className="text-xs text-zinc-800 text-end">Designed by Jamil Matheny</p>
         </section>
