@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100;1,100&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "tailwindcss";
+
+body.body-gradient-bg {
+  position: relative;
+  /* Needed for positioning context if pseudo-element uses absolute */
+  min-height: 100vh;
+  /* Ensure body fills viewport */
+  overflow-x: hidden;
+  /* Prevent horizontal scroll if circle goes off-screen */
+}
+
+body.body-gradient-bg::before {
+  content: '';
+  position: fixed;
+  /* Fixed position relative to viewport */
+  width: 60vmax;
+  /* Responsive size based on largest viewport dimension */
+  height: 60vmax;
+  /* Responsive size */
+  border-radius: 50%;
+  /* Make it a circle */
+  /* Gradient: Blue to Purple, semi-transparent */
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(168, 85, 247, 0.15) 60%, rgba(0, 0, 0, 0) 80%);
+  filter: blur(100px);
+  /* Heavy blur for soft effect (adjust as needed) */
+  z-index: -1;
+  /* Place it behind all page content */
+  /* Animation */
+  animation: moveGradientCircle 20s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
+  /* Initial position (slightly off-screen) */
+  top: -20%;
+  left: -20%;
+  pointer-events: none;
+  /* Prevent interaction */
+}
+
+@keyframes moveGradientCircle {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.8;
+  }
+
+  25% {
+    transform: translate(40vw, 30vh) rotate(90deg);
+  }
+
+  50% {
+    transform: translate(10vw, 70vh) rotate(180deg);
+    opacity: 1;
+  }
+
+  75% {
+    transform: translate(60vw, 10vh) rotate(270deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+    opacity: 0.8;
+  }
+}
+
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Montserrat', sans-serif;
+}

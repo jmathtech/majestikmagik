@@ -1,0 +1,299 @@
+'use client';
+
+import Image from 'next/image';
+import { useState, useRef, useEffect } from 'react';
+
+export default function Home() {
+  // State to manage mobile menu visibility
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null); // Ref for the menu
+  const buttonRef = useRef<HTMLButtonElement>(null); //   Ref for the button
+
+  // Function to toggle the mobile menu
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  useEffect(() => {
+    // Close the mobile menu when clicking outside of it
+    if (!isMobileMenuOpen) return; // If the menu is not open, do nothing
+    const handleClickOutside = (event: MouseEvent | TouchEvent) => {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target as Node)
+      ) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+    document.addEventListener('click', handleClickOutside);
+    document.addEventListener('touchstart', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+    };
+  }, [isMobileMenuOpen]); // Cleanup function to remove event listeners
+
+  return (
+    <>
+      {/* Header */}
+      <header className="bg-black text-white p-4 flex items-center justify-between sticky top-0 z-20"> {/* Changed justify-center to justify-between, added sticky, top-0, z-20 */}
+        {/* Logo and Title */}
+        <div className="flex items-center space-x-4">
+          <div className="relative group">
+            <Image src="/img/logo.png" alt="Majestik Magik Logo" width={50} height={50} className="transition-transform duration-500 group-hover:scale-125" />
+            
+          </div>
+          <div>
+            <h1 className="
+              text-3xl font-bold
+              bg-gradient-to-r from-white to-gray-800   // Default gradient
+              hover:from-blue-400 hover:to-purple-950 // <-- New gradient colors on hover
+              bg-clip-text text-transparent
+              animate-gradientFadeInOut
+              transition-colors duration-600 ease-in-out // <-- Add transition for smooth color change
+            ">
+              Majestik Magik
+            </h1>
+          </div>
+        </div>
+
+        {/* Desktop Navigation (Hidden on small screens) */}
+        <nav className="hidden lg:flex justify-center gap-10 py-4"> {/* Reduced gap slightly, added 'hidden md:flex' */}
+          <a
+            href="#portfolio"
+            className="px-4 py-2 rounded-md transition-colors duration-300 ease-in-out hover:bg-gray-700" // Adjusted duration and color
+          >
+            Portfolio
+          </a>
+          <a
+            href="#testimonials"
+            className="px-4 py-2 rounded-md transition-colors duration-300 ease-in-out hover:bg-gray-700" // Adjusted duration and color
+          >
+            Testimonials
+          </a>
+          <a
+            href="#contact"
+            className="px-4 py-2 rounded-md transition-colors duration-300 ease-in-out hover:bg-gray-700" // Adjusted duration and color
+          >
+            Contact
+          </a>
+          <a
+            href="https://www.github.com/jmathtech"
+            target="_blank" // Added target="_blank" for external link
+            rel="noopener noreferrer" // Added rel for security
+            className="px-4 py-2 rounded-md transition-colors duration-300 ease-in-out hover:bg-gray-700" // Adjusted duration and color
+          >
+            Github
+          </a>
+        </nav>
+
+        {/* Hamburger Menu Button (Visible only on small screens) */}
+        <div className="lg:hidden"> {/* This container is hidden on medium screens and up */}
+          <button
+            ref={buttonRef} // Attach the button ref
+            onClick={toggleMobileMenu}
+            className="text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 rounded-md p-2"
+            aria-label="Toggle menu" // Accessibility
+            aria-expanded={isMobileMenuOpen} // Accessibility
+          >
+            {/* Animated Hamburger/Close Icon */}
+            <div className="w-6 h-0.5 bg-white transition-transform duration-300 ease-in-out mb-1.5" style={{ transform: isMobileMenuOpen ? 'rotate(45deg) translate(5px, 6px)' : 'none' }}></div>
+            <div className="w-6 h-0.5 bg-white transition-opacity duration-300 ease-in-out" style={{ opacity: isMobileMenuOpen ? 0 : 1 }}></div>
+            <div className="w-6 h-0.5 bg-white transition-transform duration-300 ease-in-out mt-1.5" style={{ transform: isMobileMenuOpen ? 'rotate(-45deg) translate(5px, -6px)' : 'none' }}></div>
+          </button>
+        </div>
+      </header>
+
+      {/* Mobile Navigation Menu (Appears below header when open) */}
+      <nav
+        ref={menuRef} // Attach the menu ref
+        className={`lg:hidden absolute top-16 left-0 right-0 bg-black text-white flex flex-col items-center gap-4 py-4 transition-transform duration-300 ease-in-out transform z-10 ${isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full' // Slide down/up animation
+          }`}
+        style={{ top: '64px' }} // Explicitly set top position matching header height (p-4 = 1rem = 16px * 2 = 32px + image height 40px approx = ~72px, adjust if needed. Let's use 4rem = 64px based on p-4)
+      >
+        <a href="#portfolio" className="px-4 py-2 rounded-md hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Portfolio</a>
+        <a href="#testimonials" className="px-4 py-2 rounded-md hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Testimonials</a>
+        <a href="#contact" className="px-4 py-2 rounded-md hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Contact</a>
+        <a href="https://www.github.com/jmathtech" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-md hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Github</a>
+      </nav>
+
+
+      {/* Main Content */}
+      <main className="max-w-6xl mx-auto py-8 px-4 ">
+
+        {/* === Hero Section Start === */}
+        <section className="text-center py-16 md:py-24 lg:py-32 mb-6"> {/* Added padding and bottom margin */}
+          <h2 className="text-6xl md:text-6xl lg:text-8xl font-extrabold mb-4
+             bg-gradient-to-r from-blue-400 via-purple-900 to-pink-900 
+             bg-clip-text text-transparent // Apply gradient to text
+             
+          ">
+            Crafting Digital Excellence
+          </h2>
+          <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto"> {/* Subheading styling */}
+            From stunning designs to seamless functionality, I build websites that elevate your brand and engage your audience. Let&apos;s create something magical together.
+          </p>
+          <a
+            href="#contact"
+            className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105" // Styled CTA button
+          >
+            Get In Touch
+          </a>
+        </section>
+        {/* === Hero Section End === */}
+
+        {/* Portfolio Section */}
+        <section id="portfolio" className="mb-8">
+          <h2 className="text-2xl font-bold mb-4">Website Portfolio</h2>
+          <p className="text-sm text-gray-500 mb-4">
+            Explore my latest web development projects for real clients.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <div className="border border-gray-700 rounded-lg p-4 shadow-md bg-black">
+              <h3 className="font-semibold text-lg">CearcoChemicals.com</h3>
+              <Image src="/img/cearcochemicals_screenshot.png" alt="CearcoChemicals.com" width={500} height={300} className="rounded-md mt-4 mb-4" />
+
+              <p className="text-sm text-gray-500">
+                Cleaning Equipment & Repair Company is a locally owned business out of Richmond, Virginia. CEARCO has been established since 1981. We make specialty blended cleaning solutions that are not powdered- based. All of our specialty blended solutions are liquid-based. With this said, we have remained faithful to the original formulas.
+                <br /><br />
+                Made with the React JS framework.
+              </p>
+              <button
+                className="btn mt-4 bg-blue-400 transition-colors duration-600 ease-in-out text-white px-4 py-2 rounded-md bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer"
+                onClick={() => (window.location.href = "https://cearcochemicals.com")}
+              >
+                View Project
+              </button>
+            </div>
+
+            <div className="border border-gray-700 rounded-lg p-4 shadow-md bg-black">
+              <h3 className="font-semibold text-lg">ParrisGainer.com</h3>
+              <Image src="/img/parrisgainer_screenshot.png" alt="ParrisGainer.com" width={500} height={300} className="rounded-md mt-4 mb-4" />
+
+              <p className="text-sm text-gray-500">
+                Parris Gainer relocated to Richmond VA in 2007 where she continued her private practice and community work. Parris Gainer earned her Master of Social Work (MSW), and Master of Education (M.Ed.) both from the University of Pittsburgh. She has a Masters of Divinity from Pittsburgh Theological Seminary and Doctor of Divinity from Samuel DeWitt Proctor School of Theology. Dr. Parris Gainer has extensive work experience in program administration, community and school mental health, behavior modification and resolution counseling.
+                <br /><br />
+                Made with the React JS framework and Wordpress.
+              </p>
+              <button
+                className="btn mt-4 bg-blue-400 transition-colors duration-600 ease-in-out text-white px-4 py-2 rounded-md bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer"
+                onClick={() => (window.location.href = "https://parrisgainer.com")}
+              >
+                View Project
+              </button>
+            </div>
+
+            <div className="border border-gray-700 rounded-lg p-4 shadow-md bg-black">
+              <h3 className="font-semibold text-lg">cleaning.majestikmagik.com</h3>
+              <Image src="/img/cleaningmajestikmagik.png" alt="Cleaning Majestik Magik" width={500} height={300} className="rounded-md mt-4 mb-4" />
+              <p className="text-sm text-gray-500">
+                Let&apos;s bring cleanliness & comfort to your space. Made with the Next.js framework (javascript/typescript), AWS RDS, and deployed onVercel hosting.</p>
+              <button
+                className="btn mt-4 bg-blue-400 transition-colors duration-600 ease-in-out text-white px-4 py-2 rounded-md bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer"
+                onClick={() => (window.location.href = "https://cleaning.majestikmagik.com")}
+              >
+                View Project
+              </button>
+            </div>
+
+            <div className="border border-gray-700 rounded-lg p-4 shadow-md bg-black">
+              <h3 className="font-semibold text-lg">Zeus Suit Shop (Mock Design)</h3>
+              <video
+                width="500" // Keep width
+                height="300" // Keep height (adjust aspect ratio if needed)
+                controls // Add controls (play/pause, volume, etc.)
+                className="rounded-md mt-4 mb-4" // Keep styling
+                playsInline // Important for mobile playback within the page
+              // muted // Optional: uncomment if you want it muted by default
+              // loop // Optional: uncomment if you want the video to loop
+              // autoPlay // Optional: uncomment if you want it to play automatically (often requires muted)
+              >
+                <source src="https://user-images.githubusercontent.com/36749450/182264129-b7336ab1-84e3-46f1-a5e9-2cef906c0cd5.mp4" type="video/mp4" />
+                Your browser does not support the video tag. {/* Fallback text */}
+              </video>
+              <p className="text-sm text-gray-500">
+                An ecommerce website for a clothing store. A custom front-end ReactJS E-Commerce website for a tailored suits shop.</p>
+              <button
+                className="btn mt-4 bg-blue-400 transition-colors duration-600 ease-in-out text-white px-4 py-2 rounded-md bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer end"
+                onClick={() => (window.location.href = "https://github.com/jmathtech/Zeus-Suits-Online-Shop")}
+              >
+                View Project
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section id="testimonials" className="mb-12"> {/* Increased bottom margin */}
+          <h2 className="text-2xl font-bold mb-6 text-center">What Clients Say</h2> {/* Centered title, increased margin */}
+
+          {/* Testimonials Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            {/* Testimonial Card 1 */}
+            <div className="border border-gray-700 rounded-lg p-6 shadow-md bg-black flex flex-col"> {/* Increased padding, flex column */}
+              {/* Star Rating */}
+              <div className="flex items-center mb-3">
+                {[...Array(5)].map((_, i) => ( // Loop to create 5 stars
+                  <svg key={i} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-yellow-400"> {/* Filled star SVG */}
+                    <path fillRule="evenodd" d="M10.868 2.884c.321-.772 1.415-.772 1.736 0l1.83 4.424 4.865.707c.847.123 1.184 1.158.57 1.753l-3.52 3.43.832 4.846c.144.843-.74 1.485-1.49.995L10 15.816l-4.34 2.28c-.75.395-1.634-.152-1.49-.995l.832-4.846-3.52-3.43c-.614-.595-.277-1.63.57-1.753l4.865-.707 1.83-4.424Z" clipRule="evenodd" />
+                  </svg>
+                ))}
+              </div>
+              {/* Quote */}
+              <blockquote className="text-gray-300 italic mb-4 flex-grow"> {/* Lighter gray, margin, flex-grow */}
+                &quot;Omg you are the freaking best!! The changes has made my life so much easier. I&apos;ll definitely be in contact when I need someone.&quot;
+              </blockquote>
+              {/* Client Name */}
+              <p className="text-sm font-semibold text-gray-400 text-right">- Noel Customs</p> {/* Smaller, bold, gray, right-aligned */}
+            </div>
+
+            {/* Testimonial Card 2 */}
+            <div className="border border-gray-700 rounded-lg p-6 shadow-md bg-black flex flex-col"> {/* Increased padding, flex column */}
+              {/* Star Rating */}
+              <div className="flex items-center mb-3">
+                {[...Array(5)].map((_, i) => ( // Loop to create 5 stars
+                  <svg key={i} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-yellow-400"> {/* Filled star SVG */}
+                    <path fillRule="evenodd" d="M10.868 2.884c.321-.772 1.415-.772 1.736 0l1.83 4.424 4.865.707c.847.123 1.184 1.158.57 1.753l-3.52 3.43.832 4.846c.144.843-.74 1.485-1.49.995L10 15.816l-4.34 2.28c-.75.395-1.634-.152-1.49-.995l.832-4.846-3.52-3.43c-.614-.595-.277-1.63.57-1.753l4.865-.707 1.83-4.424Z" clipRule="evenodd" />
+                  </svg>
+                ))}
+              </div>
+              {/* Quote */}
+              <blockquote className="text-gray-300 italic mb-4 flex-grow"> {/* Lighter gray, margin, flex-grow */}
+                &quot;Working with Majestik Magik was a breeze. Excellent communication, attention to detail, and the final website exceeded our expectations. Very satisfied!&quot;
+              </blockquote>
+              {/* Client Name */}
+              <p className="text-sm font-semibold text-gray-400 text-right">- Dr. Parris Gainer, ParrisGainer.com</p> {/* Smaller, bold, gray, right-aligned */}
+            </div>
+
+            {/* Add more testimonial cards here following the same structure */}
+
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section
+          id="contact"
+          className="text-center bg-black border border-gray-700 text-white p-2 rounded-lg"
+        >
+          <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
+          <p>Have a project in mind? Reach out to me at:</p>
+          <p>
+            <a
+              href="mailto:jamil.matheny@majestikmagik.com"
+              className="underline hover:text-gray-300"
+            >
+              jamil.matheny@majestikmagik.com
+            </a> | (804) 362-7561
+          </p>
+          <p className="mt-4">405 E. Laburnum Ave. Richmond, VA 23222 </p>
+
+          <p className="text-xs text-zinc-800 text-end">Designed by Jamil Matheny</p>
+        </section>
+      </main>
+    </>
+  );
+}
