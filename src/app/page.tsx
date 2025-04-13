@@ -10,6 +10,27 @@ export default function Home() {
   const menuRef = useRef<HTMLDivElement>(null); // Ref for the menu
   const buttonRef = useRef<HTMLButtonElement>(null); //   Ref for the button
 
+  // -- START: Scroll Effect --
+  const [isScrolled, setIsScrolled] = useState(false); // State to manage scroll position
+
+  useEffect(() => {
+    // Function to handle scroll event
+    const handleScroll = () => {
+      // Set isScrolled to true if the page is scrolled down more than 50px
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    // Add event listener for scroll event
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up event listener when component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+
+    };
+  }, []); // Empty dependency array to run only on mount and unmount
+  // -- END: Scroll Effect --
+
   // Function to toggle the mobile menu
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -30,31 +51,35 @@ export default function Home() {
     };
     document.addEventListener('click', handleClickOutside);
     document.addEventListener('touchstart', handleClickOutside);
-    return () => {
-      document.removeEventListener('click', handleClickOutside);
-      document.removeEventListener('touchstart', handleClickOutside);
-    };
+
   }, [isMobileMenuOpen]); // Cleanup function to remove event listeners
 
   return (
     <>
       {/* Header */}
-      <header className="bg-black text-white p-4 flex items-center justify-between sticky top-0 z-20"> {/* Changed justify-center to justify-between, added sticky, top-0, z-20 */}
+      <header className={`bg-black text-white p-4 flex items-center justify-between sticky top-0 z-20 transition-all duration-300 ease-in-out ${isScrolled ? 'py-2 px-4' : 'p-4' // Shrink padding when scrolled
+        }`}> {/* Changed justify-center to justify-between, added sticky, top-0, z-20 */}
         {/* Logo and Title */}
         <div className="flex items-center space-x-4">
           <div className="relative group">
-            <Image src="/img/logo.png" alt="Majestik Magik Logo" width={50} height={50} className="transition-transform duration-500 group-hover:scale-125" />
+            <Image
+              src="/img/logo.png"
+              alt="Majestik Magik Logo"
+              width={isScrolled ? 40 : 50} // Smaller width when scrolled
+              height={isScrolled ? 40 : 50} // Smaller height when scrolled
+              className={`transition-all duration-600 ease-in-out ${isScrolled ? '' : 'group-hover:scale-125'}`} // Adjust hover effect slightly if needed
+            />
 
           </div>
           <div>
-            <Link href="/"><h1 className="
-              text-3xl font-bold
-              bg-gradient-to-r from-white to-gray-800   // Default gradient
-              hover:from-blue-400 hover:to-purple-950 // <-- New gradient colors on hover
-              bg-clip-text text-transparent
-              animate-gradientFadeInOut
-              transition-colors duration-600 ease-in-out // <-- Add transition for smooth color change
-            ">
+            <Link href="/"> <h1 className={`
+                font-bold
+                bg-gradient-to-r from-white to-gray-800
+                hover:from-blue-400 hover:to-purple-800
+                bg-clip-text text-transparent
+                transition-all duration-900 ease-in-out 
+                ${isScrolled ? 'text-3xl' : 'text-4xl'} 
+              `}>
               Majestik Magik
             </h1>
             </Link>
@@ -62,7 +87,7 @@ export default function Home() {
         </div>
 
         {/* Desktop Navigation (Hidden on small screens) */}
-        <nav className="hidden lg:flex justify-center gap-10 py-4"> {/* Reduced gap slightly, added 'hidden md:flex' */}
+        <nav className="hidden lg:flex justify-center gap-10 py-2"> {/* Reduced gap slightly, added 'hidden md:flex' */}
           <a
             href="#portfolio"
             className="px-4 py-2 rounded-md transition-colors duration-300 ease-in-out hover:bg-gray-700" // Adjusted duration and color
@@ -111,7 +136,8 @@ export default function Home() {
       {/* Mobile Navigation Menu (Appears below header when open) */}
       <nav
         ref={menuRef} // Attach the menu ref
-        className={`lg:hidden absolute top-16 left-0 right-0 bg-black text-white flex flex-col items-center gap-4 py-4 transition-transform duration-300 ease-in-out transform z-10 ${isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full' // Slide down/up animation
+        className={`lg:hidden absolute top-16 left-0 right-0 bg-black text-white flex flex-col items-center gap-4 py-8 transition-transform duration-300 ease-in-out transform z-10 ${isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full' // Slide down/up animation
+          } ${isScrolled ? 'top-12' : 'top-16' // Adjust padding based on scroll state
           }`}
         style={{ top: '64px' }} // Explicitly set top position matching header height (p-4 = 1rem = 16px * 2 = 32px + image height 40px approx = ~72px, adjust if needed. Let's use 4rem = 64px based on p-4)
       >
