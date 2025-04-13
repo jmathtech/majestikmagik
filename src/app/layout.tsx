@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Majestik Magik | Your Vision, Our Magic - Website Design & Development",
-  description: "Web Design Services Portfolio, Consulting, and Development",
+  title: "Majestik Magik - Crafting Digital Excellence in Website Design & Development",
+  description: "Web Design Services Portfolio, Consulting, and Development by Jamil Matheny in the Richmond, Virginia area.",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
