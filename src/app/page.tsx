@@ -65,23 +65,27 @@ export default function Home() {
             <Image
               src="/img/logo.png"
               alt="Majestik Magik Logo"
-              width={isScrolled ? 40 : 50} // Smaller width when scrolled
-              height={isScrolled ? 40 : 50} // Smaller height when scrolled
+              width={isScrolled ? 30 : 40} // Smaller width when scrolled
+              height={isScrolled ? 30 : 40} // Smaller height when scrolled
               className={`transition-all duration-600 ease-in-out ${isScrolled ? '' : 'group-hover:scale-125'}`} // Adjust hover effect slightly if needed
             />
 
           </div>
           <div>
-            <Link href="/"> <h1 className={`
-                font-bold
-                bg-gradient-to-r from-white to-gray-800
-                hover:from-blue-400 hover:to-purple-800
+            <Link href="/" className={`inline-block relative group
+                bg-gradient-to-r from-white to-gray-400
+                hover:from-white  hover:to-gray-800
                 bg-clip-text text-transparent
-                transition-all duration-900 ease-in-out 
-                ${isScrolled ? 'text-3xl' : 'text-4xl'} 
+                transition-all duration-600 ease-in-out 
               `}>
-              Majestik Magik
-            </h1>
+              <h1 className={`
+                font-bold
+                bg-clip-text text-transparent
+                transition-all duration-600 ease-in-out 
+                ${isScrolled ? 'text-2xl' : 'text-3xl'} 
+              `}>
+                Majestik Magik
+              </h1>
             </Link>
           </div>
         </div>
@@ -154,7 +158,7 @@ export default function Home() {
         {/* === Hero Section Start === */}
         <section className="text-center py-16 md:py-24 lg:py-32 mb-6"> {/* Added padding and bottom margin */}
           <h2 className="text-6xl md:text-6xl lg:text-8xl font-extrabold mb-4
-             bg-gradient-to-r from-blue-400 via-purple-900 to-pink-900 
+             bg-gradient-to-r from-blue-400 via-blue-400 to-purple-900 
              bg-clip-text text-transparent // Apply gradient to text
              
           ">
@@ -180,7 +184,7 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-            <div className="border border-gray-700 rounded-lg p-4 shadow-md bg-black">
+            <div className="border border-gray-700 rounded-lg p-4 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-103">
               <h3 className="font-semibold text-lg">CearcoChemicals.com</h3>
               <Image src="/img/cearcochemicals_screenshot.png" alt="CearcoChemicals.com" width={500} height={300} className="rounded-md mt-4 mb-4" />
 
@@ -189,15 +193,17 @@ export default function Home() {
                 <br /><br />
                 Made with the React JS framework.
               </p>
-              <button
-                className="btn mt-4 bg-blue-400 transition-colors duration-600 ease-in-out text-white px-4 py-2 rounded-md bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer"
-                onClick={() => (window.location.href = "https://cearcochemicals.com")}
-              >
-                View Project
-              </button>
+              <div className="text-right">
+                <button
+                  className="btn mt-4 bg-blue-400 transition-colors duration-600 ease-in-out text-white px-4 py-2 rounded-md bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer inline-block"
+                  onClick={() => (window.location.href = "https://cearcochemicals.com")}
+                >
+                  View Project
+                </button>
+              </div>
             </div>
 
-            <div className="border border-gray-700 rounded-lg p-4 shadow-md bg-black">
+            <div className="border border-gray-700 rounded-lg p-4 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-103">
               <h3 className="font-semibold text-lg">ParrisGainer.com</h3>
               <Image src="/img/parrisgainer_screenshot.png" alt="ParrisGainer.com" width={500} height={300} className="rounded-md mt-4 mb-4" />
 
@@ -206,28 +212,34 @@ export default function Home() {
                 <br /><br />
                 Made with the React JS framework and Wordpress.
               </p>
-              <button
-                className="btn mt-4 bg-blue-400 transition-colors duration-600 ease-in-out text-white px-4 py-2 rounded-md bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer"
-                onClick={() => (window.location.href = "https://parrisgainer.com")}
-              >
-                View Project
-              </button>
+              <div className="text-right">
+                <button
+                  className="btn mt-4 bg-blue-400 transition-colors duration-600 ease-in-out text-white px-4 py-2 rounded-md bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer inline-block"
+                  onClick={() => (window.location.href = "https://parrisgainer.com")}
+                >
+                  View Project
+                </button>
+              </div>
             </div>
 
-            <div className="border border-gray-700 rounded-lg p-4 shadow-md bg-black">
+            <div className="border border-gray-700 rounded-lg p-4 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-103">
               <h3 className="font-semibold text-lg">cleaning.majestikmagik.com</h3>
               <Image src="/img/cleaningmajestikmagik.png" alt="Cleaning Majestik Magik" width={500} height={300} className="rounded-md mt-4 mb-4" />
               <p className="text-sm text-gray-500">
-                Let&apos;s bring cleanliness & comfort to your space. Made with the Next.js framework (javascript/typescript), AWS RDS, and deployed onVercel hosting.</p>
-              <button
-                className="btn mt-4 bg-blue-400 transition-colors duration-600 ease-in-out text-white px-4 py-2 rounded-md bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer"
-                onClick={() => (window.location.href = "https://cleaning.majestikmagik.com")}
-              >
-                View Project
-              </button>
+                Let&apos;s bring cleanliness & comfort to your space. 
+                <br /><br />
+                Made with the Next.js framework (javascript/typescript), AWS RDS, and deployed onVercel hosting.</p>
+              <div className="text-right">
+                <button
+                  className="btn mt-4 bg-blue-400 transition-colors duration-600 ease-in-out text-white px-4 py-2 rounded-md bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer inline-block"
+                  onClick={() => (window.location.href = "https://cleaning.majestikmagik.com")}
+                >
+                  View Project
+                </button>
+              </div>
             </div>
 
-            <div className="border border-gray-700 rounded-lg p-4 shadow-md bg-black">
+            <div className="border border-gray-700 rounded-lg p-4 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-103">
               <h3 className="font-semibold text-lg">Zeus Suit Shop (Mock Design)</h3>
               <video
                 width="500" // Keep width
@@ -244,12 +256,14 @@ export default function Home() {
               </video>
               <p className="text-sm text-gray-500">
                 An ecommerce website for a clothing store. A custom front-end ReactJS E-Commerce website for a tailored suits shop.</p>
-              <button
-                className="btn mt-4 bg-blue-400 transition-colors duration-600 ease-in-out text-white px-4 py-2 rounded-md bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer end"
-                onClick={() => (window.location.href = "https://github.com/jmathtech/Zeus-Suits-Online-Shop")}
-              >
-                View Project
-              </button>
+              <div className="text-right">
+                <button
+                  className="btn mt-4 bg-blue-400 transition-colors duration-600 ease-in-out text-white px-4 py-2 rounded-md bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer end inline-block"
+                  onClick={() => (window.location.href = "https://github.com/jmathtech/Zeus-Suits-Online-Shop")}
+                >
+                  View Project
+                </button>
+              </div>
             </div>
           </div>
         </section>
@@ -262,7 +276,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
             {/* Testimonial Card 1 */}
-            <div className="border border-gray-700 rounded-lg p-6 shadow-md bg-black flex flex-col"> {/* Increased padding, flex column */}
+            <div className="border border-gray-700 rounded-lg p-6 shadow-md bg-black flex flex-col transition duration-300 ease-in-out transform hover:scale-103"> {/* Increased padding, flex column */}
               {/* Star Rating */}
               <div className="flex items-center mb-3">
                 {[...Array(5)].map((_, i) => ( // Loop to create 5 stars
@@ -280,7 +294,7 @@ export default function Home() {
             </div>
 
             {/* Testimonial Card 2 */}
-            <div className="border border-gray-700 rounded-lg p-6 shadow-md bg-black flex flex-col"> {/* Increased padding, flex column */}
+            <div className="border border-gray-700 rounded-lg p-6 shadow-md bg-black flex flex-col transition duration-300 ease-in-out transform hover:scale-103"> {/* Increased padding, flex column */}
               {/* Star Rating */}
               <div className="flex items-center mb-3">
                 {[...Array(5)].map((_, i) => ( // Loop to create 5 stars
@@ -305,7 +319,7 @@ export default function Home() {
         {/* Contact Section */}
         <section
           id="contact"
-          className="text-center bg-black border border-gray-700 text-white p-2 rounded-lg"
+          className="text-center bg-black border border-gray-700 text-white p-2 rounded-lg transition duration-300 ease-in-out transform hover:scale-103"
         >
           <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
           <p className="mb-4">Have a project in mind? Reach out to me at:</p>
