@@ -200,3 +200,8 @@ body {
   font-family: 'Montserrat', sans-serif;
 
 }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
+}

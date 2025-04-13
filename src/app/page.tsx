@@ -136,7 +136,7 @@ export default function Home() {
       {/* Mobile Navigation Menu (Appears below header when open) */}
       <nav
         ref={menuRef} // Attach the menu ref
-        className={`lg:hidden absolute top-16 left-0 right-0 bg-black text-white flex flex-col items-center gap-4 py-8 transition-transform duration-300 ease-in-out transform z-10 ${isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full' // Slide down/up animation
+        className={`lg:hidden absolute top-16 left-0 right-0 bg-black text-white flex flex-col items-center gap-4 py-16 transition-transform duration-300 ease-in-out transform z-10 ${isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full' // Slide down/up animation
           } ${isScrolled ? 'top-12' : 'top-16' // Adjust padding based on scroll state
           }`}
         style={{ top: '64px' }} // Explicitly set top position matching header height (p-4 = 1rem = 16px * 2 = 32px + image height 40px approx = ~72px, adjust if needed. Let's use 4rem = 64px based on p-4)
@@ -308,8 +308,8 @@ export default function Home() {
           className="text-center bg-black border border-gray-700 text-white p-2 rounded-lg"
         >
           <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
-          <p>Have a project in mind? Reach out to me at:</p>
-          <p>
+          <p className="mb-4">Have a project in mind? Reach out to me at:</p>
+          <p className="mb-4">
             <a
               href="mailto:jamil.matheny@majestikmagik.com"
               className="underline hover:text-gray-300"
@@ -319,7 +319,7 @@ export default function Home() {
           </p>
           <p className="mt-4">409 E. Laburnum Ave. Ste #3, Richmond, VA 23222 </p>
 
-          <p className="text-xs text-zinc-800 text-end">Designed by Jamil Matheny</p>
+          <p className="text-xs text-zinc-800 mt-4 text-end">Designed by Jamil Matheny</p>
         </section>
       </main>
     </>
