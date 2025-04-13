@@ -13,8 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Majestik Magik | Website Design & Development",
+  title: "Majestik Magik | Your Vision, Our Magic - Website Design & Development",
   description: "Web Design Services Portfolio, Consulting, and Development",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
