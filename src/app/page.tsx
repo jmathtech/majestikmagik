@@ -63,7 +63,7 @@ export default function Home() {
         <div className="flex items-center space-x-4">
           <div className="relative group">
             <Image
-              src="/img/logo.png"
+              src="/img/logo.webp"
               alt="Majestik Magik Logo"
               width={isScrolled ? 30 : 40} // Smaller width when scrolled
               height={isScrolled ? 30 : 40} // Smaller height when scrolled
@@ -82,7 +82,7 @@ export default function Home() {
                 font-bold
                 bg-clip-text text-transparent
                 transition-all duration-600 ease-in-out 
-                ${isScrolled ? 'text-2xl' : 'text-3xl'} 
+                ${isScrolled ? 'text-xl' : 'text-3xl'} 
               `}>
                 Majestik Magik
               </h1>
@@ -92,32 +92,32 @@ export default function Home() {
 
         {/* Desktop Navigation (Hidden on small screens) */}
         <nav className="hidden lg:flex justify-center gap-10 py-2"> {/* Reduced gap slightly, added 'hidden md:flex' */}
-          <a
+          <Link
             href="#portfolio"
-            className="px-4 py-2 rounded-md transition-colors duration-300 ease-in-out hover:bg-gray-700" // Adjusted duration and color
-          >
+            className={`px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-lg'}` }>
+          
             Portfolio
-          </a>
-          <a
+          </Link>
+          <Link
             href="#testimonials"
-            className="px-4 py-2 rounded-md transition-colors duration-300 ease-in-out hover:bg-gray-700" // Adjusted duration and color
-          >
+            className={`px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-lg'}` }>
+          
             Testimonials
-          </a>
-          <a
+          </Link>
+          <Link
             href="#contact"
-            className="px-4 py-2 rounded-md transition-colors duration-300 ease-in-out hover:bg-gray-700" // Adjusted duration and color
-          >
+            className={`px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-lg'}` }>
+          
             Contact
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://www.github.com/jmathtech"
             target="_blank" // Added target="_blank" for external link
             rel="noopener noreferrer" // Added rel for security
-            className="px-4 py-2 rounded-md transition-colors duration-300 ease-in-out hover:bg-gray-700" // Adjusted duration and color
-          >
+            className={`px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-lg'}` }>
+          
             Github
-          </a>
+          </Link>
         </nav>
 
         {/* Hamburger Menu Button (Visible only on small screens) */}
@@ -125,7 +125,7 @@ export default function Home() {
           <button
             ref={buttonRef} // Attach the button ref
             onClick={toggleMobileMenu}
-            className="text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 rounded-md p-2"
+            className="text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 rounded-md p-2 "
             aria-label="Toggle menu" // Accessibility
             aria-expanded={isMobileMenuOpen} // Accessibility
           >
@@ -145,10 +145,10 @@ export default function Home() {
           }`}
         style={{ top: '64px' }} // Explicitly set top position matching header height (p-4 = 1rem = 16px * 2 = 32px + image height 40px approx = ~72px, adjust if needed. Let's use 4rem = 64px based on p-4)
       >
-        <a href="#portfolio" className="px-4 py-2 rounded-md hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Portfolio</a>
-        <a href="#testimonials" className="px-4 py-2 rounded-md hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Testimonials</a>
-        <a href="#contact" className="px-4 py-2 rounded-md hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Contact</a>
-        <a href="https://www.github.com/jmathtech" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-md hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Github</a>
+        <Link href="#portfolio" className="px-4 py-2 rounded-md hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Portfolio</Link>
+        <Link href="#testimonials" className="px-4 py-2 rounded-md hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Testimonials</Link>
+        <Link href="#contact" className="px-4 py-2 rounded-md hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Contact</Link>
+        <Link href="https://www.github.com/jmathtech" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-md hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Github</Link>
       </nav>
 
 
@@ -167,12 +167,12 @@ export default function Home() {
           <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto"> {/* Subheading styling */}
             From stunning designs to seamless functionality, I build websites that elevate your brand and engage your audience. Let&apos;s create something magical together.
           </p>
-          <a
+          <Link
             href="#contact"
             className="inline-block bg-gradient-to-r bg-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105" // Styled CTA button
           >
             Get In Touch
-          </a>
+          </Link>
         </section>
         {/* === Hero Section End === */}
 
@@ -186,7 +186,7 @@ export default function Home() {
 
             <div className="border border-gray-700 rounded-lg p-4 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-103">
               <h3 className="font-semibold text-lg">CearcoChemicals.com</h3>
-              <Image src="/img/cearcochemicals_screenshot.png" alt="CearcoChemicals.com" width={500} height={300} className="rounded-md mt-4 mb-4" />
+              <Image src="/img/cearcochemicals_screenshot.webp" alt="CearcoChemicals.com" width={500} height={300} className="rounded-md mt-4 mb-4" />
 
               <p className="text-sm text-gray-500">
                 Cleaning Equipment & Repair Company is a locally owned business out of Richmond, Virginia. CEARCO has been established since 1981. We make specialty blended cleaning solutions that are not powdered- based. All of our specialty blended solutions are liquid-based. With this said, we have remained faithful to the original formulas.
@@ -205,7 +205,7 @@ export default function Home() {
 
             <div className="border border-gray-700 rounded-lg p-4 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-103">
               <h3 className="font-semibold text-lg">ParrisGainer.com</h3>
-              <Image src="/img/parrisgainer_screenshot.png" alt="ParrisGainer.com" width={500} height={300} className="rounded-md mt-4 mb-4" />
+              <Image src="/img/parrisgainer_screenshot.webp" alt="ParrisGainer.com" width={500} height={300} className="rounded-md mt-4 mb-4" />
 
               <p className="text-sm text-gray-500">
                 Parris Gainer relocated to Richmond VA in 2007 where she continued her private practice and community work. Parris Gainer earned her Master of Social Work (MSW), and Master of Education (M.Ed.) both from the University of Pittsburgh. She has a Masters of Divinity from Pittsburgh Theological Seminary and Doctor of Divinity from Samuel DeWitt Proctor School of Theology. Dr. Parris Gainer has extensive work experience in program administration, community and school mental health, behavior modification and resolution counseling.
@@ -224,7 +224,7 @@ export default function Home() {
 
             <div className="border border-gray-700 rounded-lg p-4 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-103">
               <h3 className="font-semibold text-lg">cleaning.majestikmagik.com</h3>
-              <Image src="/img/cleaningmajestikmagik.png" alt="Cleaning Majestik Magik" width={500} height={300} className="rounded-md mt-4 mb-4" />
+              <Image src="/img/cleaningmajestikmagik.webp" alt="Cleaning Majestik Magik" width={500} height={300} className="rounded-md mt-4 mb-4" />
               <p className="text-sm text-gray-500">
                 Let&apos;s bring cleanliness & comfort to your space. 
                 <br /><br />
@@ -324,12 +324,12 @@ export default function Home() {
           <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
           <p className="mb-4">Have a project in mind? Reach out to me at:</p>
           <p className="mb-4">
-            <a
+            <Link
               href="mailto:jamil.matheny@majestikmagik.com"
               className="underline hover:text-gray-300"
             >
               jamil.matheny@majestikmagik.com
-            </a> | (804) 362-7561
+            </Link> | (804) 362-7561
           </p>
           <p className="mt-4">409 E. Laburnum Ave. Ste #3, Richmond, VA 23222 </p>
 
