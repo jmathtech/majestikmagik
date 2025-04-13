@@ -57,7 +57,7 @@ export default function Home() {
   return (
     <>
       {/* Header */}
-      <header className={`bg-black text-white p-4 flex items-center justify-between sticky top-0 z-20 transition-all duration-300 ease-in-out ${isScrolled ? 'py-2 px-4' : 'p-4' // Shrink padding when scrolled
+      <header className={`bg-black shadow-slate-900 border-b border-gray-600 text-white p-4 flex items-center justify-between sticky top-0 z-20 transition-all duration-300 ease-in-out ${isScrolled ? 'py-2 px-4' : 'p-4' // Shrink padding when scrolled
         }`}> {/* Changed justify-center to justify-between, added sticky, top-0, z-20 */}
         {/* Logo and Title */}
         <div className="flex items-center space-x-4">
@@ -165,7 +165,7 @@ export default function Home() {
           </p>
           <a
             href="#contact"
-            className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105" // Styled CTA button
+            className="inline-block bg-gradient-to-r bg-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105" // Styled CTA button
           >
             Get In Touch
           </a>
