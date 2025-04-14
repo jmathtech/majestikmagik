@@ -1,185 +1,165 @@
 @import "tailwindcss";
 
-@layer utilities { /* Optional: Group utilities */
-  .star-layers {
-    --star-size-sm: 1px;
-    --star-size-md: 2px;
-    --star-size-lg: 3px;
-    --star-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+/* Define star variables globally or within a scope */
+:root {
+  --star-size-sm: 1px;
+  --star-size-md: 2px;
+  --star-size-lg: 3px;
+  --star-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+  --star-color-dim: rgba(255, 255, 255, 0.4); /* Dimmer for distant stars */
+}
 
-    /* Layer 1: Small stars, dense */
+/* Optional: Keep utility classes if you want to apply stars elsewhere */
+@layer utilities {
+  .star-layer-sm {
     background-image:
       radial-gradient(var(--star-size-sm) var(--star-size-sm) at 20px 30px, var(--star-color), transparent),
       radial-gradient(var(--star-size-sm) var(--star-size-sm) at 80px 80px, var(--star-color), transparent),
-      radial-gradient(var(--star-size-sm) var(--star-size-sm) at 150px 50px, var(--star-color), transparent);
+      radial-gradient(var(--star-size-sm) var(--star-size-sm) at 150px 50px, var(--star-color), transparent),
+      radial-gradient(var(--star-size-sm) var(--star-size-sm) at 55px 180px, var(--star-color), transparent),
+      radial-gradient(var(--star-size-sm) var(--star-size-sm) at 185px 140px, var(--star-color), transparent);
     background-repeat: repeat;
     background-size: 200px 200px; /* Density of small stars */
     animation: moveStarsSmall 150s linear infinite;
   }
 
-  .star-layers-2 {
-     /* Layer 2: Medium stars, less dense */
+  .star-layer-md {
     background-image:
       radial-gradient(var(--star-size-md) var(--star-size-md) at 50px 120px, var(--star-color), transparent),
       radial-gradient(var(--star-size-md) var(--star-size-md) at 200px 40px, var(--star-color), transparent),
-      radial-gradient(var(--star-size-md) var(--star-size-md) at 350px 180px, var(--star-color), transparent);
+      radial-gradient(var(--star-size-md) var(--star-size-md) at 350px 180px, var(--star-color), transparent),
+      radial-gradient(var(--star-size-md) var(--star-size-md) at 10px 280px, var(--star-color), transparent);
     background-repeat: repeat;
     background-size: 400px 400px; /* Density of medium stars */
     animation: moveStarsMedium 100s linear infinite;
   }
 
-   .star-layers-3 {
-     /* Layer 3: Large stars, sparse */
+   .star-layer-lg {
     background-image:
-      radial-gradient(var(--star-size-lg) var(--star-size-lg) at 100px 250px, var(--star-color), transparent),
-      radial-gradient(var(--star-size-lg) var(--star-size-lg) at 400px 100px, var(--star-color), transparent);
+      radial-gradient(var(--star-size-lg) var(--star-size-lg) at 100px 250px, var(--star-color-dim), transparent), /* Dimmer large stars */
+      radial-gradient(var(--star-size-lg) var(--star-size-lg) at 400px 100px, var(--star-color-dim), transparent),
+      radial-gradient(var(--star-size-lg) var(--star-size-lg) at 550px 350px, var(--star-color-dim), transparent);
     background-repeat: repeat;
     background-size: 600px 600px; /* Density of large stars */
     animation: moveStarsLarge 50s linear infinite;
    }
+   
 }
 
-
-/* Keyframes for star movement */
-@keyframes moveStarsSmall {
+/* Keyframes for star movement (Parallax) */
+@keyframes moveStarsSmall { /* Fastest */
   from { background-position: 0 0; }
-  to   { background-position: -10000px 5000px; } /* Adjust distance for speed */
+  to   { background-position: -10000px 5000px; }
 }
-@keyframes moveStarsMedium {
+@keyframes moveStarsMedium { /* Medium Speed */
   from { background-position: 0 0; }
-  to   { background-position: -10000px 8000px; } /* Adjust distance for speed */
+  to   { background-position: -8000px 6000px; } /* Slower than small */
 }
-@keyframes moveStarsLarge {
+@keyframes moveStarsLarge { /* Slowest */
   from { background-position: 0 0; }
-  to   { background-position: -10000px 10000px; } /* Adjust distance for speed */
+  to   { background-position: -5000px 4000px; } /* Slower than medium */
 }
 
-body.body-gradient-bg {
-  position: relative;
-  /* Needed for positioning context if pseudo-element uses absolute */
-  min-height: 100vh;
-  /* Ensure body fills viewport */
-  overflow-x: hidden;
-  /* Prevent horizontal scroll if circle goes off-screen */
-}
+/* --- Full Screen Background Implementation --- */
 
-body.body-gradient-bg::after,
-body.body-gradient-bg::before /* Also add ::before if you want stars on top of the gradient circle */
- {
+/* Base styles for pseudo-elements */
+html::before, html::after,
+body::before, body::after {
   content: '';
-  position: fixed; /* Use fixed to cover viewport */
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  /* Place behind content AND potentially behind the gradient circle */
-  /* If gradient circle is -1, stars should be -2 */
-  z-index: -2;
+  /* inset: 0; /* shorthand for top/left/right/bottom */
   pointer-events: none; /* Prevent interaction */
 }
 
-body.body-gradient-bg::before {
-  content: '';
-  position: fixed;
-  /* Fixed position relative to viewport */
-  width: 60vmax;
-  /* Responsive size based on largest viewport dimension */
-  height: 60vmax;
-  /* Responsive size */
-  border-radius: 50%;
-  /* Make it a circle */
-  /* Gradient: Blue to Purple, semi-transparent */
-  background: radial-gradient(circle, rgba(68, 131, 233, 0.199) 0%, rgba(169, 85, 247, 0.171) 60%, rgba(0, 0, 0, 0.027) 80%);
-  filter: blur(100px);
-  /* Heavy blur for soft effect (adjust as needed) */
-  z-index: -1;
-  /* Place it behind all page content */
-  /* Animation */
-  animation: moveGradientCircle 20s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
-  /* Initial position (slightly off-screen) */
-  top: -20%;
-  left: -20%;
-  pointer-events: none;
-  /* Prevent interaction */
+/* Layer 3: Large stars (Slowest, Furthest Back) */
+html::after {
+  background-image:
+    radial-gradient(var(--star-size-lg) var(--star-size-lg) at 100px 250px, var(--star-color-dim), transparent),
+    radial-gradient(var(--star-size-lg) var(--star-size-lg) at 400px 100px, var(--star-color-dim), transparent),
+    radial-gradient(var(--star-size-lg) var(--star-size-lg) at 550px 350px, var(--star-color-dim), transparent);
+  background-repeat: repeat;
+  background-size: 600px 600px;
+  animation: moveStarsLarge 200s linear infinite; /* Slower animation */
+  z-index: -4; /* Furthest back */
 }
 
-/* Use ::after for the star layers */
-body.body-gradient-bg::after {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -2; /* Stars behind gradient circle */
-  pointer-events: none;
+/* Layer 2: Medium stars (Medium Speed, Middle) */
+html::before {
+  background-image:
+    radial-gradient(var(--star-size-md) var(--star-size-md) at 50px 120px, var(--star-color), transparent),
+    radial-gradient(var(--star-size-md) var(--star-size-md) at 200px 40px, var(--star-color), transparent),
+    radial-gradient(var(--star-size-md) var(--star-size-md) at 350px 180px, var(--star-color), transparent),
+    radial-gradient(var(--star-size-md) var(--star-size-md) at 10px 280px, var(--star-color), transparent);
+  background-repeat: repeat;
+  background-size: 400px 400px;
+  animation: moveStarsMedium 150s linear infinite; /* Medium speed animation */
+  z-index: -3; /* Middle layer */
+}
 
-  /* Combine star layers onto the single ::after element */
-  --star-size-sm: 1px;
-  --star-size-md: 2px;
-  --star-size-lg: 3px;
-  --star-color: rgba(255, 255, 255, 0.5);
-
-  /* Layer 1: Small */
+/* Layer 1: Small stars (Fastest, Closest) */
+/* Using body::after for this layer */
+body.body-gradient-bg::after { /* Target specifically when gradient is active */
   background-image:
     radial-gradient(var(--star-size-sm) var(--star-size-sm) at 20px 30px, var(--star-color), transparent),
     radial-gradient(var(--star-size-sm) var(--star-size-sm) at 80px 80px, var(--star-color), transparent),
     radial-gradient(var(--star-size-sm) var(--star-size-sm) at 150px 50px, var(--star-color), transparent),
-  /* Layer 2: Medium */
-    radial-gradient(var(--star-size-md) var(--star-size-md) at 50px 120px, var(--star-color), transparent),
-    radial-gradient(var(--star-size-md) var(--star-size-md) at 200px 140px, var(--star-color), transparent),
-    radial-gradient(var(--star-size-md) var(--star-size-md) at 250px 150px, var(--star-color), transparent),
-  /* Layer 3: Large */
-    radial-gradient(var(--star-size-lg) var(--star-size-lg) at 100px 250px, var(--star-color), transparent),
-    radial-gradient(var(--star-size-lg) var(--star-size-lg) at 300px 200px, var(--star-color), transparent);
-
-  background-repeat: repeat, repeat, repeat; /* Repeat needed per layer group if sizes differ, but easier to use one size */
-
-  /* Use different background sizes and animations for parallax */
-  /* This requires separating into multiple elements or more complex background properties */
-  /* Simpler: Use one animation for all layers on ::after */
-   background-size: 200px 200px 100px; /* Adjust overall density */
-   animation: moveStarsLarge 100s linear infinite; /* Use one animation */
+    radial-gradient(var(--star-size-sm) var(--star-size-sm) at 55px 180px, var(--star-color), transparent),
+    radial-gradient(var(--star-size-sm) var(--star-size-sm) at 185px 140px, var(--star-color), transparent);
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: moveStarsSmall 100s linear infinite; /* Faster animation */
+  z-index: -2; /* Closest star layer */
 }
 
-/* Adjust the keyframes if using only one animation */
-@keyframes moveStarsLarge { /* Renamed or use existing */
-  from { background-position: 0 0; }
-  to   { background-position: -10000px 10000px; }
+/* --- Gradient Circle --- */
+body.body-gradient-bg {
+  position: relative; /* Needed for potential absolute positioning inside */
+  min-height: 100vh;
+  }
+
+body.body-gradient-bg::before {
+  /* Keep existing gradient styles */
+  content: '';
+  position: fixed;
+  width: 60vmax;
+  height: 60vmax;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(68, 131, 233, 0.199) 0%, rgba(169, 85, 247, 0.171) 60%, rgba(0, 0, 0, 0.027) 80%);
+  filter: blur(100px);
+  z-index: -1; /* In front of stars, behind content */
+  animation: moveGradientCircle 20s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
+  top: -20%;
+  left: -20%;
+  pointer-events: none;
 }
 
 @keyframes moveGradientCircle {
-  0% {
-    transform: translate(0, 0) rotate(0deg);
-    opacity: 0.8;
-  }
-
-  25% {
-    transform: translate(40vw, 30vh) rotate(90deg);
-  }
-
-  50% {
-    transform: translate(10vw, 70vh) rotate(180deg);
-    opacity: 1;
-  }
-
-  75% {
-    transform: translate(60vw, 10vh) rotate(270deg);
-  }
-
-  100% {
-    transform: translate(0, 0) rotate(360deg);
-    opacity: 0.8;
-  }
+  0% { transform: translate(0, 0) rotate(0deg); opacity: 0.8; }
+  25% { transform: translate(40vw, 30vh) rotate(90deg); }
+  50% { transform: translate(10vw, 70vh) rotate(180deg); opacity: 1; }
+  75% { transform: translate(60vw, 10vh) rotate(270deg); }
+  100% { transform: translate(0, 0) rotate(360deg); opacity: 0.8; }
 }
 
-
-
+/* --- Base Body & Theme Styles --- */
 :root {
+  /* Keep your light/dark theme variables */
   --background: #ffffff;
   --foreground: #171717;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a; /* Dark background for stars */
+    --foreground: #ededed;
+  }
+}
+
+/* Apply theme variables */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -187,21 +167,17 @@ body.body-gradient-bg::after {
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
+  height: 100%; /* Ensure html takes full height */
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Montserrat', sans-serif;
-
+  font-family: 'Montserrat', sans-serif; /* Ensure font is loaded */
+  min-height: 100%; /* Ensure body takes full height */
+  /* overflow: hidden; /* Moved to body.body-gradient-bg */
 }
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 4.5rem;
-}

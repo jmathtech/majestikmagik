@@ -72,21 +72,22 @@ export default function Home() {
 
           </div>
           <div>
-            <Link href="/" className={`inline-block relative group
-                bg-gradient-to-r from-white to-gray-400
-                hover:from-white  hover:to-gray-800
-                bg-clip-text text-transparent
-                transition-all duration-600 ease-in-out 
-              `}>
+            <Link href="/" className="inline-block relative">
               <h1 className={`
-                font-bold
-                bg-clip-text text-transparent
-                transition-all duration-600 ease-in-out 
-                ${isScrolled ? 'text-xl' : 'text-3xl'} 
-              `}>
-                Majestik Magik
+              font-extrabold
+              relative
+              transition-all duration-300 ease-in-out
+              ${isScrolled ? 'text-lg' : 'text-xl'}
+            `}>
+                <span className="absolute inset-0 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent opacity-100 transition-opacity duration-600 hover:opacity-0">
+                  Majestik Magik
+                </span>
+                <span className="bg-gradient-to-r from-white to-gray-800 bg-clip-text text-transparent opacity-0 transition-opacity duration-900 hover:opacity-100">
+                  Majestik Magik
+                </span>
               </h1>
             </Link>
+
           </div>
         </div>
 
@@ -94,28 +95,28 @@ export default function Home() {
         <nav className="hidden lg:flex justify-center gap-10 py-2"> {/* Reduced gap slightly, added 'hidden md:flex' */}
           <Link
             href="#portfolio"
-            className={`px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-lg'}` }>
-          
+            className={`px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
+
             Portfolio
           </Link>
           <Link
             href="#testimonials"
-            className={`px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-lg'}` }>
-          
+            className={`px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
+
             Testimonials
           </Link>
           <Link
             href="#contact"
-            className={`px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-lg'}` }>
-          
+            className={`px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
+
             Contact
           </Link>
           <Link
             href="https://www.github.com/jmathtech"
             target="_blank" // Added target="_blank" for external link
             rel="noopener noreferrer" // Added rel for security
-            className={`px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-lg'}` }>
-          
+            className={`px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
+
             Github
           </Link>
         </nav>
@@ -157,7 +158,7 @@ export default function Home() {
 
         {/* === Hero Section Start === */}
         <section className="text-center py-16 md:py-24 lg:py-32 mb-6"> {/* Added padding and bottom margin */}
-          <h2 className="text-6xl md:text-6xl lg:text-8xl font-extrabold mb-4
+          <h2 className="text-4xl md:text-5xl lg:text-8xl font-extrabold mb-4
              bg-gradient-to-r from-blue-400 via-blue-400 to-purple-900 
              bg-clip-text text-transparent // Apply gradient to text
              
@@ -226,7 +227,7 @@ export default function Home() {
               <h3 className="font-semibold text-lg">cleaning.majestikmagik.com</h3>
               <Image src="/img/cleaningmajestikmagik.webp" alt="Cleaning Majestik Magik" width={500} height={300} className="rounded-md mt-4 mb-4" />
               <p className="text-sm text-gray-500">
-                Let&apos;s bring cleanliness & comfort to your space. 
+                Let&apos;s bring cleanliness & comfort to your space.
                 <br /><br />
                 Made with the Next.js framework (javascript/typescript), AWS RDS, and deployed onVercel hosting.</p>
               <div className="text-right">
@@ -328,7 +329,7 @@ export default function Home() {
               href="mailto:jamil.matheny@majestikmagik.com"
               className="underline hover:text-gray-300"
             >
-              jamil.matheny@majestikmagik.com
+              jamil.matheny@<br />majestikmagik.com
             </Link> | (804) 362-7561
           </p>
           <p className="mt-4">409 E. Laburnum Ave. Ste #3, Richmond, VA 23222 </p>
