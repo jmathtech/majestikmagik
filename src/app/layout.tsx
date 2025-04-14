@@ -15,7 +15,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Majestik Magik - Crafting Digital Excellence in Website Design & Development",
   description: "A Professional web design portfolio, consulting, and development service by Jamil Matheny in Richmond, Virginia.",
-  viewport: "width=device-width, initial-scale=1.0",
   authors: [
     {
       name: "Jamil Matheny",
@@ -89,6 +88,13 @@ export const metadata: Metadata = {
     creator: "@majestikmagik",
     images: ["/screenshot.png"],
   },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1.0,
+  maximumScale: 1.0,
+  userScalable: false,
 };
 
 export default function RootLayout({

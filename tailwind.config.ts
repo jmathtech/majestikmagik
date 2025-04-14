@@ -22,12 +22,18 @@ module.exports = {
         fadeInOut: {
           '0%, 100%': { opacity: '0.2' }, // Start and end semi-transparent (adjust opacity as needed)
           '50%': { opacity: '1' },       // Fully visible in the middle
-        }
-      },
-      animation: {
-        // Reference the keyframes above
-        gradientFadeInOut: 'gradientFadeInOut 4s ease-in-out infinite', // Adjust duration (4s) and timing as needed
-        fadeInOut: 'fadeInOut 4s ease-in-out infinite',
+        },
+
+        fadeInScrollUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' }, // Start off-screen and transparent
+          '100%': { opacity: '1', transform: 'translateY(0)' }, // End on-screen and fully visible
+        },
+        animation: {
+          // Reference the keyframes above
+          gradientFadeInOut: 'gradientFadeInOut 4s ease-in-out infinite', // Adjust duration (4s) and timing as needed
+          fadeInOut: 'fadeInOut 4s ease-in-out infinite',
+          fadeInScrollUp: 'fadeInScrollUp 0.6s ease-out forwards', // Adjust duration (0.5s) as needed
+        },
       },
       // Keep existing extensions if any
       backgroundImage: {

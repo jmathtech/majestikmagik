@@ -160,12 +160,13 @@ export default function Home() {
         <section className="text-center py-16 md:py-24 lg:py-32 mb-6"> {/* Added padding and bottom margin */}
           <h2 className="text-4xl md:text-5xl lg:text-8xl font-extrabold mb-4
              bg-gradient-to-r from-blue-400 via-blue-400 to-purple-900 
-             bg-clip-text text-transparent // Apply gradient to text
-             
+             [-webkit-background-clip:text] 
+             bg-clip-text text-transparent
+             select-none
           ">
             Crafting Digital Excellence
           </h2>
-          <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto"> {/* Subheading styling */}
+          <p className="text-md md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto"> {/* Subheading styling */}
             From stunning designs to seamless functionality, I build websites that elevate your brand and engage your audience. Let&apos;s create something magical together.
           </p>
           <Link
@@ -179,8 +180,8 @@ export default function Home() {
 
         {/* Portfolio Section */}
         <section id="portfolio" className="mb-8">
-          <h2 className="text-2xl font-bold ">Website Portfolio</h2>
-          <p className="text-sm text-gray-500 mb-8">
+          <h2 className="text-2xl font-bold text-center">Website Portfolio</h2>
+          <p className="text-sm text-gray-500 mb-8 text-center">
             Explore my latest web development projects for real clients.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
