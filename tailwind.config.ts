@@ -8,6 +8,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backdropFilter: {
+        'none': 'none',
+        'blur': 'blur(10px)',
+      },
       // Add these keyframes and animation definitions
       keyframes: {
         gradientFadeInOut: {
