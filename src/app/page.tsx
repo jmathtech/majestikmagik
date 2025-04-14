@@ -179,8 +179,8 @@ export default function Home() {
 
         {/* Portfolio Section */}
         <section id="portfolio" className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">Website Portfolio</h2>
-          <p className="text-sm text-gray-500 mb-4">
+          <h2 className="text-2xl font-bold ">Website Portfolio</h2>
+          <p className="text-sm text-gray-500 mb-8">
             Explore my latest web development projects for real clients.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
