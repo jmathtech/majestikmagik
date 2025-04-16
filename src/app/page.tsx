@@ -9,7 +9,7 @@ export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null); // Ref for the menu
   const buttonRef = useRef<HTMLButtonElement>(null); //   Ref for the button
-
+  
   // -- START: Scroll Effect --
   const [isScrolled, setIsScrolled] = useState(false); // State to manage scroll position
 
