@@ -248,10 +248,6 @@ export default function Home() {
                 height="300" // Keep height (adjust aspect ratio if needed)
                 controls // Add controls (play/pause, volume, etc.)
                 className="rounded-md mt-4 mb-4" // Keep styling
-                playsInline // Important for mobile playback within the page
-              // muted // Optional: uncomment if you want it muted by default
-              // loop // Optional: uncomment if you want the video to loop
-              // autoPlay // Optional: uncomment if you want it to play automatically (often requires muted)
               >
                 <source src="https://user-images.githubusercontent.com/36749450/182264129-b7336ab1-84e3-46f1-a5e9-2cef906c0cd5.mp4" type="video/mp4" />
                 Your browser does not support the video tag. {/* Fallback text */}
