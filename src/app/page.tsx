@@ -141,10 +141,10 @@ export default function Home() {
       {/* Mobile Navigation Menu (Appears below header when open) */}
       <nav
         ref={menuRef} // Attach the menu ref
-        className={`lg:hidden absolute top-16 left-0 right-0 bg-black text-white flex flex-col items-center gap-4 py-16 transition-transform duration-300 ease-in-out transform z-10 ${isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full' // Slide down/up animation
+        className={`lg:hidden fixed inset-x-0 bg-black text-white flex flex-col items-center gap-4 py-16 transition-transform duration-300 ease-in-out transform z-10 ${isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full' // Slide down/up animation
           } ${isScrolled ? 'top-12' : 'top-16' // Adjust padding based on scroll state
           }`}
-        style={{ top: '64px' }} // Explicitly set top position matching header height (p-4 = 1rem = 16px * 2 = 32px + image height 40px approx = ~72px, adjust if needed. Let's use 4rem = 64px based on p-4)
+        
       >
         <Link href="#portfolio" className="px-4 py-2 rounded-md hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Portfolio</Link>
         <Link href="#testimonials" className="px-4 py-2 rounded-md hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Testimonials</Link>
