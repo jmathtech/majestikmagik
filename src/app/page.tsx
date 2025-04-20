@@ -3,6 +3,9 @@
 import Image from 'next/image';
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+
 
 export default function Home() {
   // State to manage mobile menu visibility
@@ -57,7 +60,7 @@ export default function Home() {
   return (
     <>
       {/* Header */}
-      <header className={`bg-black shadow-slate-900 border-b border-gray-600 text-white p-4 flex items-center justify-between sticky top-0 z-20 transition-all duration-300 ease-in-out ${isScrolled ? 'py-2 px-4' : 'p-4' // Shrink padding when scrolled
+      <header className={`bg-black shadow-slate-900 border-b border-gray-600 text-white p-4 flex items-center justify-between sticky top-0 z-20 transition-all duration-300 ease-in-out ${isScrolled ? 'py-2 px-4' : 'p-2' // Shrink padding when scrolled
         }`}> {/* Changed justify-center to justify-between, added sticky, top-0, z-20 */}
         {/* Logo and Title */}
         <div className="flex items-center space-x-4">
@@ -117,7 +120,7 @@ export default function Home() {
             rel="noopener noreferrer" // Added rel for security
             className={`px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
 
-            Github
+               <FontAwesomeIcon icon={faGithub} className="text-white text-2xl" /> 
           </Link>
         </nav>
 
@@ -149,7 +152,7 @@ export default function Home() {
         <Link href="#portfolio" className="px-4 py-2 rounded-md hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Portfolio</Link>
         <Link href="#testimonials" className="px-4 py-2 rounded-md hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Testimonials</Link>
         <Link href="#contact" className="px-4 py-2 rounded-md hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Contact</Link>
-        <Link href="https://www.github.com/jmathtech" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-md hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Github</Link>
+        <Link href="https://www.github.com/jmathtech" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-md hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}><FontAwesomeIcon icon={faGithub} className="text-white text-2xl" /> </Link>
       </nav>
 
 
