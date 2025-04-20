@@ -260,6 +260,7 @@ export default function Home() {
               </video>
               <p className="text-sm text-gray-500">
                 An ecommerce website for a clothing store. A custom front-end ReactJS E-Commerce website for a tailored suits shop.
+                <br /><br />
                 <b>Website Project:</b><br/>
                 Made with the React JS and Material UI framework.</p>
               <div className="text-right">
