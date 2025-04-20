@@ -196,7 +196,8 @@ export default function Home() {
               <p className="text-sm text-gray-500">
                 Cleaning Equipment & Repair Company is a locally owned business out of Richmond, Virginia. CEARCO has been established since 1981. We make specialty blended cleaning solutions that are not powdered- based. All of our specialty blended solutions are liquid-based. With this said, we have remained faithful to the original formulas.
                 <br /><br />
-                Made with the React JS framework.
+                <b>Website Project:</b><br/>
+                Made with the React JS framework and Vanilla CSS.
               </p>
               <div className="text-right">
                 <button
@@ -215,7 +216,8 @@ export default function Home() {
               <p className="text-sm text-gray-500">
                 Parris Gainer relocated to Richmond VA in 2007 where she continued her private practice and community work. Parris Gainer earned her Master of Social Work (MSW), and Master of Education (M.Ed.) both from the University of Pittsburgh. She has a Masters of Divinity from Pittsburgh Theological Seminary and Doctor of Divinity from Samuel DeWitt Proctor School of Theology. Dr. Parris Gainer has extensive work experience in program administration, community and school mental health, behavior modification and resolution counseling.
                 <br /><br />
-                Made with the React JS framework and Wordpress.
+                <b>Website Project:</b><br/>
+                Made with the React JS framework, Tailwind CSS, and Wordpress CMS.
               </p>
               <div className="text-right">
                 <button
@@ -233,7 +235,8 @@ export default function Home() {
               <p className="text-sm text-gray-500">
                 Let&apos;s bring cleanliness & comfort to your space.
                 <br /><br />
-                Made with the Next.js framework (javascript/typescript), AWS RDS, and deployed onVercel hosting.</p>
+                <b>Website Project:</b><br/>
+                Made with the Next.js framework (javascript/typescript), Tailwind CSS, AWS RDS, and deployed onVercel hosting.</p>
               <div className="text-right">
                 <button
                   className="btn mt-4 bg-blue-400 transition-colors duration-600 ease-in-out text-white px-4 py-2 rounded-md bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer inline-block"
@@ -257,6 +260,8 @@ export default function Home() {
               </video>
               <p className="text-sm text-gray-500">
                 An ecommerce website for a clothing store. A custom front-end ReactJS E-Commerce website for a tailored suits shop.</p>
+                <b>Website Project:</b><br/>
+                Made with the React JS and Material UI framework.
               <div className="text-right">
                 <button
                   className="btn mt-4 bg-blue-400 transition-colors duration-600 ease-in-out text-white px-4 py-2 rounded-md bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer end inline-block"
