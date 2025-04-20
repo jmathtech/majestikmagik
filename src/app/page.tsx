@@ -259,9 +259,9 @@ export default function Home() {
                 Your browser does not support the video tag. {/* Fallback text */}
               </video>
               <p className="text-sm text-gray-500">
-                An ecommerce website for a clothing store. A custom front-end ReactJS E-Commerce website for a tailored suits shop.</p>
+                An ecommerce website for a clothing store. A custom front-end ReactJS E-Commerce website for a tailored suits shop.
                 <b>Website Project:</b><br/>
-                Made with the React JS and Material UI framework.
+                Made with the React JS and Material UI framework.</p>
               <div className="text-right">
                 <button
                   className="btn mt-4 bg-blue-400 transition-colors duration-600 ease-in-out text-white px-4 py-2 rounded-md bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer end inline-block"
