@@ -170,7 +170,7 @@ export default function Home() {
             Crafting Digital Excellence
           </h2>
           <p className="text-md md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto"> {/* Subheading styling */}
-            From stunning designs to seamless functionality, I build websites that elevate your brand and engage your audience. Let&apos;s create something magical together.
+          Stay Ahead in the Digital Age: Outdated websites, technical hurdles, and a lack of scalable solutions can hold businesses back. Don’t miss out on opportunities for growth, engagement, and efficiency—partner with a solopreneur to create impactful web solutions that deliver results!
           </p>
           <Link
             href="#contact"
