@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+const siteUrl = "https://www.majestikmagik.com"; // Ensure this is set in your environment variables
+const imageUrl = `${siteUrl}/img/screenshot.png`; // Construct absolute URL
+
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -67,16 +71,10 @@ export const metadata: Metadata = {
   // Open Graph Metadata
   openGraph: {
     title: "Majestik Magik - Crafting Digital Excellence in Website Design & Development",
-    description: "A Professional web design portfolio, consulting, and development service by Jamil Matheny in Richmond, Virginia.",
-    url: "https://majestikmagik.com",
+    description: "Professional web design, consulting, and development services by Jamil Matheny, based in Richmond, Virginia.",
+    url: siteUrl,
     siteName: "Majestik Magik",
-    images: [
-      {
-        url: "/screenshot.png",
-        width: 1200,
-        height: 630,
-      },
-    ],
+    images: [imageUrl],
     locale: "en_US",
     type: "website",
   },
@@ -84,9 +82,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Majestik Magik - Crafting Digital Excellence in Website Design & Development",
-    description: "A Professional web design portfolio, consulting, and development service by Jamil Matheny in Richmond, Virginia.",
+    description: "Professional web design, consulting, and development services by Jamil Matheny, based in Richmond, Virginia.",
     creator: "@majestikmagik",
-    images: ["/screenshot.png"],
+    images: [imageUrl],
   },
 };
 
