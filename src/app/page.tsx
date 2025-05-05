@@ -6,13 +6,12 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-
 export default function Home() {
   // State to manage mobile menu visibility
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null); // Ref for the menu
   const buttonRef = useRef<HTMLButtonElement>(null); //   Ref for the button
-  
+
   // -- START: Scroll Effect --
   const [isScrolled, setIsScrolled] = useState(false); // State to manage scroll position
 
@@ -120,7 +119,7 @@ export default function Home() {
             rel="noopener noreferrer" // Added rel for security
             className={`px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
 
-               <FontAwesomeIcon icon={faGithub} className="text-white text-2xl" /> 
+            <FontAwesomeIcon icon={faGithub} className="text-white text-2xl" />
           </Link>
         </nav>
 
@@ -147,7 +146,7 @@ export default function Home() {
         className={`lg:hidden fixed inset-x-0 bg-black text-white flex flex-col items-center gap-4 py-16 transition-transform duration-300 ease-in-out transform z-10 ${isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full' // Slide down/up animation
           } ${isScrolled ? 'top-12' : 'top-16' // Adjust padding based on scroll state
           }`}
-        
+
       >
         <Link href="#portfolio" className="px-4 py-2 rounded-md hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Portfolio</Link>
         <Link href="#testimonials" className="px-4 py-2 rounded-md hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Testimonials</Link>
@@ -170,7 +169,7 @@ export default function Home() {
             Crafting Digital Excellence
           </h2>
           <p className="text-md md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto"> {/* Subheading styling */}
-          Stay Ahead in the Digital Age: Outdated websites, technical hurdles, and a lack of scalable solutions can hold businesses back. Don’t miss out on opportunities for growth, engagement, and efficiency—partner with a solopreneur to create impactful web solutions that deliver results!
+            Stay Ahead in the Digital Age: Outdated websites, technical hurdles, and a lack of scalable solutions can hold businesses back. Don’t miss out on opportunities for growth, engagement, and efficiency—partner with a solopreneur to create impactful web solutions that deliver results!
           </p>
           <Link
             href="#contact"
@@ -182,7 +181,7 @@ export default function Home() {
         {/* === Hero Section End === */}
 
         {/* Portfolio Section */}
-        <section id="portfolio" className="mb-8">
+        <section id="portfolio" className="mb-26">
           <h2 className="text-2xl font-bold text-center">Website Portfolio</h2>
           <p className="text-sm text-gray-500 mb-8 text-center">
             Explore my latest web development projects for real clients.
@@ -196,7 +195,7 @@ export default function Home() {
               <p className="text-sm text-gray-500">
                 Cleaning Equipment & Repair Company is a locally owned business out of Richmond, Virginia. CEARCO has been established since 1981. We make specialty blended cleaning solutions that are not powdered- based. All of our specialty blended solutions are liquid-based. With this said, we have remained faithful to the original formulas.
                 <br /><br />
-                <b>Website Project:</b><br/>
+                <b>Website Project:</b><br />
                 Made with the React JS framework and Vanilla CSS.
               </p>
               <div className="text-right">
@@ -216,7 +215,7 @@ export default function Home() {
               <p className="text-sm text-gray-500">
                 Parris Gainer relocated to Richmond VA in 2007 where she continued her private practice and community work. Parris Gainer earned her Master of Social Work (MSW), and Master of Education (M.Ed.) both from the University of Pittsburgh. She has a Masters of Divinity from Pittsburgh Theological Seminary and Doctor of Divinity from Samuel DeWitt Proctor School of Theology. Dr. Parris Gainer has extensive work experience in program administration, community and school mental health, behavior modification and resolution counseling.
                 <br /><br />
-                <b>Website Project:</b><br/>
+                <b>Website Project:</b><br />
                 Made with the React JS framework, Tailwind CSS, and Wordpress CMS.
               </p>
               <div className="text-right">
@@ -235,7 +234,7 @@ export default function Home() {
               <p className="text-sm text-gray-500">
                 Let&apos;s bring cleanliness & comfort to your space.
                 <br /><br />
-                <b>Website Project:</b><br/>
+                <b>Website Project:</b><br />
                 Made with the Next.js framework (javascript/typescript), Tailwind CSS, AWS RDS, and deployed onVercel hosting.</p>
               <div className="text-right">
                 <button
@@ -261,7 +260,7 @@ export default function Home() {
               <p className="text-sm text-gray-500">
                 An ecommerce website for a clothing store. A custom front-end ReactJS E-Commerce website for a tailored suits shop.
                 <br /><br />
-                <b>Website Project:</b><br/>
+                <b>Website Project:</b><br />
                 Made with the React JS and Material UI framework.</p>
               <div className="text-right">
                 <button
@@ -275,8 +274,17 @@ export default function Home() {
           </div>
         </section>
 
+          {/* Mockup Section */}
+        <section id="mockup" className="mb-26">
+          <h2 className="text-2xl font-bold mb-6 text-center"> Ask About Our Free Mockup Design</h2>
+          <div className="border border-gray-700 rounded-lg p-4 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-103">
+              <h3 className="font-semibold text-lg text-center">Get Inspiration From Our Design Free Mockups</h3>
+              <Image src="/img/mockup-website-design.jpg" alt="Free Mockup Website Design" width={1280} height={1024} className="rounded-xl mt-4 mb-4 justify-center" />
+          </div>
+        </section>
+
         {/* Testimonials Section */}
-        <section id="testimonials" className="mb-12"> {/* Increased bottom margin */}
+        <section id="testimonials" className="mb-26"> {/* Increased bottom margin */}
           <h2 className="text-2xl font-bold mb-6 text-center">What Clients Say</h2> {/* Centered title, increased margin */}
 
           {/* Testimonials Grid */}
@@ -326,9 +334,10 @@ export default function Home() {
         {/* Contact Section */}
         <section
           id="contact"
-          className="text-center bg-black border border-gray-700 text-white p-2 rounded-lg transition duration-300 ease-in-out transform hover:scale-103"
-        >
-          <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
+          className="text-center">
+            <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
+            <div className=" bg-black border border-gray-700 text-white p-2 rounded-lg transition duration-300 ease-in-out transform hover:scale-103"
+        >          
           <p className="mb-4">Have a project in mind? Reach out to me at:</p>
           <p className="mb-4">
             <Link
@@ -341,6 +350,7 @@ export default function Home() {
           <p className="mt-4">409 E. Laburnum Ave. Ste #3, Richmond, VA 23222 </p>
 
           <p className="text-xs text-zinc-800 mt-4 text-end">Designed by Jamil Matheny</p>
+        </div>
         </section>
       </main>
     </>
