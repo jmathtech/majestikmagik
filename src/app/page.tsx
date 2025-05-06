@@ -274,12 +274,15 @@ export default function Home() {
           </div>
         </section>
 
-          {/* Mockup Section */}
+        {/* Mockup Section */}
         <section id="mockup" className="mb-26">
           <h2 className="text-2xl font-bold mb-6 text-center"> Ask About Our Free Mockup Design</h2>
           <div className="border border-gray-700 rounded-lg p-4 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-103">
-              <h3 className="font-semibold text-lg text-center">Get Inspiration From Our Design Free Mockups</h3>
-              <Image src="/img/mockup-website-design.jpg" alt="Free Mockup Website Design" width={1280} height={1024} className="rounded-xl mt-4 mb-4 justify-center" />
+            <h3 className="font-semibold text-lg text-center">Get Inspiration From Our Design Free Mockups</h3>
+            <p className="p-4 text-sm text-center text-gray-500">
+              Want to see your design ideas come to life? Ask us about our free mockup options! We&apos;ll take your concept and create a custom mockup design, giving you a realistic preview. To help you visualize the final product, we&apos;ll send you a link where you can view the mockup design. Get inspired by our diverse range of free mockups and discover the potential of your ideas.
+            </p>
+            <Image src="/img/mockup-website-design.jpg" alt="Free Mockup Website Design" width={1280} height={1024} className="rounded-xl mt-4 mb-4 justify-center" />
           </div>
         </section>
 
@@ -320,7 +323,7 @@ export default function Home() {
               </div>
               {/* Quote */}
               <blockquote className="text-gray-300 italic mb-4 flex-grow"> {/* Lighter gray, margin, flex-grow */}
-                &quot;Working with Majestik Magik was a breeze. Excellent communication, attention to detail, and the final website exceeded our expectations. Very satisfied!&quot;
+                &quot;Excellent communication, attention to detail, and the final website exceeded my expectations. Very satisfied!&quot;
               </blockquote>
               {/* Client Name */}
               <p className="text-sm font-semibold text-gray-400 text-right">- Dr. Parris Gainer, ParrisGainer.com</p> {/* Smaller, bold, gray, right-aligned */}
@@ -335,22 +338,22 @@ export default function Home() {
         <section
           id="contact"
           className="text-center">
-            <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
-            <div className=" bg-black border border-gray-700 text-white p-2 rounded-lg transition duration-300 ease-in-out transform hover:scale-103"
-        >          
-          <p className="mb-4">Have a project in mind? Reach out to me at:</p>
-          <p className="mb-4">
-            <Link
-              href="mailto:jamil.matheny@majestikmagik.com"
-              className="underline hover:text-gray-300"
-            >
-              jamil.matheny@<br />majestikmagik.com
-            </Link> | (804) 362-7561
-          </p>
-          <p className="mt-4">409 E. Laburnum Ave. Ste #3, Richmond, VA 23222 </p>
+          <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
+          <div className=" bg-black border border-gray-700 text-white p-2 rounded-lg transition duration-300 ease-in-out transform hover:scale-103"
+          >
+            <p className="mb-4">Have a project in mind? Reach out to me at:</p>
+            <p className="mb-4">
+              <Link
+                href="mailto:jamil.matheny@majestikmagik.com"
+                className="underline hover:text-gray-300"
+              >
+                jamil.matheny@<br />majestikmagik.com
+              </Link> | (804) 362-7561
+            </p>
+            <p className="mt-4">409 E. Laburnum Ave. Ste #3, Richmond, VA 23222 </p>
 
-          <p className="text-xs text-zinc-800 mt-4 text-end">Designed by Jamil Matheny</p>
-        </div>
+            <p className="text-xs text-zinc-800 mt-4 text-end">Designed by Jamil Matheny</p>
+          </div>
         </section>
       </main>
     </>
