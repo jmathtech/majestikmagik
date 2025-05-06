@@ -312,7 +312,7 @@ export default function Home() {
                 &quot;Omg you are the freaking best!! The changes has made my life so much easier. I&apos;ll definitely be in contact when I need someone.&quot;
               </blockquote>
               {/* Client Name */}
-              <p className="text-sm font-semibold text-gray-400 text-right">- NoelCustoms.shop</p> {/* Smaller, bold, gray, right-aligned */}
+              <p className="text-sm font-semibold text-gray-400 text-right">- <Link href="https://noelcustoms.shop/">NoelCustoms.shop</Link></p> {/* Smaller, bold, gray, right-aligned */}
             </div>
 
             {/* Testimonial Card 2 */}
@@ -330,7 +330,7 @@ export default function Home() {
                 &quot;Excellent communication, attention to detail, and the final website exceeded my expectations. Very satisfied!&quot;
               </blockquote>
               {/* Client Name */}
-              <p className="text-sm font-semibold text-gray-400 text-right">- Dr. Parris Gainer, ParrisGainer.com</p> {/* Smaller, bold, gray, right-aligned */}
+              <p className="text-sm font-semibold text-gray-400 text-right">- <Link href="https://www.parrisgainer.com/">Dr. Parris Gainer, ParrisGainer.com</Link></p> {/* Smaller, bold, gray, right-aligned */}
             </div>
 
             {/* Add more testimonial cards here following the same structure */}
