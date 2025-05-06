@@ -308,7 +308,7 @@ export default function Home() {
                 &quot;Omg you are the freaking best!! The changes has made my life so much easier. I&apos;ll definitely be in contact when I need someone.&quot;
               </blockquote>
               {/* Client Name */}
-              <p className="text-sm font-semibold text-gray-400 text-right">- Noel Customs</p> {/* Smaller, bold, gray, right-aligned */}
+              <p className="text-sm font-semibold text-gray-400 text-right">- NoelCustoms.shop</p> {/* Smaller, bold, gray, right-aligned */}
             </div>
 
             {/* Testimonial Card 2 */}
