@@ -196,7 +196,7 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-            <div className="border border-gray-700 rounded-lg p-4 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-103">
+            <div className="border border-gray-700 rounded-lg p-12 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-103">
               <h3 className="font-semibold text-lg">CearcoChemicals.com</h3>
               <Image src="/img/cearcochemicals_screenshot.webp" alt="CearcoChemicals.com" width={500} height={300} className="rounded-md mt-4 mb-4" />
 
@@ -216,7 +216,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="border border-gray-700 rounded-lg p-4 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-103">
+            <div className="border border-gray-700 rounded-lg p-12 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-103">
               <h3 className="font-semibold text-lg">ParrisGainer.com</h3>
               <Image src="/img/parrisgainer_screenshot.webp" alt="ParrisGainer.com" width={500} height={300} className="rounded-md mt-4 mb-4" />
 
@@ -236,7 +236,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="border border-gray-700 rounded-lg p-4 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-103">
+            <div className="border border-gray-700 rounded-lg p-12 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-103">
               <h3 className="font-semibold text-lg">cleaning.majestikmagik.com</h3>
               <Image src="/img/cleaningmajestikmagik.webp" alt="Cleaning Majestik Magik" width={500} height={300} className="rounded-md mt-4 mb-4" />
               <p className="text-sm text-gray-500">
@@ -254,7 +254,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="border border-gray-700 rounded-lg p-4 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-103">
+            <div className="border border-gray-700 rounded-lg p-12 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-103">
               <h3 className="font-semibold text-lg">Zeus Suit Shop (Mock Design)</h3>
               <video
                 width="500" // Keep width
@@ -285,12 +285,12 @@ export default function Home() {
         {/* Mockup Section */}
         <section id="mockup" className="mb-26">
           <h2 className="text-2xl font-bold mb-6 text-center"> Ask About Our Free Mockup Design</h2>
-          <div className="border border-gray-700 rounded-lg p-4 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-103">
+          <div className="border border-gray-700 rounded-lg p-12 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-103">
             <h3 className="font-semibold text-lg text-center">Get Inspiration From Our Design Free Mockups</h3>
             <p className="p-4 text-sm text-center text-gray-500">
               Want to see your design ideas come to life? Ask us about our free mockup options! We&apos;ll take your concept and create a custom mockup design, giving you a realistic preview. To help you visualize the final product, we&apos;ll send you a link where you can view the mockup design. Get inspired by our diverse range of free mockups and discover the potential of your ideas.
             </p>
-            <Image src="/img/mockup-website-design.jpg" alt="Free Mockup Website Design" width={1280} height={1024} className="rounded-xl mt-4 mb-4 justify-center" />
+            <Image src="/img/mockup-website-design.jpg" alt="Free Mockup Website Design" width={1280} height={1024} className="mt-4 mb-4 rounded-lg justify-center" />
           </div>
         </section>
 
@@ -302,7 +302,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
             {/* Testimonial Card 1 */}
-            <div className="border border-gray-700 rounded-lg p-6 shadow-md bg-black flex flex-col transition duration-300 ease-in-out transform hover:scale-103"> {/* Increased padding, flex column */}
+            <div className="border border-gray-700 rounded-lg p-12 shadow-md bg-black flex flex-col transition duration-300 ease-in-out transform hover:scale-103"> {/* Increased padding, flex column */}
               {/* Star Rating */}
               <div className="flex items-center mb-3">
                 {[...Array(5)].map((_, i) => ( // Loop to create 5 stars
@@ -320,7 +320,7 @@ export default function Home() {
             </div>
 
             {/* Testimonial Card 2 */}
-            <div className="border border-gray-700 rounded-lg p-6 shadow-md bg-black flex flex-col transition duration-300 ease-in-out transform hover:scale-103"> {/* Increased padding, flex column */}
+            <div className="border border-gray-700 rounded-lg p-12 shadow-md bg-black flex flex-col transition duration-300 ease-in-out transform hover:scale-103"> {/* Increased padding, flex column */}
               {/* Star Rating */}
               <div className="flex items-center mb-3">
                 {[...Array(5)].map((_, i) => ( // Loop to create 5 stars
@@ -347,7 +347,7 @@ export default function Home() {
           id="contact"
           className="text-center">
           <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
-          <div className=" bg-black border border-gray-700 text-white p-2 rounded-lg transition duration-300 ease-in-out transform hover:scale-103"
+          <div className=" bg-black border border-gray-700 text-white p-12 rounded-lg transition duration-300 ease-in-out transform hover:scale-103"
           >
             <p className="mb-4">Have a project in mind? Reach out to me at:</p>
             <p className="mb-4">
