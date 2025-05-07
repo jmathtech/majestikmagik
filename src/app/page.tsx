@@ -157,8 +157,8 @@ export default function Home() {
         <Link href="#contact" className="px-4 py-2 rounded-md hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Contact</Link>
         <Link href="https://www.github.com/jmathtech" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-md hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}><FontAwesomeIcon icon={faGithub} className="text-white text-2xl" /> </Link>
         <Link href="https://www.upwork.com/freelancers/~01bfab6a82f6cc6c6c?mp_source=share" target="_blank" rel="noopener noreferrer" // Added rel for security
-          className={`px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
-          <Image src="img/upwork-white.svg" alt="Upwork Logo" width={isScrolled ? 22 : 23} height={isScrolled ? 22 : 23} className="transition-all duration-600 ease-in-out" />
+          className="px-4 py-2 rounded-md transition-all duration-600 ease-in-out w-full hover:bg-gray-700 text-center">
+          <Image src="img/upwork-white.svg" alt="Upwork Logo" width={22} height={22} className="transition-all duration-600 ease-in-out inline-block" />
         </Link>
       </nav>
 
