@@ -359,6 +359,11 @@ export default function Home() {
             <p className="text-xs text-zinc-800 mt-4 text-end">Designed by Jamil Matheny</p>
           </div>
         </section>
+
+        <div className="mt-8 flex justify-between text-sm text-gray-500">
+          <Link href="/privacy-policy" className="underline">Privacy Policy</Link>
+          <Link href="/terms-of-service" className="underline">Terms of Service</Link>
+        </div>
       </main>
     </>
   );
