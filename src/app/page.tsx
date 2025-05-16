@@ -342,10 +342,10 @@ export default function Home() {
         <section
           id="contact"
           className="text-center">
-          <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
+          <h2 className="text-2xl font-bold mb-4">Get In Touch</h2>
           <div className=" bg-black border border-gray-700 text-white p-12 rounded-lg transition duration-300 ease-in-out transform hover:scale-103"
           >
-            <p className="mb-4">Do you have a project in mind? Reach out to me at:</p>
+            <p className="mb-4">Do you have a project in mind? Contact us at:</p>
             <p className="mb-4">
               <Link
                 href="mailto:jamil.matheny@majestikmagik.com"

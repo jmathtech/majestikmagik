@@ -24,8 +24,20 @@ export default function TermsOfServiceContent() {
         <div className="bg-black text-white min-h-screen py-8 px-16 max-w-5xl mx-auto">
             {/* Optional Header (if you want a basic one) */}
             <header className={`bg-black border-b border-gray-600 p-4 sticky top-0 z-10 transition-all duration-300 ease-in-out ${isScrolled ? 'py-2' : 'py-4'}`}>
-                <Link href="/" className="text-xl font-bold">
-                    Majestik Magik
+                <Link href="/" className="inline-block relative">
+                    <h1 className={`
+              font-extrabold
+              relative
+              transition-all duration-300 ease-in-out
+              ${isScrolled ? 'text-lg' : 'text-xl'}
+            `}>
+                        <span className="absolute inset-0 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent opacity-100 transition-opacity duration-600 hover:opacity-0">
+                            Majestik Magik
+                        </span>
+                        <span className="bg-gradient-to-r from-white to-gray-800 bg-clip-text text-transparent opacity-0 transition-opacity duration-900 hover:opacity-100">
+                            Majestik Magik
+                        </span>
+                    </h1>
                 </Link>
             </header>
             <div className="py-8">
