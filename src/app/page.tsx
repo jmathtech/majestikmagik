@@ -177,7 +177,7 @@ export default function Home() {
             Crafting Digital Excellence
           </h2>
           <p className="text-md md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto"> {/* Subheading styling */}
-            Stay Ahead in the Digital Age: Outdated websites, technical hurdles, and a lack of scalable solutions can hold businesses back. Don’t miss out on opportunities for growth, engagement, and efficiency—partner with a solopreneur to create impactful web solutions that deliver results!
+           Overcome digital hurdles with a solopreneur&apos;s impactful and scalable web solutions designed for growth.
           </p>
           <Link
             href="#contact"
@@ -349,7 +349,7 @@ export default function Home() {
             <p className="mb-4">
               <Link
                 href="mailto:jamil.matheny@majestikmagik.com"
-                className="underline hover:text-gray-300"
+                className="underline transition duration-300 ease-in-out hover:text-gray-400"
               >
                 jamil.matheny@<br />majestikmagik.com
               </Link> | (804) 362-7561
@@ -361,8 +361,8 @@ export default function Home() {
         </section>
 
         <div className="mt-8 flex justify-between text-sm text-gray-500">
-          <Link href="/privacy-policy" className="underline">Privacy Policy</Link>
-          <Link href="/terms-of-service" className="underline">Terms of Service</Link>
+          <Link href="/privacy-policy" className="underline transition duration-300 ease-in-out hover:text-gray-200">Privacy Policy</Link>
+          <Link href="/terms-of-service" className="underline transition duration-300 ease-in-out hover:text-gray-200">Terms of Service</Link>
         </div>
       </main>
     </>

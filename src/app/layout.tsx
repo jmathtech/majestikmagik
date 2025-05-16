@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     "Majestik Magik",
     "digital excellence",
     "professional services",
-  "website design",
+    "website design",
     "website development",
     "web design services",
     "web development services",
@@ -61,12 +61,17 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/screenshot.png",
-    other: {
-      rel: "apple-touch-icon",
-      url: "/favicon.ico",
-    },
+    icon: [
+      { rel: 'icon', url: '/favicon.ico', sizes: 'any' }, // .ico can contain multiple sizes
+      { rel: 'icon', type: 'image/png', sizes: '16x16', url: '/favicon-16x16.png' },
+      { rel: 'icon', type: 'image/png', sizes: '32x32', url: '/favicon-32x32.png' },
+      // You can add more sizes like 48x48 if you have specific PNGs for them
+      // { rel: 'icon', type: 'image/png', sizes: '48x48', url: '/favicon-48x48.png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png' }, // Defaults to 180x180, or you can specify sizes
+    ],
+    shortcut: '/favicon.ico',
   },
   // Open Graph Metadata
   openGraph: {
