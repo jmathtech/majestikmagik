@@ -206,10 +206,13 @@ export default function Home() {
             Overcome digital hurdles with a solopreneur&apos;s impactful and scalable web solutions designed for growth.
           </p>
           <Link
-            href="#contact"
-            className="inline-block bg-gradient-to-r bg-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105" // Styled CTA button
+            href="#services"
+            className="inline-flex items-center bg-gradient-to-r bg-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105" // Styled CTA button
           >
-            Get In Touch
+            Get Started
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 ml-2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+            </svg>
           </Link>
         </section>
         {/* === Hero Section End === */}
