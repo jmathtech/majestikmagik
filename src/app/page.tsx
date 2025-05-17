@@ -322,7 +322,7 @@ export default function Home() {
 
         {/* Services Section */}
         <section id="services" className="mb-26">
-          <h2 className="text-2xl font-bold mb-12 text-center text-white">Our Services</h2>
+          <h2 className="text-2xl font-bold mb-8 text-center text-white">Our Services</h2>
           <div className="border border-gray-700 rounded-lg p-12 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-101">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Starter Spark */}
@@ -333,22 +333,24 @@ export default function Home() {
                 <p className="text-gray-400 mb-4">Ideal for launching a basic online presence. Get a simple, responsive website (up to 3 sections) with essential features like a contact form, basic SEO, and analytics to get you started.</p>
                 <p className="text-gray-400 mb-2 font-semibold">Best For: Simple Landing Pages, Small Businesses</p>
                 <hr className="text-gray-800 mt-4 mb-4" />
-                <p className="text-gray-400 mb-2"><li>Custom Website Design: Basic, Up to 3 Sections</li></p>
-                <p className="text-gray-400 mb-2"><li>Responsive Design: Included</li></p>
-                <p className="text-gray-400 mb-2"><li>Content Integration: Basic Text & Images</li></p>
-                <p className="text-gray-400 mb-2"><li>SEO Optimization: Basic On-Page</li></p>
-                <p className="text-gray-400 mb-2"><li>Mobile Optimization: Included</li></p>
-                <p className="text-gray-400 mb-2"><li>Contact Form: Included</li></p>
-                <p className="text-gray-400 mb-2"><li>Social Media Integration: Basic Icons</li></p>
-                <p className="text-gray-400 mb-2"><li>Analytics Setup: Basic Google Analytics</li></p>
-                <p className="text-gray-400 mb-2"><li>CMS Integration: WordPress Basic Setup</li></p>
-                <p className="text-gray-400 mb-2"><li>Technology Stack: HTML, CSS, JavaScript</li></p>
-                <p className="text-gray-400 mb-2"><li>E-commerce Ready: Optional (Simple Setup)</li></p>
-                <p className="text-gray-400 mb-2"><li>Custom Features: -</li></p>
-                <p className="text-gray-400 mb-2"><li>Revisions: 1 Round</li></p>
-                <p className="text-gray-400 mb-2"><li>Initial Consultation: Included</li></p>
-                <p className="text-gray-400 mb-2"><li>Post-Launch Support: 1 Week (Basic)</li></p>
-                <p className="text-gray-400 mb-2"><li>Estimated Timeline: 2-4 Weeks</li></p>
+                <ul className="text-gray-400 mb-2 space-y-1 list-disc list-inside">
+                  <li>Custom Website Design: Basic, Up to 3 Sections</li>
+                  <li>Responsive Design: Included</li>
+                  <li>Content Integration: Basic Text & Images</li>
+                  <li>SEO Optimization: Basic On-Page</li>
+                  <li>Mobile Optimization: Included</li>
+                  <li>Contact Form: Included</li>
+                  <li>Social Media Integration: Basic Icons</li>
+                  <li>Analytics Setup: Basic Google Analytics</li>
+                  <li>CMS Integration: WordPress Basic Setup</li>
+                  <li>Technology Stack: HTML, CSS, JavaScript</li>
+                  <li>E-commerce Ready: Optional (Simple Setup)</li>
+                  <li>Custom Features: -</li>
+                  <li>Revisions: 1 Round</li>
+                  <li>Initial Consultation: Included</li>
+                  <li>Post-Launch Support: 1 Week (Basic)</li>
+                  <li>Estimated Timeline: 2-4 Weeks</li>
+                </ul>
                 <hr className="text-gray-800 mt-4 mb-4" />
                 <div className="flex items-center justify-between mt-auto">
                   <span className="text-2xl font-bold text-green-500">${1500}</span>
@@ -370,22 +372,24 @@ export default function Home() {
                 <p className="text-gray-400 mb-4">Perfect for growing businesses needing a more engaging online presence. Includes a modern, responsive website (up to 7 sections), comprehensive API & content integration, enhanced SEO, social media integration, and basic e-commerce capabilities.</p>
                 <p className="text-gray-400 mb-2 font-semibold">Best For: Growing Businesses, Custom Features</p>
                 <hr className="text-gray-800 mt-4 mb-4" />
-                <p className="text-gray-400 mb-2"><li>Custom Website Design: Modern, Up to 7 Sections</li></p>
-                <p className="text-gray-400 mb-2"><li>Responsive Design: Included</li></p>
-                <p className="text-gray-400 mb-2"><li>Content Integration: Comprehensive Content Integration</li></p>
-                <p className="text-gray-400 mb-2"><li>SEO Optimization: Enhanced On-Page & Technical</li></p>
-                <p className="text-gray-400 mb-2"><li>Mobile Optimization: Included</li></p>
-                <p className="text-gray-400 mb-2"><li>Contact Form: Included</li></p>
-                <p className="text-gray-400 mb-2"><li>Social Media Integration: Enhanced Integration</li></p>
-                <p className="text-gray-400 mb-2"><li>Analytics Setup: Advanced Analytics & Tracking</li></p>
-                <p className="text-gray-400 mb-2"><li>CMS Integration: WordPress Advanced Setup & Customization</li></p>
-                <p className="text-gray-400 mb-2"><li>Technology Stack: React, Next.js, TypeScript (Basic)</li></p>
-                <p className="text-gray-400 mb-2"><li>E-commerce Ready: Included (Up to 10 Products)</li></p>
-                <p className="text-gray-400 mb-2"><li>Custom Features: Up to 3 Basic Features</li></p>
-                <p className="text-gray-400 mb-2"><li>Revisions: 2 Rounds</li></p>
-                <p className="text-gray-400 mb-2"><li>Initial Consultation: Included</li></p>
-                <p className="text-gray-400 mb-2"><li>Post-Launch Support: 1 Month (Standard)</li></p>
-                <p className="text-gray-400 mb-2"><li>Estimated Timeline: 4-8 Weeks</li></p>
+                <ul className="text-gray-400 mb-2 space-y-1 list-disc list-inside">
+                  <li>Custom Website Design: Modern, Up to 7 Sections</li>
+                  <li>Responsive Design: Included</li>
+                  <li>Content Integration: Comprehensive Content Integration</li>
+                  <li>SEO Optimization: Enhanced On-Page & Technical</li>
+                  <li>Mobile Optimization: Included</li>
+                  <li>Contact Form: Included</li>
+                  <li>Social Media Integration: Enhanced Integration</li>
+                  <li>Analytics Setup: Advanced Analytics & Tracking</li>
+                  <li>CMS Integration: WordPress Advanced Setup & Customization</li>
+                  <li>Technology Stack: React, Next.js, TypeScript (Basic)</li>
+                  <li>E-commerce Ready: Included (Up to 10 Products)</li>
+                  <li>Custom Features: Up to 3 Basic Features</li>
+                  <li>Revisions: 2 Rounds</li>
+                  <li>Initial Consultation: Included</li>
+                  <li>Post-Launch Support: 1 Month (Standard)</li>
+                  <li>Estimated Timeline: 4-8 Weeks</li>
+                </ul>
                 <hr className="text-gray-800 mt-4 mb-4" />
                 <div className="flex items-center justify-between mt-auto">
                   <span className="text-2xl font-bold text-green-500">${4000}</span>
@@ -399,22 +403,24 @@ export default function Home() {
                 <p className="text-gray-400 mb-4">For complex projects and businesses requiring a fully customized and scalable online solution. Offers a bespoke, responsive website with unlimited sections, advanced content management options (including Headless CMS), in-depth SEO strategy, full social media integration, and ongoing priority support.</p>
                 <p className="text-gray-400 mb-2 font-semibold">Best For: Complex Projects, Ongoing Support</p>
                 <hr className="text-gray-800 mt-4 mb-4" />
-                <p className="text-gray-400 mb-2"><li>Custom Website Design: Bespoke, Unlimited Sections</li></p>
-                <p className="text-gray-400 mb-2"><li>Responsive Design: Included</li></p>
-                <p className="text-gray-400 mb-2"><li>Content Integration: Advanced Content Migration & Setup</li></p>
-                <p className="text-gray-400 mb-2"><li>SEO Optimization: Advanced SEO Strategy & Implementation</li></p>
-                <p className="text-gray-400 mb-2"><li>Mobile Optimization: Included</li></p>
-                <p className="text-gray-400 mb-2"><li>Contact Form: Included</li></p>
-                <p className="text-gray-400 mb-2"><li>Social Media Integration: Full Platform Integration</li></p>
-                <p className="text-gray-400 mb-2"><li>Analytics Setup: Custom Reporting & Insights</li></p>
-                <p className="text-gray-400 mb-2"><li>CMS Integration: Headless CMS (Next.js/Strapi) Options</li></p>
-                <p className="text-gray-400 mb-2"><li>Technology Stack: React, Next.js, TypeScript (Advanced)</li></p>
-                <p className="text-gray-400 mb-2"><li>E-commerce Ready: Included (Unlimited Products & Features)</li></p>
-                <p className="text-gray-400 mb-2"><li>Custom Features: Unlimited & Complex Features</li></p>
-                <p className="text-gray-400 mb-2"><li>Revisions: Unlimited Minor Revisions</li></p>
-                <p className="text-gray-400 mb-2"><li>Initial Consultation: Included</li></p>
-                <p className="text-gray-400 mb-2"><li>Post-Launch Support: 3 Months (Priority)</li></p>
-                <p className="text-gray-400 mb-2"><li>Estimated Timeline: 8+ Weeks</li></p>
+                <ul className="text-gray-400 mb-2 space-y-1 list-disc list-inside">
+                  <li>Custom Website Design: Bespoke, Unlimited Sections</li>
+                  <li>Responsive Design: Included</li>
+                  <li>Content Integration: Advanced Content Migration & Setup</li>
+                  <li>SEO Optimization: Advanced SEO Strategy & Implementation</li>
+                  <li>Mobile Optimization: Included</li>
+                  <li>Contact Form: Included</li>
+                  <li>Social Media Integration: Full Platform Integration</li>
+                  <li>Analytics Setup: Custom Reporting & Insights</li>
+                  <li>CMS Integration: Headless CMS (Next.js/Strapi) Options</li>
+                  <li>Technology Stack: React, Next.js, TypeScript (Advanced)</li>
+                  <li>E-commerce Ready: Included (Unlimited Products & Features)</li>
+                  <li>Custom Features: Unlimited & Complex Features</li>
+                  <li>Revisions: Unlimited Small Revisions</li>
+                  <li>Initial Consultation: Included</li>
+                  <li>Post-Launch Support: 3 Months (Priority)</li>
+                  <li>Estimated Timeline: 8+ Weeks</li>
+                </ul>
                 <hr className="text-gray-800 mt-4 mb-4" />
                 <div className="flex items-center justify-between mt-auto">
                   <span className="text-2xl font-bold text-green-500">${8000}</span>
