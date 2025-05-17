@@ -513,6 +513,7 @@ export default function Home() {
 
         <div className="mt-8 flex justify-between text-sm text-gray-500">
           <Link href="/privacy-policy" className="underline transition duration-300 ease-in-out hover:text-gray-200">Privacy Policy</Link>
+          <Link href="/refund-policy" className="underline transition duration-300 ease-in-out hover:text-gray-200">Refund Policy</Link>
           <Link href="/cyber-security" className="underline transition duration-300 ease-in-out hover:text-gray-200">Cyber Security Committment</Link>
           <Link href="/terms-of-service" className="underline transition duration-300 ease-in-out hover:text-gray-200">Terms of Service</Link>
         </div>
