@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
+
 export default function Home() {
   // State to manage mobile menu visibility
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -14,6 +15,7 @@ export default function Home() {
 
   // -- START: Scroll Effect --
   const [isScrolled, setIsScrolled] = useState(false); // State to manage scroll position
+
 
   useEffect(() => {
     // Function to handle scroll event
@@ -102,6 +104,18 @@ export default function Home() {
             Portfolio
           </Link>
           <Link
+            href="#design"
+            className={`px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
+
+            Mock Design
+          </Link>
+          <Link
+            href="#services"
+            className={`px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
+
+            Services
+          </Link>
+          <Link
             href="#testimonials"
             className={`px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
 
@@ -153,6 +167,18 @@ export default function Home() {
 
       >
         <Link href="#portfolio" className="px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Portfolio</Link>
+        <Link
+          href="#design"
+          className={`px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
+
+          Mock Design
+        </Link>
+        <Link
+          href="#services"
+          className={`px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
+
+          Services
+        </Link>
         <Link href="#testimonials" className="px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Testimonials</Link>
         <Link href="#contact" className="px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Contact</Link>
         <Link href="https://www.github.com/jmathtech" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}><FontAwesomeIcon icon={faGithub} className="text-white text-2xl" /> </Link>
@@ -177,7 +203,7 @@ export default function Home() {
             Crafting Digital Excellence
           </h2>
           <p className="text-md md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto"> {/* Subheading styling */}
-           Overcome digital hurdles with a solopreneur&apos;s impactful and scalable web solutions designed for growth.
+            Overcome digital hurdles with a solopreneur&apos;s impactful and scalable web solutions designed for growth.
           </p>
           <Link
             href="#contact"
@@ -283,7 +309,7 @@ export default function Home() {
         </section>
 
         {/* Mockup Section */}
-        <section id="mockup" className="mb-26">
+        <section id="design" className="mb-26">
           <h2 className="text-2xl font-bold mb-6 text-center"> Ask About Our Free Mockup Design</h2>
           <div className="border border-gray-700 rounded-lg p-12 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-103">
             <h3 className="font-semibold text-lg text-center">Get Inspiration From Our Design Free Mockups</h3>
@@ -291,6 +317,111 @@ export default function Home() {
               Want to see your design ideas come to life? Ask us about our free mockup options! We&apos;ll take your concept and create a custom mockup design, giving you a realistic preview. To help you visualize the final product, we&apos;ll send you a link where you can view the mockup design. Get inspired by our diverse range of free mockups and discover the potential of your ideas.
             </p>
             <Image src="/img/mockup-website-design.jpg" alt="Free Mockup Website Design" width={1280} height={1024} className="mt-4 mb-4 rounded-lg justify-center" />
+          </div>
+        </section>
+
+        {/* Services Section */}
+        <section id="services" className="mb-26">
+          <h2 className="text-2xl font-bold mb-12 text-center text-white">Our Services</h2>
+          <div className="border border-gray-700 rounded-lg p-12 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-101">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Starter Spark */}
+              <div className="border border-gray-700 rounded-lg p-6 shadow-md bg-gray-900 transition duration-300 ease-in-out transform hover:scale-103 flex flex-col">
+                <Image src="/img/webdesign_01.png" alt="Starter Spark" width={192} height={192} className="w-full mb-4" />
+
+                <h3 className="text-xl font-semibold mb-2 text-white">Starter Spark</h3>
+                <p className="text-gray-400 mb-4">Ideal for launching a basic online presence. Get a simple, responsive website (up to 3 sections) with essential features like a contact form, basic SEO, and analytics to get you started.</p>
+                <p className="text-gray-400 mb-2 font-semibold">Best For: Simple Landing Pages, Small Businesses</p>
+                <hr className="text-gray-800 mt-4 mb-4" />
+                <p className="text-gray-400 mb-2"><li>Custom Website Design: Basic, Up to 3 Sections</li></p>
+                <p className="text-gray-400 mb-2"><li>Responsive Design: Included</li></p>
+                <p className="text-gray-400 mb-2"><li>Content Integration: Basic Text & Images</li></p>
+                <p className="text-gray-400 mb-2"><li>SEO Optimization: Basic On-Page</li></p>
+                <p className="text-gray-400 mb-2"><li>Mobile Optimization: Included</li></p>
+                <p className="text-gray-400 mb-2"><li>Contact Form: Included</li></p>
+                <p className="text-gray-400 mb-2"><li>Social Media Integration: Basic Icons</li></p>
+                <p className="text-gray-400 mb-2"><li>Analytics Setup: Basic Google Analytics</li></p>
+                <p className="text-gray-400 mb-2"><li>CMS Integration: WordPress Basic Setup</li></p>
+                <p className="text-gray-400 mb-2"><li>Technology Stack: HTML, CSS, JavaScript</li></p>
+                <p className="text-gray-400 mb-2"><li>E-commerce Ready: Optional (Simple Setup)</li></p>
+                <p className="text-gray-400 mb-2"><li>Custom Features: -</li></p>
+                <p className="text-gray-400 mb-2"><li>Revisions: 1 Round</li></p>
+                <p className="text-gray-400 mb-2"><li>Initial Consultation: Included</li></p>
+                <p className="text-gray-400 mb-2"><li>Post-Launch Support: 1 Week (Basic)</li></p>
+                <p className="text-gray-400 mb-2"><li>Estimated Timeline: 2-4 Weeks</li></p>
+                <hr className="text-gray-800 mt-4 mb-4" />
+                <div className="flex items-center justify-between mt-auto">
+                  <span className="text-2xl font-bold text-green-500">${1500}</span>
+                  <Link href="https://checkout.majestikmagik.com/b/eVqdR83E41eJdhI4vJf7i01"><button className="transition duration-300 ease-in-out bg-green-500 hover:bg-green-900 text-white cursor-pointer font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Buy Now</button></Link>
+                </div>
+              </div>
+
+              {/* Magik Weaver */}
+              <div className="border border-gray-700 rounded-lg p-6 shadow-md bg-gray-900 transition duration-300 ease-in-out transform hover:scale-103 relative flex flex-col">
+                <span className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-black text-sm font-bold py-1 px-2 rounded-full">Best Deal</span>
+                <div className="flex justify-center mb-2">
+                  {/* You can add an icon here if you have one */}
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 4v-2m3-2v-2M6 19h12a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v10a2 2 0 002 2zM3 21h18M5 3h14M5 5h14M3 7h18" />
+                  </svg>
+                </div>
+                <Image src="/img/webdesign_02.png" alt="Magik Weaver" width={192} height={192} className="w-full mb-4" />
+                <h3 className="text-xl font-semibold mb-2 text-white">Magik Weaver</h3>
+                <p className="text-gray-400 mb-4">Perfect for growing businesses needing a more engaging online presence. Includes a modern, responsive website (up to 7 sections), comprehensive API & content integration, enhanced SEO, social media integration, and basic e-commerce capabilities.</p>
+                <p className="text-gray-400 mb-2 font-semibold">Best For: Growing Businesses, Custom Features</p>
+                <hr className="text-gray-800 mt-4 mb-4" />
+                <p className="text-gray-400 mb-2"><li>Custom Website Design: Modern, Up to 7 Sections</li></p>
+                <p className="text-gray-400 mb-2"><li>Responsive Design: Included</li></p>
+                <p className="text-gray-400 mb-2"><li>Content Integration: Comprehensive Content Integration</li></p>
+                <p className="text-gray-400 mb-2"><li>SEO Optimization: Enhanced On-Page & Technical</li></p>
+                <p className="text-gray-400 mb-2"><li>Mobile Optimization: Included</li></p>
+                <p className="text-gray-400 mb-2"><li>Contact Form: Included</li></p>
+                <p className="text-gray-400 mb-2"><li>Social Media Integration: Enhanced Integration</li></p>
+                <p className="text-gray-400 mb-2"><li>Analytics Setup: Advanced Analytics & Tracking</li></p>
+                <p className="text-gray-400 mb-2"><li>CMS Integration: WordPress Advanced Setup & Customization</li></p>
+                <p className="text-gray-400 mb-2"><li>Technology Stack: React, Next.js, TypeScript (Basic)</li></p>
+                <p className="text-gray-400 mb-2"><li>E-commerce Ready: Included (Up to 10 Products)</li></p>
+                <p className="text-gray-400 mb-2"><li>Custom Features: Up to 3 Basic Features</li></p>
+                <p className="text-gray-400 mb-2"><li>Revisions: 2 Rounds</li></p>
+                <p className="text-gray-400 mb-2"><li>Initial Consultation: Included</li></p>
+                <p className="text-gray-400 mb-2"><li>Post-Launch Support: 1 Month (Standard)</li></p>
+                <p className="text-gray-400 mb-2"><li>Estimated Timeline: 4-8 Weeks</li></p>
+                <hr className="text-gray-800 mt-4 mb-4" />
+                <div className="flex items-center justify-between mt-auto">
+                  <span className="text-2xl font-bold text-green-500">${4000}</span>
+                  <Link href="https://checkout.majestikmagik.com/b/00w5kCeiI6z32D49Q3f7i02"><button className="transition duration-300 ease-in-out bg-green-500 hover:bg-green-900 text-white cursor-pointer font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Buy Now</button></Link>                </div>
+              </div>
+
+              {/* Grand Architect */}
+              <div className="border border-gray-700 rounded-lg p-6 shadow-md bg-gray-900 transition duration-300 ease-in-out transform hover:scale-103 flex flex-col">
+                <Image src="/img/webdesign_03.png" alt="Grand Architect" width={192} height={192} className="w-full mb-4" />
+                <h3 className="text-xl font-semibold mb-2 text-white">Grand Architect</h3>
+                <p className="text-gray-400 mb-4">For complex projects and businesses requiring a fully customized and scalable online solution. Offers a bespoke, responsive website with unlimited sections, advanced content management options (including Headless CMS), in-depth SEO strategy, full social media integration, and ongoing priority support.</p>
+                <p className="text-gray-400 mb-2 font-semibold">Best For: Complex Projects, Ongoing Support</p>
+                <hr className="text-gray-800 mt-4 mb-4" />
+                <p className="text-gray-400 mb-2"><li>Custom Website Design: Bespoke, Unlimited Sections</li></p>
+                <p className="text-gray-400 mb-2"><li>Responsive Design: Included</li></p>
+                <p className="text-gray-400 mb-2"><li>Content Integration: Advanced Content Migration & Setup</li></p>
+                <p className="text-gray-400 mb-2"><li>SEO Optimization: Advanced SEO Strategy & Implementation</li></p>
+                <p className="text-gray-400 mb-2"><li>Mobile Optimization: Included</li></p>
+                <p className="text-gray-400 mb-2"><li>Contact Form: Included</li></p>
+                <p className="text-gray-400 mb-2"><li>Social Media Integration: Full Platform Integration</li></p>
+                <p className="text-gray-400 mb-2"><li>Analytics Setup: Custom Reporting & Insights</li></p>
+                <p className="text-gray-400 mb-2"><li>CMS Integration: Headless CMS (Next.js/Strapi) Options</li></p>
+                <p className="text-gray-400 mb-2"><li>Technology Stack: React, Next.js, TypeScript (Advanced)</li></p>
+                <p className="text-gray-400 mb-2"><li>E-commerce Ready: Included (Unlimited Products & Features)</li></p>
+                <p className="text-gray-400 mb-2"><li>Custom Features: Unlimited & Complex Features</li></p>
+                <p className="text-gray-400 mb-2"><li>Revisions: Unlimited Minor Revisions</li></p>
+                <p className="text-gray-400 mb-2"><li>Initial Consultation: Included</li></p>
+                <p className="text-gray-400 mb-2"><li>Post-Launch Support: 3 Months (Priority)</li></p>
+                <p className="text-gray-400 mb-2"><li>Estimated Timeline: 8+ Weeks</li></p>
+                <hr className="text-gray-800 mt-4 mb-4" />
+                <div className="flex items-center justify-between mt-auto">
+                  <span className="text-2xl font-bold text-green-500">${8000}</span>
+                  <Link href="https://checkout.majestikmagik.com/b/8x2fZg6QgaPj4Lcgerf7i03"><button className="transition duration-300 ease-in-out bg-green-500 hover:bg-green-900 text-white cursor-pointer font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Buy Now</button>
+                </Link></div>
+              </div>
+            </div>
           </div>
         </section>
 

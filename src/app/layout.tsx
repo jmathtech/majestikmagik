@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Majestik Magik - Crafting Digital Excellence in Website Design & Development",
-  description: "A Professional web design portfolio, consulting, and development service by Jamil Matheny in Richmond, Virginia.",
+  description: "A Professional web design portfolio, consulting, and development service in Richmond, Virginia.",
   authors: [
     {
       name: "Jamil Matheny",
@@ -62,21 +62,17 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { rel: 'icon', url: '/favicon.ico', sizes: 'any' }, // .ico can contain multiple sizes
+      { rel: 'icon', url: '/favicon.ico', sizes: 'any' },
       { rel: 'icon', type: 'image/png', sizes: '16x16', url: '/favicon-16x16.png' },
       { rel: 'icon', type: 'image/png', sizes: '32x32', url: '/favicon-32x32.png' },
-      // You can add more sizes like 48x48 if you have specific PNGs for them
-      // { rel: 'icon', type: 'image/png', sizes: '48x48', url: '/favicon-48x48.png' },
     ],
-    apple: [
-      { url: '/apple-touch-icon.png' }, // Defaults to 180x180, or you can specify sizes
-    ],
+    apple: '/apple-touch-icon.png',
     shortcut: '/favicon.ico',
   },
   // Open Graph Metadata
   openGraph: {
     title: "Majestik Magik - Crafting Digital Excellence in Website Design & Development",
-    description: "Professional web design, consulting, and development services by Jamil Matheny, based in Richmond, Virginia.",
+    description: "Professional web design, consulting, and development services based in Richmond, Virginia.",
     url: siteUrl,
     siteName: "Majestik Magik",
     images: [imageUrl],
@@ -87,7 +83,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Majestik Magik - Crafting Digital Excellence in Website Design & Development",
-    description: "Professional web design, consulting, and development services by Jamil Matheny, based in Richmond, Virginia.",
+    description: "Professional web design, consulting, and development services based in Richmond, Virginia.",
     creator: "@majestikmagik",
     images: [imageUrl],
   },
