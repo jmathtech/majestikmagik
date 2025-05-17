@@ -331,10 +331,10 @@ export default function Home() {
               We offer a range of services to help you achieve your online goals. Our services include:
             </p>
             <p className="text-xs mb-10 text-green-800">NOTE: We can write a custom invoice if one of these packages does not meet your requirements. For example: Small tweaks to current website, custom code for Shopify ecommerce, training only, etc.</p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Starter Spark */}
-              <div className="border border-gray-700 rounded-lg p-4 shadow-md bg-gray-900 transition duration-300 ease-in-out transform hover:scale-103 flex flex-col">
+              <div className="border border-gray-700 mb-10 rounded-lg p-4 shadow-md bg-gray-900 transition duration-300 ease-in-out transform hover:scale-103 flex flex-col">
                 <Image src="/img/webdesign_01.png" alt="Starter Spark" width={192} height={192} className="w-full mb-4" />
 
                 <h3 className="text-xl font-semibold mb-2 text-white">Starter Spark</h3>
@@ -367,7 +367,7 @@ export default function Home() {
               </div>
 
               {/* Magik Weaver */}
-              <div className="border border-gray-700 rounded-lg p-4 shadow-md bg-gray-900 transition duration-300 ease-in-out transform hover:scale-103 relative flex flex-col">
+              <div className="border border-gray-700 mb-10 rounded-lg p-4 shadow-md bg-gray-900 transition duration-300 ease-in-out transform hover:scale-103 relative flex flex-col">
                 <span className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-black text-sm font-bold py-1 px-2 rounded-full">Best Deal</span>
                 <div className="flex justify-center mb-2">
                   {/* You can add an icon here if you have one */}
@@ -406,7 +406,7 @@ export default function Home() {
               </div>
 
               {/* Grand Architect */}
-              <div className="border border-gray-700 rounded-lg p-4 shadow-md bg-gray-900 transition duration-300 ease-in-out transform hover:scale-103 flex flex-col">
+              <div className="border border-gray-700 mb-10 rounded-lg p-4 shadow-md bg-gray-900 transition duration-300 ease-in-out transform hover:scale-103 flex flex-col">
                 <Image src="/img/webdesign_03.png" alt="Grand Architect" width={192} height={192} className="w-full mb-4" />
                 <h3 className="text-xl font-semibold mb-2 text-white">Grand Architect</h3>
                 <p className="text-gray-400 mb-4">For complex projects and businesses requiring a fully customized and scalable online solution. Offers a bespoke, responsive website with unlimited sections, advanced content management options (including Headless CMS), in-depth SEO strategy, full social media integration, and ongoing priority support.</p>
@@ -435,7 +435,7 @@ export default function Home() {
                 <div className="flex items-center justify-between mt-auto">
                   <span className="text-2xl font-bold text-green-500">${(8000).toLocaleString()}</span>
                   <Link href="https://checkout.majestikmagik.com/b/8x2fZg6QgaPj4Lcgerf7i03"><button className="transition duration-300 ease-in-out bg-green-500 hover:bg-green-900 text-white cursor-pointer font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Buy Now</button>
-                </Link></div>
+                  </Link></div>
               </div>
             </div>
           </div>
@@ -502,7 +502,11 @@ export default function Home() {
               </Link> | (804) 362-7561
             </p>
             <p className="mt-4 mb-6">409 E. Laburnum Ave. Ste #3, Richmond, VA 23222 </p>
-<iframe width="380" height="82" className="mx-auto flex justify-center" src="https://climate.stripe.com/badge/QjbCfj?theme=dark&size=large&locale=en-US"></iframe>
+            <iframe
+              src="https://climate.stripe.com/badge/QjbCfj?theme=dark&size=large&locale=en-US"
+              className="block mx-auto w-[280px] h-[112px] md:w-[380px] md:h-[82px]"
+              title="Stripe Climate Badge"
+            ></iframe>
             <p className="text-xs text-zinc-800 mt-4 text-end">Designed by Jamil Matheny</p>
           </div>
         </section>
