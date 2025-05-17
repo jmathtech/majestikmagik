@@ -350,7 +350,7 @@ export default function Home() {
                   <li>Contact Form: Included</li>
                   <li>Social Media Integration: Basic Icons</li>
                   <li>Analytics Setup: Basic Google Analytics</li>
-                  <li>CMS Integration: WordPress Basic Setup</li>
+                  <li>CMS Integration: WordPress or Drupal Basic Setup</li>
                   <li>Technology Stack: HTML, CSS, JavaScript</li>
                   <li>E-commerce Ready: Optional (Simple Setup)</li>
                   <li>Custom Features: -</li>
@@ -383,6 +383,7 @@ export default function Home() {
                 <ul className="text-gray-400 mb-2 space-y-1 list-disc list-inside">
                   <li>Custom Website Design: Modern, Up to 7 Sections</li>
                   <li>Responsive Design: Included</li>
+                  <li>AWS / Google Cloud Integration: Included (Instance fees may apply outside of scope) </li>
                   <li>Content Integration: Comprehensive Content Integration</li>
                   <li>SEO Optimization: Enhanced On-Page & Technical</li>
                   <li>Mobile Optimization: Included</li>
@@ -393,7 +394,7 @@ export default function Home() {
                   <li>Technology Stack: React, Next.js, TypeScript (Basic)</li>
                   <li>E-commerce Ready: Included (Up to 10 Products)</li>
                   <li>Custom Features: Up to 3 Basic Features</li>
-                  <li>Revisions: 2 Rounds</li>
+                  <li>Revisions: 3 Rounds</li>
                   <li>Initial Consultation: Included</li>
                   <li>Post-Launch Support: 1 Month (Standard)</li>
                   <li>Estimated Timeline: 4-8 Weeks</li>
@@ -414,13 +415,14 @@ export default function Home() {
                 <ul className="text-gray-400 mb-2 space-y-1 list-disc list-inside">
                   <li>Custom Website Design: Bespoke, Unlimited Sections</li>
                   <li>Responsive Design: Included</li>
+                  <li>AWS / Google Cloud Integration: Included (Instance fees may apply outside of scope) </li>
                   <li>Content Integration: Advanced Content Migration & Setup</li>
                   <li>SEO Optimization: Advanced SEO Strategy & Implementation</li>
                   <li>Mobile Optimization: Included</li>
                   <li>Contact Form: Included</li>
                   <li>Social Media Integration: Full Platform Integration</li>
                   <li>Analytics Setup: Custom Reporting & Insights</li>
-                  <li>CMS Integration: Headless CMS (Next.js/Strapi) Options</li>
+                  <li>CMS Integration: Headless CMS (Next.js/Drupal) Options</li>
                   <li>Technology Stack: React, Next.js, TypeScript (Advanced)</li>
                   <li>E-commerce Ready: Included (Unlimited Products & Features)</li>
                   <li>Custom Features: Unlimited & Complex Features</li>
