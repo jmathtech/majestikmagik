@@ -501,8 +501,8 @@ export default function Home() {
                 jamil.matheny@<br />majestikmagik.com
               </Link> | (804) 362-7561
             </p>
-            <p className="mt-4">409 E. Laburnum Ave. Ste #3, Richmond, VA 23222 </p>
-
+            <p className="mt-4 mb-6">409 E. Laburnum Ave. Ste #3, Richmond, VA 23222 </p>
+<iframe width="380" height="82" className="mx-auto flex justify-center" src="https://climate.stripe.com/badge/QjbCfj?theme=dark&size=large&locale=en-US"></iframe>
             <p className="text-xs text-zinc-800 mt-4 text-end">Designed by Jamil Matheny</p>
           </div>
         </section>
