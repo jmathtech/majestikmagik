@@ -353,7 +353,7 @@ export default function Home() {
                 </ul>
                 <hr className="text-gray-800 mt-4 mb-4" />
                 <div className="flex items-center justify-between mt-auto">
-                  <span className="text-2xl font-bold text-green-500">${1500}</span>
+                  <span className="text-2xl font-bold text-green-500">${(1500).toLocaleString()}</span>
                   <Link href="https://checkout.majestikmagik.com/b/eVqdR83E41eJdhI4vJf7i01"><button className="transition duration-300 ease-in-out bg-green-500 hover:bg-green-900 text-white cursor-pointer font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Buy Now</button></Link>
                 </div>
               </div>
@@ -392,7 +392,7 @@ export default function Home() {
                 </ul>
                 <hr className="text-gray-800 mt-4 mb-4" />
                 <div className="flex items-center justify-between mt-auto">
-                  <span className="text-2xl font-bold text-green-500">${4000}</span>
+                  <span className="text-2xl font-bold text-green-500">${(4000).toLocaleString()}</span>
                   <Link href="https://checkout.majestikmagik.com/b/00w5kCeiI6z32D49Q3f7i02"><button className="transition duration-300 ease-in-out bg-green-500 hover:bg-green-900 text-white cursor-pointer font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Buy Now</button></Link>                </div>
               </div>
 
@@ -423,7 +423,7 @@ export default function Home() {
                 </ul>
                 <hr className="text-gray-800 mt-4 mb-4" />
                 <div className="flex items-center justify-between mt-auto">
-                  <span className="text-2xl font-bold text-green-500">${8000}</span>
+                  <span className="text-2xl font-bold text-green-500">${(8000).toLocaleString()}</span>
                   <Link href="https://checkout.majestikmagik.com/b/8x2fZg6QgaPj4Lcgerf7i03"><button className="transition duration-300 ease-in-out bg-green-500 hover:bg-green-900 text-white cursor-pointer font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Buy Now</button>
                 </Link></div>
               </div>
