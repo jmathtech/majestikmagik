@@ -41,7 +41,7 @@ export default function TermsOfServiceContent() {
                 </Link>
             </header>
             <div className="py-8">
-                <h1 className="text-3xl font-bold mb-6 text-center">Terms of Service for Majestik Magik</h1>
+                <h1 className="text-3xl font-bold mt-12 mb-12 text-center">Terms of Service for Majestik Magik</h1>
 
                 <p className="mb-4 font-light text-xs italic">
                     <strong>Last Updated:</strong> May 15, 2025
@@ -57,39 +57,39 @@ export default function TermsOfServiceContent() {
                 <h2 className="text-xl font-semibold mb-2">2. Services Provided</h2>
                 <p className="mb-4">Majestik Magik offers website design and development services, which may include but are not limited to:</p>
                 <ul className="list-disc list-inside mb-4">
-                    <li>Website design (including mockups and visual concepts)</li>
-                    <li>Website development (coding, implementation)</li>
-                    <li>WordPress theme installation and customization</li>
-                    <li>Plugin integration and configuration</li>
-                    <li>Website maintenance and support</li>
-                    <li>Training on website content management</li>
+                    <li className="mb-6">Website design (including mockups and visual concepts)</li>
+                    <li className="mb-6">Website development (coding, implementation)</li>
+                    <li className="mb-6">WordPress theme installation and customization</li>
+                    <li className="mb-6">Plugin integration and configuration</li>
+                    <li className="mb-6">Website maintenance and support</li>
+                    <li className="mb-6">Training on website content management</li>
                 </ul>
                 <p className="mb-4">The specific details and scope of the Services will be outlined in a separate agreement or proposal provided to you.</p>
 
                 <h2 className="text-xl font-semibold mb-2">3. Client Responsibilities</h2>
                 <p className="mb-4">To enable us to provide the Services effectively, you agree to:</p>
                 <ul className="list-disc list-inside mb-4">
-                    <li>Provide us with clear and timely instructions, information, and materials necessary for the project.</li>
-                    <li>Ensure that you have the legal right to use any content, images, trademarks, or other materials you provide to us.</li>
-                    <li>Review and provide feedback on our work promptly.</li>
-                    <li>Meet agreed-upon deadlines for providing information and approvals.</li>
-                    <li>Pay our invoices according to the agreed-upon payment terms.</li>
+                    <li className="mb-6">Provide us with clear and timely instructions, information, and materials necessary for the project.</li>
+                    <li className="mb-6">Ensure that you have the legal right to use any content, images, trademarks, or other materials you provide to us.</li>
+                    <li className="mb-6">Review and provide feedback on our work promptly.</li>
+                    <li className="mb-6">Meet agreed-upon deadlines for providing information and approvals.</li>
+                    <li className="mb-6">Pay our invoices according to the agreed-upon payment terms.</li>
                 </ul>
 
                 <h2 className="text-xl font-semibold mb-2">4. Payment Terms</h2>
                 <p className="mb-4">The fees for our Services will be outlined in a separate agreement or proposal. Unless otherwise agreed in writing, payment terms are as follows:</p>
                 <ul className="list-disc list-inside mb-4">
-                    <li>A deposit may be required to commence work on a project.</li>
-                    <li>Interim payments may be required at agreed-upon milestones.</li>
-                    <li>The final balance is due upon completion of the project or as otherwise specified.</li>
+                    <li className="mb-6">A deposit may be required to commence work on a project.</li>
+                    <li className="mb-6">Interim payments may be required at agreed-upon milestones.</li>
+                    <li className="mb-6">The final balance is due upon completion of the project or as otherwise specified.</li>
                 </ul>
                 <p className="mb-4">Payments are to be made in the currency specified in the agreement. Late payments may be subject to interest charges as permitted by applicable law in the United States.</p>
 
                 <h2 className="text-xl font-semibold mb-2">5. Intellectual Property</h2>
                 <ul className="list-disc list-inside mb-4">
-                    <li><strong>Client Content:</strong> You retain ownership of the content you provide to us (text, images, etc.). You grant us a non-exclusive license to use, reproduce, and modify this content solely for the purpose of providing the Services.</li>
-                    <li><strong>Developed Work:</strong> Upon full payment of all agreed-upon fees, you will own the final website design and development work, excluding any third-party components (such as themes, plugins, or stock images) which may have their own licensing terms. We retain the right to showcase the completed project in our portfolio.</li>
-                    <li><strong>Our Tools and Templates:</strong> We retain ownership of any proprietary tools, templates, code libraries, and processes used in the provision of the Services.</li>
+                    <li className="mb-6"><strong>Client Content:</strong> You retain ownership of the content you provide to us (text, images, etc.). You grant us a non-exclusive license to use, reproduce, and modify this content solely for the purpose of providing the Services.</li>
+                    <li className="mb-6"><strong>Developed Work:</strong> Upon full payment of all agreed-upon fees, you will own the final website design and development work, excluding any third-party components (such as themes, plugins, or stock images) which may have their own licensing terms. We retain the right to showcase the completed project in our portfolio.</li>
+                    <li className="mb-6"><strong>Our Tools and Templates:</strong> We retain ownership of any proprietary tools, templates, code libraries, and processes used in the provision of the Services.</li>
                 </ul>
 
                 <h2 className="text-xl font-semibold mb-2">6. Project Timeline</h2>
@@ -105,10 +105,10 @@ export default function TermsOfServiceContent() {
                 <h2 className="text-xl font-semibold mb-2">9. Indemnification</h2>
                 <p className="mb-4">You agree to indemnify and hold harmless Majestik Magik, its affiliates, officers, directors, employees, and agents from and against any and all claims, liabilities, damages, losses, and expenses (including reasonable attorneys&apos; fees) arising out of or relating to:</p>
                 <ul className="list-disc list-inside mb-4">
-                    <li>Your breach of these Terms.</li>
-                    <li>Your use of the Site or our Services.</li>
-                    <li>Any content or materials you provide to us.</li>
-                    <li>Your infringement of any intellectual property rights of third parties.</li>
+                    <li className="mb-6">Your breach of these Terms.</li>
+                    <li className="mb-6">Your use of the Site or our Services.</li>
+                    <li className="mb-6">Any content or materials you provide to us.</li>
+                    <li className="mb-6">Your infringement of any intellectual property rights of third parties.</li>
                 </ul>
 
                 <h2 className="text-xl font-semibold mb-2">10. Termination</h2>
