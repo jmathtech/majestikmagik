@@ -509,15 +509,10 @@ export default function Home() {
           <div className=" bg-black border border-gray-700 text-white p-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-103"
           >
             <p className="mb-4">Do you have a project in mind? Contact us at:</p>
-            <p className="mb-4">
-              <Link
-                href="mailto:jamil.matheny@majestikmagik.com"
-                className="underline transition duration-300 ease-in-out hover:text-gray-400"
-              >
-                jamil.matheny@<br />majestikmagik.com
-              </Link> | (804) 362-7561
-            </p>
-            <p className="mt-4 mb-6">405 E. Laburnum Ave. Ste #3, Richmond, VA 23222 </p>
+            <p className="mb-2">Majestik Magik</p>
+            <p className="mb-2">405 E. Laburnum Ave Ste #3</p>
+            <p className="mb-2"><Link href="mailto:jamil.matheny@majestikmagik.com" className="underline">jamil.matheny@majestikmagik.com</Link></p>
+            <p className="mb-4">804.362.7561</p>
             <iframe
               src="https://climate.stripe.com/badge/QjbCfj?theme=dark&size=large&locale=en-US"
               className="block mx-auto w-[280px] h-[112px] md:w-[380px] md:h-[82px]"
