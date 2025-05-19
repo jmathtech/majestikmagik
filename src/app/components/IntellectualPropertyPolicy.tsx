@@ -137,7 +137,7 @@ export default function IntellectualPropertyPolicyPage() {
           If you have any questions or concerns about this Intellectual Property Policy, please contact us at:
         </p>
         <p className="mb-2">Majestik Magik</p>
-        <p className="mb-2">409 E. Laburnum Ave Ste #3</p>
+        <p className="mb-2">405 E. Laburnum Ave Ste #3</p>
         <p className="mb-2"><Link href="mailto:jamil.matheny@majestikmagik.com" className="underline">jamil.matheny@majestikmagik.com</Link></p>
         <p className="mb-4">804.362.7561</p>
 

@@ -12,10 +12,26 @@ export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null); // Ref for the menu
   const buttonRef = useRef<HTMLButtonElement>(null); //   Ref for the button
+  // -- START: Cookie Banner --
+  const [showCookieBanner, setShowCookieBanner] = useState(false);
 
   // -- START: Scroll Effect --
   const [isScrolled, setIsScrolled] = useState(false); // State to manage scroll position
 
+
+  // -- START: Cookie Banner Logic --
+  useEffect(() => {
+    const cookieConsent = localStorage.getItem('cookieConsent');
+    if (!cookieConsent) {
+      setShowCookieBanner(true);
+    }
+  }, []);
+
+  const handleAcceptCookies = () => {
+    localStorage.setItem('cookieConsent', 'true');
+    setShowCookieBanner(false);
+  };
+  // -- END: Cookie Banner -- 
 
   useEffect(() => {
     // Function to handle scroll event
@@ -520,6 +536,26 @@ export default function Home() {
           <Link href="/terms-of-service" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-md'}`}>Terms of Service</Link>
         </div>
       </main>
+      {/* Cookie Banner */}
+      {showCookieBanner && (
+        <div className="fixed bottom-0 left-0 right-0 bg-black border-t border-gray-600 text-white p-4 shadow-lg z-50 flex flex-col sm:flex-row justify-between items-center">
+          <p className="text-xs mb-2 sm:mb-0 sm:mr-4">
+            We use cookies to ensure you get the best experience on our website. By continuing to use our site, you agree to our use of cookies.
+          </p>
+          {/* Button Group */}
+          <div className="flex flex-col sm:flex-row items-center gap-2 mt-2 sm:mt-0"> {/* Manages button layout and spacing */}
+            <button
+              onClick={handleAcceptCookies}
+              className="btn bg-blue-400 transition-colors duration-600 ease-in-out text-white text-xs px-4 py-2 rounded-md border border-gray-600 bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer w-full sm:w-auto"
+            >
+              Accept
+            </button>
+            <Link href="/cookie-policy" className="w-full sm:w-auto"> {/* Ensure Link also adapts width */}
+              <button className="btn bg-black transition-colors duration-600 ease-in-out text-white text-xs px-4 py-2 rounded-md border border-gray-600 bg-gradient-to-r hover:from-black hover:to-purple-950 hover:cursor-pointer w-full">Cookie Policy</button>
+            </Link>
+          </div>
+        </div>
+      )}
     </>
   );
 }

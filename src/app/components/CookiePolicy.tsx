@@ -95,7 +95,7 @@ export default function CookiePolicyPage() {
         <h2 className="text-xl font-semibold mb-2">7. Contact Us</h2>
         <p className="mb-4">If you have any questions about our use of cookies or other tracking technologies, please contact us at:</p>
         <p className="mb-2">Majestik Magik</p>
-        <p className="mb-2">409 E. Laburnum Ave Ste #3</p>
+        <p className="mb-2">405 E. Laburnum Ave Ste #3</p>
         <p className="mb-2"><Link href="mailto:jamil.matheny@majestikmagik.com" className="underline">jamil.matheny@majestikmagik.com</Link></p>
         <p className="mb-4">804.362.7561</p>
 
