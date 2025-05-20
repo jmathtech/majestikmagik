@@ -408,7 +408,7 @@ export default function Home() {
                     <li>Analytics Setup: Advanced Analytics & Tracking</li>
                     <li>CMS Integration: WordPress or Drupal Advanced Setup & Customization</li>
                     <li>Technology Stack: React, Next.js, TypeScript (Basic)</li>
-                    <li>E-commerce Ready: Included (Up to 10 Products)</li>
+                    <li>E-commerce Integration: Shopify or WooCommerce (Up to 10 Products)</li>
                     <li>Custom Features: Up to 3 Basic Features</li>
                     <li>Revisions: 3 Rounds</li>
                     <li>Initial Consultation: Included</li>
@@ -440,7 +440,7 @@ export default function Home() {
                     <li>Analytics Setup: Custom Reporting & Insights</li>
                     <li>CMS Integration: Wordpress or Headless CMS (Next.js/Drupal) Options</li>
                     <li>Technology Stack: React, Next.js, TypeScript (Advanced)</li>
-                    <li>E-commerce Ready: Included (Up to 10 products)</li>
+                    <li>E-commerce Integration: Shopify or WooCommerce (Up to 10 Products)</li>
                     <li>Custom Features: Unlimited & Complex Features</li>
                     <li>Revisions: Unlimited Small Revisions</li>
                     <li>Initial Consultation: Included</li>
