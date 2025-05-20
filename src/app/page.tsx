@@ -370,11 +370,10 @@ export default function Home() {
                     <li>CMS Integration: WordPress or Drupal Basic Setup</li>
                     <li>Technology Stack: HTML, CSS, JavaScript</li>
                     <li>E-commerce Ready: Optional (Simple Setup)</li>
-                    <li>Custom Features: -</li>
                     <li>Revisions: 1 Round</li>
                     <li>Initial Consultation: Included</li>
-                    <li>Post-Launch Support: 1 Week (Basic)</li>
-                    <li>Estimated Timeline: 2-4 Weeks</li>
+                    <li>Post-Launch Support: 5 days</li>
+                    <li>Estimated Timeline: 5-7 days</li>
                   </ul>
                   <hr className="text-gray-800 mt-4 mb-4" />
                   <div className="flex items-center justify-between mt-auto">
@@ -407,14 +406,14 @@ export default function Home() {
                     <li>Contact Form: Included</li>
                     <li>Social Media Integration: Enhanced Integration</li>
                     <li>Analytics Setup: Advanced Analytics & Tracking</li>
-                    <li>CMS Integration: WordPress Advanced Setup & Customization</li>
+                    <li>CMS Integration: WordPress or Drupal Advanced Setup & Customization</li>
                     <li>Technology Stack: React, Next.js, TypeScript (Basic)</li>
                     <li>E-commerce Ready: Included (Up to 10 Products)</li>
                     <li>Custom Features: Up to 3 Basic Features</li>
                     <li>Revisions: 3 Rounds</li>
                     <li>Initial Consultation: Included</li>
                     <li>Post-Launch Support: 1 Month (Standard)</li>
-                    <li>Estimated Timeline: 4-8 Weeks</li>
+                    <li>Estimated Timeline: 10-14 days</li>
                   </ul>
                   <hr className="text-gray-800 mt-4 mb-4" />
                   <div className="flex items-center justify-between mt-auto">
@@ -439,14 +438,14 @@ export default function Home() {
                     <li>Contact Form: Included</li>
                     <li>Social Media Integration: Full Platform Integration</li>
                     <li>Analytics Setup: Custom Reporting & Insights</li>
-                    <li>CMS Integration: Headless CMS (Next.js/Drupal) Options</li>
+                    <li>CMS Integration: Wordpress or Headless CMS (Next.js/Drupal) Options</li>
                     <li>Technology Stack: React, Next.js, TypeScript (Advanced)</li>
-                    <li>E-commerce Ready: Included (Unlimited Products & Features)</li>
+                    <li>E-commerce Ready: Included (Up to 10 products)</li>
                     <li>Custom Features: Unlimited & Complex Features</li>
                     <li>Revisions: Unlimited Small Revisions</li>
                     <li>Initial Consultation: Included</li>
                     <li>Post-Launch Support: 3 Months (Priority)</li>
-                    <li>Estimated Timeline: 8+ Weeks</li>
+                    <li>Estimated Timeline: 30-50 days</li>
                   </ul>
                   <hr className="text-gray-800 mt-4 mb-4" />
                   <div className="flex items-center justify-between mt-auto">
