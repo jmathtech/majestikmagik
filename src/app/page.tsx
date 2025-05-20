@@ -345,7 +345,7 @@ export default function Home() {
             <h2 className="text-2xl font-bold mb-8 text-center text-white">Our Services</h2>
             <div className="border border-gray-700 rounded-lg p-6 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-101">
               <p className="p-4 text-sm text-center text-gray-500">
-                We offer a range of services to help you achieve your online goals. Our services include:
+                We offer FREE consultation and a range of services to help you achieve your online goals. Our services include:
               </p>
               <p className="text-xs mb-10 text-blue-800">NOTE: We can write a custom invoice if one of these packages does not meet your requirements. For example: Small tweaks to current website, custom code for Shopify ecommerce, training only, etc.</p>
 
