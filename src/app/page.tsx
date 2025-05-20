@@ -254,7 +254,7 @@ export default function Home() {
                 </p>
                 <div className="text-right">
                   <button
-                    className="btn mt-4 bg-blue-400 transition-colors duration-600 ease-in-out text-white px-4 py-2 rounded-md bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer inline-block"
+                    className="btn mt-4 bg-blue-500 transition-colors duration-600 ease-in-out font-bold text-white px-4 py-2 rounded-md bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer inline-block"
                     onClick={() => (window.location.href = "https://cearcochemicals.com")}
                   >
                     View Project
@@ -274,7 +274,7 @@ export default function Home() {
                 </p>
                 <div className="text-right">
                   <button
-                    className="btn mt-4 bg-blue-400 transition-colors duration-600 ease-in-out text-white px-4 py-2 rounded-md bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer inline-block"
+                    className="btn mt-4 bg-blue-500 transition-colors duration-600 ease-in-out font-bold text-white px-4 py-2 rounded-md bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer inline-block"
                     onClick={() => (window.location.href = "https://parrisgainer.com")}
                   >
                     View Project
@@ -292,7 +292,7 @@ export default function Home() {
                   Made with the Next.js framework (javascript/typescript), Tailwind CSS, AWS RDS, and deployed onVercel hosting.</p>
                 <div className="text-right">
                   <button
-                    className="btn mt-4 bg-blue-400 transition-colors duration-600 ease-in-out text-white px-4 py-2 rounded-md bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer inline-block"
+                    className="btn mt-4 bg-blue-500 transition-colors duration-600 ease-in-out font-bold text-white px-4 py-2 rounded-md bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer inline-block"
                     onClick={() => (window.location.href = "https://cleaning.majestikmagik.com")}
                   >
                     View Project
@@ -318,7 +318,7 @@ export default function Home() {
                   Made with the React JS and Material UI framework.</p>
                 <div className="text-right">
                   <button
-                    className="btn mt-4 bg-blue-400 transition-colors duration-600 ease-in-out text-white px-4 py-2 rounded-md bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer end inline-block"
+                    className="btn mt-4 bg-blue-400 transition-colors duration-600 ease-in-out font-bold text-white px-4 py-2 rounded-md bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer end inline-block"
                     onClick={() => (window.location.href = "https://github.com/jmathtech/Zeus-Suits-Online-Shop")}
                   >
                     View Project
