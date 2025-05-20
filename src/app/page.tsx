@@ -318,7 +318,7 @@ export default function Home() {
                   Made with the React JS and Material UI framework.</p>
                 <div className="text-right">
                   <button
-                    className="btn mt-4 bg-blue-400 transition-colors duration-600 ease-in-out font-bold text-white px-4 py-2 rounded-md bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer end inline-block"
+                    className="btn mt-4 bg-blue-500 transition-colors duration-600 ease-in-out font-bold text-white px-4 py-2 rounded-md bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer end inline-block"
                     onClick={() => (window.location.href = "https://github.com/jmathtech/Zeus-Suits-Online-Shop")}
                   >
                     View Project
