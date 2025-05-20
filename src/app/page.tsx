@@ -219,7 +219,7 @@ export default function Home() {
             Crafting Digital Excellence
           </h2>
           <p className="text-md md:text-lg text-gray-400 mb-8 max-w-2xl mx-auto"> {/* Subheading styling */}
-            Overcome digital hurdles with a solopreneur&apos;s impactful and scalable web solutions designed for growth.
+            Overcome digital hurdles with impactful and scalable web solutions designed for growth.
           </p>
           <Link
             href="#services"
