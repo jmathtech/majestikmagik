@@ -211,7 +211,7 @@ export default function Home() {
 
           {/* === Hero Section Start === */}
           <section className="text-center py-16 md:py-24 lg:py-32 mb-6"> {/* Added padding and bottom margin */}
-            <h2 className="text-4xl md:text-5xl lg:text-8xl font-extrabold mb-4
+            <h2 className="text-4xl md:text-5xl lg:text-8xl mask-y-from-neutral-950 mb-4
              bg-gradient-to-r from-blue-400 via-blue-400 to-purple-900 
              [-webkit-background-clip:text] 
              bg-clip-text text-transparent
