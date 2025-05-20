@@ -283,7 +283,7 @@ export default function Home() {
               </div>
 
               <div className="border border-gray-700 rounded-lg p-6 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-103">
-                <h3 className="font-semibold text-lg">cleaning.majestikmagik.com</h3>
+                <h3 className="font-semibold text-lg">Cleaning.MajestikMagik.com</h3>
                 <Image src="/img/cleaningmajestikmagik.webp" alt="Cleaning Majestik Magik" width={500} height={300} className="rounded-md mt-4 mb-4" />
                 <p className="text-sm text-gray-500">
                   Let&apos;s bring cleanliness & comfort to your space.
