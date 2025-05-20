@@ -345,7 +345,7 @@ export default function Home() {
             <h2 className="text-2xl font-bold mb-8 text-center text-white">Our Services</h2>
             <div className="border border-gray-700 rounded-lg p-6 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-101">
               <p className="p-4 text-sm text-center text-gray-500">
-                We offer FREE consultation and a range of services to help you achieve your online goals. Our services include:
+                We offer <b>FREE consultation</b> and a range of services to help you achieve your online goals. Our services include:
               </p>
               <p className="text-xs mb-10 text-blue-800">NOTE: We can write a custom invoice if one of these packages does not meet your requirements. For example: Small tweaks to current website, custom code for Shopify ecommerce, training only, etc.</p>
 
@@ -523,12 +523,12 @@ export default function Home() {
           </section>
 
 
-          <div className="mt-8 flex justify-between text-xs text-gray-200">
+          <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 text-center gap-4 text-xs text-gray-200">
             <Link href="/privacy-policy" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-md'}`}>Privacy Policy</Link>
             <Link href="/refund-policy" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-md'}`}>Refund Policy</Link>
             <Link href="/cookie-policy" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-md'}`}>Cookie Policy</Link>
             <Link href="/intellectual-property-policy" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-md'}`}>Intellectual Property Policy</Link>
-            <Link href="/cyber-security" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-md'}`}>Cyber Security Committment</Link>
+            <Link href="/cyber-security" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-md'}`}>Cyber Security</Link>
             <Link href="/terms-of-service" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-md'}`}>Terms of Service</Link>
           </div>
         </main>
