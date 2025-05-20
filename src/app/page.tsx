@@ -522,16 +522,17 @@ export default function Home() {
               <p className="text-xs text-zinc-800 mt-4 text-end">Designed by Jamil Matheny</p>
             </div>
           </section>
-        </main>
 
-        <div className="mt-8 flex justify-between text-xs text-gray-200">
-          <Link href="/privacy-policy" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-md'}`}>Privacy Policy</Link>
-          <Link href="/refund-policy" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-md'}`}>Refund Policy</Link>
-          <Link href="/cookie-policy" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-md'}`}>Cookie Policy</Link>
-          <Link href="/intellectual-property-policy" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-md'}`}>Intellectual Property Policy</Link>
-          <Link href="/cyber-security" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-md'}`}>Cyber Security Committment</Link>
-          <Link href="/terms-of-service" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-md'}`}>Terms of Service</Link>
-        </div>
+
+          <div className="mt-8 flex justify-between text-xs text-gray-200">
+            <Link href="/privacy-policy" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-md'}`}>Privacy Policy</Link>
+            <Link href="/refund-policy" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-md'}`}>Refund Policy</Link>
+            <Link href="/cookie-policy" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-md'}`}>Cookie Policy</Link>
+            <Link href="/intellectual-property-policy" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-md'}`}>Intellectual Property Policy</Link>
+            <Link href="/cyber-security" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-md'}`}>Cyber Security Committment</Link>
+            <Link href="/terms-of-service" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-md'}`}>Terms of Service</Link>
+          </div>
+        </main>
       </div>
 
       {/* Cookie Banner */}
