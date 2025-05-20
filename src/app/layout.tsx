@@ -62,9 +62,10 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { rel: 'icon', url: '/favicon.ico', sizes: 'any' },
+      { rel: 'icon', type: 'image/x-icon', url: '/favicon.ico', sizes: 'any' },
       { rel: 'icon', type: 'image/png', sizes: '16x16', url: '/favicon-16x16.png' },
       { rel: 'icon', type: 'image/png', sizes: '32x32', url: '/favicon-32x32.png' },
+      { rel: 'icon', type: 'image/png', sizes: 'any', url: '/media-icon.png' },
     ],
     apple: '/apple-touch-icon.png',
     shortcut: '/favicon.ico',

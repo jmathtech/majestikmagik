@@ -137,12 +137,35 @@ body.body-gradient-bg::before {
   pointer-events: none;
 }
 
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
 @keyframes moveGradientCircle {
   0% { transform: translate(0, 0) rotate(0deg); opacity: 0.8; }
   25% { transform: translate(40vw, 30vh) rotate(90deg); }
   50% { transform: translate(10vw, 70vh) rotate(180deg); opacity: 1; }
   75% { transform: translate(60vw, 10vh) rotate(270deg); }
   100% { transform: translate(0, 0) rotate(360deg); opacity: 0.8; }
+}
+
+/* For Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #141414; /* Dark track background */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #1b63eb, #8a2be2); /* Darker thumb */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to right, #1346a7, #551b8b);
 }
 
 /* --- Base Body & Theme Styles --- */
