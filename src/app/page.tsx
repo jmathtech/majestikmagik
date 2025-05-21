@@ -15,6 +15,10 @@ export default function Home() {
   // -- START: Cookie Banner --
   const [showCookieBanner, setShowCookieBanner] = useState(false);
 
+  // -- START: Show MagikWeaverPrice --
+  const [showStarterSparkPrice, setShowStarterSparkPrice] = useState(false);
+  const [showMagikWeaverPrice, setShowMagikWeaverPrice] = useState(false);
+  const [showGrandArchitectPrice, setShowGrandArchitectPrice] = useState(false);
   // -- START: Scroll Effect --
   const [isScrolled, setIsScrolled] = useState(false); // State to manage scroll position
 
@@ -377,7 +381,17 @@ export default function Home() {
                   </ul>
                   <hr className="text-gray-800 mt-4 mb-4" />
                   <div className="flex items-center justify-between mt-auto">
-                    <span className="text-2xl font-bold text-blue-500">${(1500).toLocaleString()}</span>
+                    {showStarterSparkPrice ? (
+                      <span className="text-2xl font-bold text-blue-500 animate-flipIn">${(1500).toLocaleString()}</span>
+
+
+                    ) : (
+                      <button
+                        onClick={() => setShowStarterSparkPrice(true)}
+                        className="transition duration-300 ease-in-out bg-gray-700 hover:bg-gray-600 text-white cursor-pointer font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                      >
+                        See Price
+                      </button>)}
                     <Link href="https://checkout.majestikmagik.com/b/eVqdR83E41eJdhI4vJf7i01"><button className="transition duration-300 ease-in-out bg-gradient-to-r bg-blue-500 hover:from-blue-600 hover:to-purple-700 text-white cursor-pointer font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Buy Now</button></Link>
                   </div>
                 </div>
@@ -417,7 +431,18 @@ export default function Home() {
                   </ul>
                   <hr className="text-gray-800 mt-4 mb-4" />
                   <div className="flex items-center justify-between mt-auto">
-                    <span className="text-2xl font-bold text-blue-500">${(4000).toLocaleString()}</span>
+                    {showMagikWeaverPrice ? (
+                      <span className="text-2xl font-bold text-blue-500 animate-flipIn">${(4000).toLocaleString()}</span>
+
+
+                    ) : (
+                      <button
+                        onClick={() => setShowMagikWeaverPrice(true)}
+                        className="transition duration-300 ease-in-out bg-gray-700 hover:bg-gray-600 text-white cursor-pointer font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                      >
+                        See Price
+                      </button>)}
+
                     <Link href="https://checkout.majestikmagik.com/b/00w5kCeiI6z32D49Q3f7i02"><button className="transition duration-300 ease-in-out bg-gradient-to-r bg-blue-500 hover:from-blue-600 hover:to-purple-700 text-white cursor-pointer font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Buy Now</button></Link>                </div>
                 </div>
 
@@ -449,7 +474,17 @@ export default function Home() {
                   </ul>
                   <hr className="text-gray-800 mt-4 mb-4" />
                   <div className="flex items-center justify-between mt-auto">
-                    <span className="text-2xl font-bold text-blue-500">${(8000).toLocaleString()}</span>
+                    {showGrandArchitectPrice ? (
+                      <span className="text-2xl font-bold text-blue-500 animate-flipIn">${(8000).toLocaleString()}</span>
+
+
+                    ) : (
+                      <button
+                        onClick={() => setShowGrandArchitectPrice(true)}
+                        className="transition duration-300 ease-in-out bg-gray-700 hover:bg-gray-600 text-white cursor-pointer font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                      >
+                        See Price
+                      </button>)}
                     <Link href="https://checkout.majestikmagik.com/b/8x2fZg6QgaPj4Lcgerf7i03"><button className="transition duration-300 ease-in-out bg-gradient-to-r bg-blue-500 hover:from-blue-600 hover:to-purple-700 text-white cursor-pointer font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Buy Now</button>
                     </Link></div>
                 </div>
