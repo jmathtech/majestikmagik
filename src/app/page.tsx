@@ -38,9 +38,21 @@ export default function Home() {
   };
 
   const handleDeclineCookies = () => {
-    localStorage.setItem('cookieConsent', '');
-    window.history.back();
-    setShowCookieBanner(false);
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        localStorage.setItem('cookieConsent', '');
+      }
+
+      if (window.history.length > 1) {
+        window.history.back();
+      } else {
+        window.location.href = '/';
+      }
+    } catch (error) {
+      console.error('Error accepting cookies:', error);
+    } finally {
+      setShowCookieBanner(false);
+    }
   };
   // -- END: Cookie Banner -- 
 
