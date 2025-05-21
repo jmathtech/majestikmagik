@@ -9,19 +9,20 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 export default function Home() {
   // State to manage mobile menu visibility
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null); // Ref for the menu
   const buttonRef = useRef<HTMLButtonElement>(null); //   Ref for the button
-  // -- START: Cookie Banner --
+
+  // UI state
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Feature-specific state
   const [showCookieBanner, setShowCookieBanner] = useState(false);
 
-  // -- START: Show MagikWeaverPrice --
+  // Pricing display state
   const [showStarterSparkPrice, setShowStarterSparkPrice] = useState(false);
   const [showMagikWeaverPrice, setShowMagikWeaverPrice] = useState(false);
   const [showGrandArchitectPrice, setShowGrandArchitectPrice] = useState(false);
-  // -- START: Scroll Effect --
-  const [isScrolled, setIsScrolled] = useState(false); // State to manage scroll position
-
 
   // -- START: Cookie Banner Logic --
   useEffect(() => {
@@ -84,6 +85,10 @@ export default function Home() {
     document.addEventListener('click', handleClickOutside);
     document.addEventListener('touchstart', handleClickOutside);
 
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+    };
   }, [isMobileMenuOpen]); // Cleanup function to remove event listeners
 
   return (
@@ -193,26 +198,14 @@ export default function Home() {
           className={`lg:hidden fixed inset-x-0 bg-black text-white flex flex-col items-center gap-4 py-16 transition-transform duration-300 ease-in-out transform z-10 ${isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full' // Slide down/up animation
             } ${isScrolled ? 'top-12' : 'top-16' // Adjust padding based on scroll state
             }`}
-
         >
           <Link href="#portfolio" className="px-4 py-2 rounded-md font-extralight transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Portfolio</Link>
-          <Link
-            href="#design"
-            className={`px-4 py-2 rounded-md font-extralight transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
-
-            Design
-          </Link>
-          <Link
-            href="#services"
-            className={`px-4 py-2 rounded-md font-extralight transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
-
-            Services
-          </Link>
+          <Link href="#design" className="px-4 py-2 rounded-md font-extralight transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Design</Link>
+          <Link href="#services" className="px-4 py-2 rounded-md font-extralight transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Services</Link>
           <Link href="#testimonials" className="px-4 py-2 rounded-md font-extralight transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Testimonials</Link>
           <Link href="#contact" className="px-4 py-2 rounded-md font-extralight transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Contact</Link>
-          <Link href="https://www.github.com/jmathtech" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}><FontAwesomeIcon icon={faGithub} className="text-white text-2xl" /> </Link>
-          <Link href="https://www.upwork.com/freelancers/~01bfab6a82f6cc6c6c?mp_source=share" target="_blank" rel="noopener noreferrer" // Added rel for security
-            className="px-4 py-2 rounded-md transition-all duration-600 ease-in-out w-full hover:bg-gray-700 text-center">
+          <Link href="https://www.github.com/jmathtech" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}><FontAwesomeIcon icon={faGithub} className="text-white text-2xl" /></Link>
+          <Link href="https://www.upwork.com/freelancers/~01bfab6a82f6cc6c6c?mp_source=share" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>
             <Image src="img/upwork-white.svg" alt="Upwork Logo" width={22} height={22} className="transition-all duration-600 ease-in-out inline-block" />
           </Link>
         </nav>
@@ -223,7 +216,7 @@ export default function Home() {
 
           {/* === Hero Section Start === */}
           <section className="text-center py-16 md:py-24 lg:py-32 mb-12"> {/* Added padding and bottom margin */}
-            <h2 className="text-4xl md:text-5xl lg:text-8xl mask-t-from-neutral-950 mb-4 font-extralight
+            <h2 className="text-4xl md:text-5xl lg:text-8xl mb-4 font-extralight
              bg-gradient-to-r from-blue-400 via-blue-400 to-purple-900 
              [-webkit-background-clip:text] 
              bg-clip-text text-transparent
@@ -546,7 +539,7 @@ export default function Home() {
             <h2 className="text-4xl font-bold mb-6">Get In Touch</h2>
             <div className=" bg-black border border-gray-700 text-white p-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-103"
             >
-              <p className="mb-12 font-bold">Do you have a web design project you want to take to the next level? <br/> Contact us for a free consultation today!</p>
+              <p className="mb-12 font-bold">Do you have a web design project you want to take to the next level? <br /> Contact us for a free consultation today!</p>
               <p className="mb-2">Majestik Magik</p>
               <p className="mb-2">405 E. Laburnum Ave Ste #3</p>
               <p className="mb-2"><Link href="mailto:jamil.matheny@majestikmagik.com" className="hover:text-gray-600 transition duration-900 ease-in-out">jamil.matheny@majestikmagik.com</Link></p>
@@ -573,31 +566,33 @@ export default function Home() {
       </div>
 
       {/* Cookie Banner */}
-      {showCookieBanner && (
-        <div className="fixed bottom-0 left-0 right-0 bg-black border-t border-gray-600 text-white p-4 shadow-lg z-50 flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-xs mb-2 sm:mb-0 sm:mr-4">
-            We use cookies to enhance your experience and analyze site traffic. By clicking “Accept” or continuing to use this site, you consent to our use of cookies. Learn more in our Cookie Policy.
-          </p>
-          {/* Button Group */}
-          <div className="flex flex-col sm:flex-row items-center gap-2 mt-2 sm:mt-0"> {/* Manages button layout and spacing */}
-            <button
-              onClick={handleAcceptCookies}
-              className="btn bg-blue-400 transition-colors duration-600 ease-in-out text-white text-xs px-4 py-2 rounded-md border border-gray-600 bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer w-full sm:w-auto"
-            >
-              Accept
-            </button>
-            <button
-              onClick={handleDeclineCookies}
-              className="btn bg-black transition-colors duration-600 ease-in-out text-white text-xs px-4 py-2 rounded-md border border-gray-600 bg-gradient-to-r hover:from-black hover:to-purple-950 hover:cursor-pointer w-full sm:w-auto"
-            >
-              Decline
-            </button>
-            <Link href="/cookie-policy" className="w-full sm:w-auto"> {/* Ensure Link also adapts width */}
-              <button className="btn bg-black transition-colors duration-600 ease-in-out text-white text-xs px-4 py-2 rounded-md border border-gray-600 bg-gradient-to-r hover:from-black hover:to-purple-950 hover:cursor-pointer w-full">Cookie Policy</button>
-            </Link>
+      {
+        showCookieBanner && (
+          <div className="fixed bottom-0 left-0 right-0 bg-black border-t border-gray-600 text-white p-4 shadow-lg z-50 flex flex-col sm:flex-row justify-between items-center">
+            <p className="text-xs mb-2 sm:mb-0 sm:mr-4">
+              We use cookies to enhance your experience and analyze site traffic. By clicking “Accept” or continuing to use this site, you consent to our use of cookies. Learn more in our Cookie Policy.
+            </p>
+            {/* Button Group */}
+            <div className="flex flex-col sm:flex-row items-center gap-2 mt-2 sm:mt-0"> {/* Manages button layout and spacing */}
+              <button
+                onClick={handleAcceptCookies}
+                className="btn bg-blue-400 transition-colors duration-600 ease-in-out text-white text-xs px-4 py-2 rounded-md border border-gray-600 bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer w-full sm:w-auto"
+              >
+                Accept
+              </button>
+              <button
+                onClick={handleDeclineCookies}
+                className="btn bg-black transition-colors duration-600 ease-in-out text-white text-xs px-4 py-2 rounded-md border border-gray-600 bg-gradient-to-r hover:from-black hover:to-purple-950 hover:cursor-pointer w-full sm:w-auto"
+              >
+                Decline
+              </button>
+              <Link href="/cookie-policy" className="w-full sm:w-auto"> {/* Ensure Link also adapts width */}
+                <button className="btn bg-black transition-colors duration-600 ease-in-out text-white text-xs px-4 py-2 rounded-md border border-gray-600 bg-gradient-to-r hover:from-black hover:to-purple-950 hover:cursor-pointer w-full">Cookie Policy</button>
+              </Link>
+            </div>
           </div>
-        </div>
-      )}
+        )
+      }
     </>
   );
 }
