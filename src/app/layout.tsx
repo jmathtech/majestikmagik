@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono, Montserrat } from "next/font/google";
 import "./globals.css";
 
 const siteUrl = "https://www.majestikmagik.com"; // Ensure this is set in your environment variables
 const imageUrl = `${siteUrl}/img/screenshot.png`; // Construct absolute URL
 
 
-const geistSans = Geist({
+const geistSans = Montserrat({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });

@@ -35,7 +35,15 @@ export default function Home() {
     localStorage.setItem('cookieConsent', 'true');
     setShowCookieBanner(false);
   };
+
+  const handleDeclineCookies = () => {
+    localStorage.setItem('cookieConsent', '');
+    window.history.back();
+    setShowCookieBanner(false);
+  };
   // -- END: Cookie Banner -- 
+
+
 
   useEffect(() => {
     // Function to handle scroll event
@@ -120,31 +128,31 @@ export default function Home() {
           <nav className="hidden lg:flex justify-center gap-10 py-2"> {/* Reduced gap slightly, added 'hidden md:flex' */}
             <Link
               href="#portfolio"
-              className={`px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
+              className={`px-4 py-2 rounded-md font-extralight transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
 
               Portfolio
             </Link>
             <Link
               href="#design"
-              className={`px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
+              className={`px-4 py-2 rounded-md font-extralight transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
 
               Design
             </Link>
             <Link
               href="#services"
-              className={`px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
+              className={`px-4 py-2 rounded-md font-extralight transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
 
               Services
             </Link>
             <Link
               href="#testimonials"
-              className={`px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
+              className={`px-4 py-2 rounded-md font-extralight transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
 
               Testimonials
             </Link>
             <Link
               href="#contact"
-              className={`px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
+              className={`px-4 py-2 rounded-md font-extralight transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
 
               Contact
             </Link>
@@ -187,21 +195,21 @@ export default function Home() {
             }`}
 
         >
-          <Link href="#portfolio" className="px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Portfolio</Link>
+          <Link href="#portfolio" className="px-4 py-2 rounded-md font-extralight transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Portfolio</Link>
           <Link
             href="#design"
-            className={`px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
+            className={`px-4 py-2 rounded-md font-extralight transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
 
             Design
           </Link>
           <Link
             href="#services"
-            className={`px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
+            className={`px-4 py-2 rounded-md font-extralight transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
 
             Services
           </Link>
-          <Link href="#testimonials" className="px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Testimonials</Link>
-          <Link href="#contact" className="px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Contact</Link>
+          <Link href="#testimonials" className="px-4 py-2 rounded-md font-extralight transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Testimonials</Link>
+          <Link href="#contact" className="px-4 py-2 rounded-md font-extralight transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Contact</Link>
           <Link href="https://www.github.com/jmathtech" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}><FontAwesomeIcon icon={faGithub} className="text-white text-2xl" /> </Link>
           <Link href="https://www.upwork.com/freelancers/~01bfab6a82f6cc6c6c?mp_source=share" target="_blank" rel="noopener noreferrer" // Added rel for security
             className="px-4 py-2 rounded-md transition-all duration-600 ease-in-out w-full hover:bg-gray-700 text-center">
@@ -214,8 +222,8 @@ export default function Home() {
         <main className="max-w-6xl mx-auto py-8 px-4 ">
 
           {/* === Hero Section Start === */}
-          <section className="text-center py-16 md:py-24 lg:py-32 mb-6"> {/* Added padding and bottom margin */}
-            <h2 className="text-4xl md:text-5xl lg:text-8xl mask-t-from-neutral-950 mb-4
+          <section className="text-center py-16 md:py-24 lg:py-32 mb-12"> {/* Added padding and bottom margin */}
+            <h2 className="text-4xl md:text-5xl lg:text-8xl mask-t-from-neutral-950 mb-4 font-extralight
              bg-gradient-to-r from-blue-400 via-blue-400 to-purple-900 
              [-webkit-background-clip:text] 
              bg-clip-text text-transparent
@@ -223,7 +231,7 @@ export default function Home() {
           ">
               Crafting Digital Excellence
             </h2>
-            <p className="text-md md:text-lg text-gray-400 mb-8 max-w-2xl mx-auto"> {/* Subheading styling */}
+            <p className="text-md md:text-lg text-gray-400 mb-12 max-w-2xl mx-auto"> {/* Subheading styling */}
               Overcome digital hurdles with impactful and scalable web solutions designed for growth.
             </p>
             <Link
@@ -240,8 +248,8 @@ export default function Home() {
 
           {/* Portfolio Section */}
           <section id="portfolio" className="mb-26">
-            <h2 className="text-2xl font-bold text-center">Website Portfolio</h2>
-            <p className="text-sm text-gray-500 mb-8 text-center">
+            <h2 className="text-4xl font-bold text-center">Website Portfolio</h2>
+            <p className="text-md text-gray-500 mb-6 text-center">
               Explore my latest web development projects for real clients.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -334,7 +342,7 @@ export default function Home() {
 
           {/* Mockup Section */}
           <section id="design" className="mb-26">
-            <h2 className="text-2xl font-bold mb-6 text-center"> Ask About Our Free Mockup Design</h2>
+            <h2 className="text-4xl font-bold mb-6 text-center"> Ask About Our Free Mockup Design</h2>
             <div className="border border-gray-700 rounded-lg p-6 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-103">
               <h3 className="font-semibold text-lg text-center">Get Inspiration From Our Design Free Mockups</h3>
               <p className="p-4 text-sm text-center text-gray-500">
@@ -346,7 +354,7 @@ export default function Home() {
 
           {/* Services Section */}
           <section id="services" className="mb-26">
-            <h2 className="text-2xl font-bold mb-8 text-center text-white">Our Services</h2>
+            <h2 className="text-4xl font-bold mb-8 text-center text-white">Our Services</h2>
             <div className="border border-gray-700 rounded-lg p-6 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-101">
               <p className="p-4 text-sm text-center text-gray-500">
                 We offer <b>FREE consultation</b> and a range of services to help you achieve your online goals. Our services include:
@@ -377,14 +385,12 @@ export default function Home() {
                     <li>Revisions: 1 Round</li>
                     <li>Initial Consultation: Included</li>
                     <li>Post-Launch Support: 5 days</li>
-                    <li>Estimated Timeline: 5-7 days</li>
+                    <li>Estimated Timeline: 3-5 days</li>
                   </ul>
                   <hr className="text-gray-800 mt-4 mb-4" />
                   <div className="flex items-center justify-between mt-auto">
                     {showStarterSparkPrice ? (
-                      <span className="text-2xl font-bold text-blue-500 animate-flipIn">${(1500).toLocaleString()}</span>
-
-
+                      <span onClick={() => setShowStarterSparkPrice(false)} className="text-2xl font-bold cursor-pointer text-blue-500 animate-flipIn">${(1500).toLocaleString()}</span>
                     ) : (
                       <button
                         onClick={() => setShowStarterSparkPrice(true)}
@@ -427,14 +433,12 @@ export default function Home() {
                     <li>Revisions: 3 Rounds</li>
                     <li>Initial Consultation: Included</li>
                     <li>Post-Launch Support: 1 Month (Standard)</li>
-                    <li>Estimated Timeline: 10-14 days</li>
+                    <li>Estimated Timeline: 7-10 days</li>
                   </ul>
                   <hr className="text-gray-800 mt-4 mb-4" />
                   <div className="flex items-center justify-between mt-auto">
                     {showMagikWeaverPrice ? (
-                      <span className="text-2xl font-bold text-blue-500 animate-flipIn">${(4000).toLocaleString()}</span>
-
-
+                      <span onClick={() => setShowMagikWeaverPrice(false)} className="text-2xl cursor-pointer font-bold text-blue-500 animate-flipIn">${(4000).toLocaleString()}</span>
                     ) : (
                       <button
                         onClick={() => setShowMagikWeaverPrice(true)}
@@ -443,7 +447,8 @@ export default function Home() {
                         See Price
                       </button>)}
 
-                    <Link href="https://checkout.majestikmagik.com/b/00w5kCeiI6z32D49Q3f7i02"><button className="transition duration-300 ease-in-out bg-gradient-to-r bg-blue-500 hover:from-blue-600 hover:to-purple-700 text-white cursor-pointer font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Buy Now</button></Link>                </div>
+                    <Link href="https://checkout.majestikmagik.com/b/00w5kCeiI6z32D49Q3f7i02"><button className="transition duration-300 ease-in-out bg-gradient-to-r bg-blue-500 hover:from-blue-600 hover:to-purple-700 text-white cursor-pointer font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Buy Now</button></Link>
+                  </div>
                 </div>
 
                 {/* Grand Architect */}
@@ -470,14 +475,12 @@ export default function Home() {
                     <li>Revisions: Unlimited Small Revisions</li>
                     <li>Initial Consultation: Included</li>
                     <li>Post-Launch Support: 3 Months (Priority)</li>
-                    <li>Estimated Timeline: 30-50 days</li>
+                    <li>Estimated Timeline: 12-15 days</li>
                   </ul>
                   <hr className="text-gray-800 mt-4 mb-4" />
                   <div className="flex items-center justify-between mt-auto">
                     {showGrandArchitectPrice ? (
-                      <span className="text-2xl font-bold text-blue-500 animate-flipIn">${(8000).toLocaleString()}</span>
-
-
+                      <span onClick={() => setShowGrandArchitectPrice(false)} className="text-2xl font-bold cursor-pointer text-blue-500 animate-flipIn">${(8000).toLocaleString()}</span>
                     ) : (
                       <button
                         onClick={() => setShowGrandArchitectPrice(true)}
@@ -494,7 +497,7 @@ export default function Home() {
 
           {/* Testimonials Section */}
           <section id="testimonials" className="mb-26"> {/* Increased bottom margin */}
-            <h2 className="text-2xl font-bold mb-6 text-center">What Clients Say</h2> {/* Centered title, increased margin */}
+            <h2 className="text-4xl font-bold mb-6 text-center">What Clients Say</h2> {/* Centered title, increased margin */}
 
             {/* Testimonials Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -514,7 +517,7 @@ export default function Home() {
                   &quot;Omg you are the freaking best!! The changes has made my life so much easier. I&apos;ll definitely be in contact when I need someone.&quot;
                 </blockquote>
                 {/* Client Name */}
-                <p className="text-sm font-semibold text-gray-400 text-right">- <Link href="https://noelcustoms.shop/">NoelCustoms.shop</Link></p> {/* Smaller, bold, gray, right-aligned */}
+                <p className="text-sm font-semibold text-gray-400 text-right">- <Link href="https://noelcustoms.shop/" className="hover:text-gray-200 transition duration-900 ease-in-out">NoelCustoms.shop</Link></p> {/* Smaller, bold, gray, right-aligned */}
               </div>
 
               {/* Testimonial Card 2 */}
@@ -528,7 +531,7 @@ export default function Home() {
                   ))}
                 </div>
                 {/* Client Name */}
-                <p className="text-sm font-semibold text-gray-400 text-right">- <Link href="https://www.parrisgainer.com/">Dr. Parris Gainer, ParrisGainer.com</Link></p> {/* Smaller, bold, gray, right-aligned */}
+                <p className="text-sm font-semibold text-gray-400 text-right">- <Link href="https://www.parrisgainer.com/" className="hover:text-gray-200 transition duration-900 ease-in-out">Dr. Parris Gainer, ParrisGainer.com</Link></p> {/* Smaller, bold, gray, right-aligned */}
               </div>
 
               {/* Add more testimonial cards here following the same structure */}
@@ -540,13 +543,13 @@ export default function Home() {
           <section
             id="contact"
             className="text-center">
-            <h2 className="text-2xl font-bold mb-4">Get In Touch</h2>
+            <h2 className="text-4xl font-bold mb-6">Get In Touch</h2>
             <div className=" bg-black border border-gray-700 text-white p-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-103"
             >
-              <p className="mb-4">Do you have a project in mind? Contact us at:</p>
+              <p className="mb-12 font-bold">Do you have a web design project you want to take to the next level? <br/> Contact us for a free consultation today!</p>
               <p className="mb-2">Majestik Magik</p>
               <p className="mb-2">405 E. Laburnum Ave Ste #3</p>
-              <p className="mb-2"><Link href="mailto:jamil.matheny@majestikmagik.com" className="underline">jamil.matheny@majestikmagik.com</Link></p>
+              <p className="mb-2"><Link href="mailto:jamil.matheny@majestikmagik.com" className="hover:text-gray-600 transition duration-900 ease-in-out">jamil.matheny@majestikmagik.com</Link></p>
               <p className="mb-4">804.362.7561</p>
               <iframe
                 src="https://climate.stripe.com/badge/QjbCfj?theme=dark&size=large&locale=en-US"
@@ -573,7 +576,7 @@ export default function Home() {
       {showCookieBanner && (
         <div className="fixed bottom-0 left-0 right-0 bg-black border-t border-gray-600 text-white p-4 shadow-lg z-50 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-xs mb-2 sm:mb-0 sm:mr-4">
-            We use cookies to ensure you get the best experience on our website. By continuing to use our site, you agree to our use of cookies.
+            We use cookies to enhance your experience and analyze site traffic. By clicking “Accept” or continuing to use this site, you consent to our use of cookies. Learn more in our Cookie Policy.
           </p>
           {/* Button Group */}
           <div className="flex flex-col sm:flex-row items-center gap-2 mt-2 sm:mt-0"> {/* Manages button layout and spacing */}
@@ -582,6 +585,12 @@ export default function Home() {
               className="btn bg-blue-400 transition-colors duration-600 ease-in-out text-white text-xs px-4 py-2 rounded-md border border-gray-600 bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer w-full sm:w-auto"
             >
               Accept
+            </button>
+            <button
+              onClick={handleDeclineCookies}
+              className="btn bg-black transition-colors duration-600 ease-in-out text-white text-xs px-4 py-2 rounded-md border border-gray-600 bg-gradient-to-r hover:from-black hover:to-purple-950 hover:cursor-pointer w-full sm:w-auto"
+            >
+              Decline
             </button>
             <Link href="/cookie-policy" className="w-full sm:w-auto"> {/* Ensure Link also adapts width */}
               <button className="btn bg-black transition-colors duration-600 ease-in-out text-white text-xs px-4 py-2 rounded-md border border-gray-600 bg-gradient-to-r hover:from-black hover:to-purple-950 hover:cursor-pointer w-full">Cookie Policy</button>

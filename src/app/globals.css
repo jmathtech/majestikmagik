@@ -197,6 +197,13 @@ body {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .body-gradient-bg {
+    background-color: #141414;
+    animation: none;
+  }
+}
+
 /* Apply theme variables */
 @theme inline {
   --color-background: var(--background);
