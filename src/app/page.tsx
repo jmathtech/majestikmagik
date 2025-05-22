@@ -192,7 +192,7 @@ export default function Home() {
             <button
               ref={buttonRef} // Attach the button ref
               onClick={toggleMobileMenu}
-              className="text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 rounded-md p-2 "
+              className="text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 rounded-md p-2 cursor-pointer"
               aria-label="Toggle menu" // Accessibility
               aria-expanded={isMobileMenuOpen} // Accessibility
             >
