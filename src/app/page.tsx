@@ -580,8 +580,12 @@ export default function Home() {
       {/* Cookie Banner */}
       {
         showCookieBanner && (
-          <div className="fixed inset-0 bg-black opacity-90 z-50 transition-opacity duration-300 ease-in-out">
-            <div className="fixed bottom-0 left-0 right-0 transition-opacity bg-black border-t border-gray-600 text-white p-4 shadow-lg z-40 flex flex-col sm:flex-row justify-between items-center">
+          <>
+            {/* Dimming Overlay */}
+            <div className="fixed inset-0 bg-black opacity-90 z-40 transition-opacity duration-300 ease-in-out"></div>
+
+            {/* Actual Cookie Banner Content (Solid Background) */}
+            <div className="fixed bottom-0 left-0 right-0 bg-gray-900 border-t border-gray-600 text-white p-4 shadow-lg z-50 flex flex-col sm:flex-row justify-between items-center transition-opacity duration-300 ease-in-out">
               <p className="text-xs mb-2 sm:mb-0 sm:mr-4">
                 We use cookies to enhance your experience and analyze site traffic. By clicking “Accept” or continuing to use this site, you consent to our use of cookies. Learn more in our Cookie Policy.
               </p>
@@ -604,7 +608,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-          </div>
+          </>
         )
       }
     </>
