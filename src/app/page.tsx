@@ -105,7 +105,7 @@ export default function Home() {
 
   return (
     <>
-      <div className={`transition-all duration-300 ease-in-out ${showCookieBanner ? 'filter brightness-10' : 'filter brightness-100'}`}>
+      <div>
         {/* Header */}
         <header className={`bg-black shadow-slate-900 border-b border-gray-600 text-white p-4 flex items-center justify-between sticky top-0 z-20 transition-all duration-300 ease-in-out ${isScrolled ? 'py-2 px-4' : 'p-2' // Shrink padding when scrolled
           }`}> {/* Changed justify-center to justify-between, added sticky, top-0, z-20 */}
@@ -207,7 +207,7 @@ export default function Home() {
         {/* Mobile Navigation Menu (Appears below header when open) */}
         <nav
           ref={menuRef} // Attach the menu ref
-          className={`lg:hidden fixed inset-x-0 bg-black text-white flex flex-col items-center gap-4 py-16 transition-transform duration-300 ease-in-out transform z-10 ${isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full' // Slide down/up animation
+          className={`lg:hidden fixed inset-x-0 bg-black text-white flex flex-col items-center gap-4 py-16 transition-transform duration-600 ease-in-out transform z-10 ${isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full' // Slide down/up animation
             } ${isScrolled ? 'top-12' : 'top-16' // Adjust padding based on scroll state
             }`}
         >
@@ -335,7 +335,7 @@ export default function Home() {
                   Made with the React JS and Material UI framework.</p>
                 <div className="text-right">
                   <button
-                    className="btn mt-4 bg-blue-500 transition-colors duration-600 ease-in-out font-bold text-white px-4 py-2 rounded-md bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer end inline-block" 
+                    className="btn mt-4 bg-blue-500 transition-colors duration-600 ease-in-out font-bold text-white px-4 py-2 rounded-md bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer end inline-block"
                     onClick={() => (window.location.href = "https://github.com/jmathtech/Zeus-Suits-Online-Shop")}
                   >
                     View Project
@@ -580,27 +580,29 @@ export default function Home() {
       {/* Cookie Banner */}
       {
         showCookieBanner && (
-          <div className="fixed bottom-0 left-0 right-0 bg-black border-t border-gray-600 text-white p-4 shadow-lg z-50 flex flex-col sm:flex-row justify-between items-center">
-            <p className="text-xs mb-2 sm:mb-0 sm:mr-4">
-              We use cookies to enhance your experience and analyze site traffic. By clicking “Accept” or continuing to use this site, you consent to our use of cookies. Learn more in our Cookie Policy.
-            </p>
-            {/* Button Group */}
-            <div className="flex flex-col sm:flex-row items-center gap-2 mt-2 sm:mt-0"> {/* Manages button layout and spacing */}
-              <button
-                onClick={handleAcceptCookies}
-                className="btn bg-blue-400 transition-colors duration-600 ease-in-out text-white text-xs px-4 py-2 rounded-md border border-gray-600 bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer w-full sm:w-auto"
-              >
-                Accept
-              </button>
-              <button
-                onClick={handleDeclineCookies}
-                className="btn bg-black transition-colors duration-600 ease-in-out text-white text-xs px-4 py-2 rounded-md border border-gray-600 bg-gradient-to-r hover:from-black hover:to-purple-950 hover:cursor-pointer w-full sm:w-auto"
-              >
-                Decline
-              </button>
-              <Link href="/cookie-policy" className="w-full sm:w-auto"> {/* Ensure Link also adapts width */}
-                <button className="btn bg-black transition-colors duration-600 ease-in-out text-white text-xs px-4 py-2 rounded-md border border-gray-600 bg-gradient-to-r hover:from-black hover:to-purple-950 hover:cursor-pointer w-full">Cookie Policy</button>
-              </Link>
+          <div className="fixed inset-0 bg-black opacity-90 z-50 transition-opacity duration-300 ease-in-out">
+            <div className="fixed bottom-0 left-0 right-0 transition-opacity bg-black border-t border-gray-600 text-white p-4 shadow-lg z-40 flex flex-col sm:flex-row justify-between items-center">
+              <p className="text-xs mb-2 sm:mb-0 sm:mr-4">
+                We use cookies to enhance your experience and analyze site traffic. By clicking “Accept” or continuing to use this site, you consent to our use of cookies. Learn more in our Cookie Policy.
+              </p>
+              {/* Button Group */}
+              <div className="flex flex-col sm:flex-row items-center gap-2 mt-2 sm:mt-0"> {/* Manages button layout and spacing */}
+                <button
+                  onClick={handleAcceptCookies}
+                  className="btn bg-blue-400 transition-colors duration-600 ease-in-out text-white text-xs px-4 py-2 rounded-md border border-gray-600 bg-gradient-to-r hover:from-blue-400 hover:to-purple-950 hover:cursor-pointer w-full sm:w-auto"
+                >
+                  Accept
+                </button>
+                <button
+                  onClick={handleDeclineCookies}
+                  className="btn bg-black transition-colors duration-600 ease-in-out text-white text-xs px-4 py-2 rounded-md border border-gray-600 bg-gradient-to-r hover:from-black hover:to-purple-950 hover:cursor-pointer w-full sm:w-auto"
+                >
+                  Decline
+                </button>
+                <Link href="/cookie-policy" className="w-full sm:w-auto"> {/* Ensure Link also adapts width */}
+                  <button className="btn bg-black transition-colors duration-600 ease-in-out text-white text-xs px-4 py-2 rounded-md border border-gray-600 bg-gradient-to-r hover:from-black hover:to-purple-950 hover:cursor-pointer w-full">Cookie Policy</button>
+                </Link>
+              </div>
             </div>
           </div>
         )
