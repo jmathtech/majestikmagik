@@ -373,7 +373,7 @@ export default function Home() {
                 <div className="border border-gray-700 mb-10 rounded-lg p-4 shadow-md bg-gray-900 transition duration-300 ease-in-out transform hover:scale-103 flex flex-col">
                   <Image src="/img/web-maintenance_01.png" alt="Basic Maintenance" width={192} height={192} className="w-full mb-4" />
                   <h3 className="text-xl font-semibold mb-2 text-white">Basic Maintenance</h3>
-                  <p className="text-gray-400 mb-4">Perfect for personal sites and small blogs. Ensures your website stays updated and secure with fundamental maintenance.</p>
+                  <p className="text-gray-400 mb-4">Perfect for active personal sites and small blogs. Ensures your website stays updated and secure with fundamental maintenance.</p>
                   <p className="text-gray-400 mb-2 font-semibold">Best For: Personal Websites, Basic Blogs</p>
                   <hr className="text-gray-800 mt-4 mb-4" />
                   <ul className="text-gray-400 mb-2 space-y-1 list-disc list-inside">
@@ -401,7 +401,7 @@ export default function Home() {
                   <span className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-black text-sm font-bold py-1 px-2 rounded-full">Best Deal</span>
                   <Image src="/img/web-maintenance_02.png" alt="Standard/Growth Plan" width={192} height={192} className="w-full mb-4" />
                   <h3 className="text-xl font-semibold mb-2 text-white">Standard/Growth Plan</h3>
-                  <p className="text-gray-400 mb-4">Ideal for small businesses and active blogs. Includes advanced security, performance boosts, and limited content updates.</p>
+                  <p className="text-gray-400 mb-4">Ideal for active small business websites and active blogs. Includes advanced security, performance boosts, and limited content updates.</p>
                   <p className="text-gray-400 mb-2 font-semibold">Best For: Small Businesses, Growing Blogs</p>
                   <hr className="text-gray-800 mt-4 mb-4" />
                   <ul className="text-gray-400 mb-2 space-y-1 list-disc list-inside">
@@ -430,7 +430,7 @@ export default function Home() {
                 <div className="border border-gray-700 mb-10 rounded-lg p-4 shadow-md bg-gray-900 transition duration-300 ease-in-out transform hover:scale-103 flex flex-col">
                   <Image src="/img/web-maintenance_03.png" alt="Premium/Proactive/E-commerce Plan" width={192} height={192} className="w-full mb-4" />
                   <h3 className="text-xl font-semibold mb-2 text-white">Premium/Proactive/E-commerce Plan</h3>
-                  <p className="text-gray-400 mb-4">Comprehensive support for e-commerce and high-traffic sites. Maximum security, performance, and dedicated strategic partnership.</p>
+                  <p className="text-gray-400 mb-4">Comprehensive support for active e-commerce and high-traffic sites. Maximum security, performance, and dedicated strategic partnership.</p>
                   <p className="text-gray-400 mb-2 font-semibold">Best For: E-commerce, High-Traffic Sites, Critical Websites</p>
                   <hr className="text-gray-800 mt-4 mb-4" />
                   <ul className="text-gray-400 mb-2 space-y-1 list-disc list-inside">
