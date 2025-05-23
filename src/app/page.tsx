@@ -367,6 +367,96 @@ export default function Home() {
               <p className="text-xs mb-10 text-blue-800">NOTE: We can write a custom invoice if one of these packages does not meet your requirements. For example: Small tweaks to current website, custom code for Shopify ecommerce, training only, etc.</p>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+
+                {/* Tier 1: Basic Maintenance */}
+                <div className="border border-gray-700 mb-10 rounded-lg p-4 shadow-md bg-gray-900 transition duration-300 ease-in-out transform hover:scale-103 flex flex-col">
+                  <Image src="/img/web-maintenance_01.png" alt="Basic Maintenance" width={192} height={192} className="w-full mb-4" />
+                  <h3 className="text-xl font-semibold mb-2 text-white">Basic Maintenance</h3>
+                  <p className="text-gray-400 mb-4">Perfect for personal sites and small blogs. Ensures your website stays updated and secure with fundamental maintenance.</p>
+                  <p className="text-gray-400 mb-2 font-semibold">Best For: Personal Websites, Basic Blogs</p>
+                  <hr className="text-gray-800 mt-4 mb-4" />
+                  <ul className="text-gray-400 mb-2 space-y-1 list-disc list-inside">
+                    <li>Core WordPress Updates</li>
+                    <li>Plugin & Theme Updates</li>
+                    <li>Weekly Database Backups</li>
+                    <li>Basic Security Scans</li>
+                    <li>Uptime Monitoring (24/7)</li>
+                    <li>Basic Performance Checks</li>
+                    <li>Email/Phone Support (48-hour response)</li>
+                    <li>1 Website</li>
+                    <li>All-access: Tech video training resources</li>
+                  </ul>
+                  <hr className="text-gray-800 mt-4 mb-4" />
+                  <div className="flex items-center justify-between mt-auto">
+                    <span className="text-2xl font-bold cursor-pointer text-green-500 animate-flipIn">$49/mo</span>
+                    <Link href="https://checkout.majestikmagik.com/b/dRmcN48Yo0aFb9Agerf7i04" passHref>
+                      <button className="transition duration-300 ease-in-out bg-gradient-to-r bg-blue-500 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Subscribe Now</button>
+                    </Link>
+                  </div>
+                </div>
+
+                {/* Tier 2: Standard/Growth Plan */}
+                <div className="border border-gray-700 mb-10 rounded-lg p-4 shadow-md bg-gray-900 transition duration-300 ease-in-out transform hover:scale-103 relative flex flex-col">
+                  <span className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-black text-sm font-bold py-1 px-2 rounded-full">Best Deal</span>
+                  <Image src="/img/web-maintenance_02.png" alt="Standard/Growth Plan" width={192} height={192} className="w-full mb-4" />
+                  <h3 className="text-xl font-semibold mb-2 text-white">Standard/Growth Plan</h3>
+                  <p className="text-gray-400 mb-4">Ideal for small businesses and active blogs. Includes advanced security, performance boosts, and limited content updates.</p>
+                  <p className="text-gray-400 mb-2 font-semibold">Best For: Small Businesses, Growing Blogs</p>
+                  <hr className="text-gray-800 mt-4 mb-4" />
+                  <ul className="text-gray-400 mb-2 space-y-1 list-disc list-inside">
+                    <li>All Basic Maintenance features</li>
+                    <li>Daily File & Database Backups</li>
+                    <li>Advanced Security Monitoring & Hardening</li>
+                    <li>Malware Scanning & Removal</li>
+                    <li>Performance Optimization (Caching, Image Opt.)</li>
+                    <li>Small Content Edits (Up to 1 hour/month)</li>
+                    <li>Broken Link Monitoring</li>
+                    <li>Priority Email/Phone Support (24-hour response)</li>
+                    <li>1 Website</li>
+                    <li>All-access: Tech video training resources</li>
+                  </ul>
+                  <hr className="text-gray-800 mt-4 mb-4" />
+                  <div className="flex items-center justify-between mt-auto">
+
+                    <span className="text-2xl font-bold cursor-pointer text-green-500 animate-flipIn">$99/mo</span>
+                    <Link href="https://checkout.majestikmagik.com/b/5kQbJ0caA5uZdhId2ff7i05" passHref>
+                      <button className="transition duration-300 ease-in-out bg-gradient-to-r bg-blue-500 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Subscribe Now</button>
+                    </Link>
+                  </div>
+                </div>
+
+                {/* Tier 3: Premium/Proactive/E-commerce Plan */}
+                <div className="border border-gray-700 mb-10 rounded-lg p-4 shadow-md bg-gray-900 transition duration-300 ease-in-out transform hover:scale-103 flex flex-col">
+                  <Image src="/img/web-maintenance_03.png" alt="Premium/Proactive/E-commerce Plan" width={192} height={192} className="w-full mb-4" />
+                  <h3 className="text-xl font-semibold mb-2 text-white">Premium/Proactive/E-commerce Plan</h3>
+                  <p className="text-gray-400 mb-4">Comprehensive support for e-commerce and high-traffic sites. Maximum security, performance, and dedicated strategic partnership.</p>
+                  <p className="text-gray-400 mb-2 font-semibold">Best For: E-commerce, High-Traffic Sites, Critical Websites</p>
+                  <hr className="text-gray-800 mt-4 mb-4" />
+                  <ul className="text-gray-400 mb-2 space-y-1 list-disc list-inside">
+                    <li>All Standard/Growth Plan features</li>
+                    <li>Real-time Security Monitoring</li>
+                    <li>24/7 Uptime & Performance Monitoring</li>
+                    <li>Emergency 4-Hour Response Time</li>
+                    <li>Proactive Site Audits (Quarterly)</li>
+                    <li>Content Updates (Up to 3 hours/month)</li>
+                    <li>Staging Environment Management</li>
+                    <li>Advanced SEO Monitoring</li>
+                    <li>Phone Support</li>
+                    <li>Up to 3 Websites</li>
+                    <li>All-access: Tech video training resources</li>
+                  </ul>
+                  <hr className="text-gray-800 mt-4 mb-4" />
+                  <div className="flex items-center justify-between mt-auto">
+                    <span className="text-2xl font-bold cursor-pointer text-green-500 animate-flipIn">$199/mo</span>
+                    <Link href="https://checkout.majestikmagik.com/b/14AdR8eiI0aFelMe6jf7i06" passHref>
+                      <button className="transition duration-300 ease-in-out bg-gradient-to-r bg-blue-500 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Subscribe Now</button>
+                    </Link>
+                  </div>
+                </div>
+
+
+
                 {/* Starter Spark */}
                 <div className="border border-gray-700 mb-10 rounded-lg p-4 shadow-md bg-gray-900 transition duration-300 ease-in-out transform hover:scale-103 flex flex-col">
                   <Image src="/img/webdesign_01.png" alt="Starter Spark" width={192} height={192} className="w-full mb-4" />
