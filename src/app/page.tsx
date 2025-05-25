@@ -672,7 +672,7 @@ export default function Home() {
         showCookieBanner && (
           <>
             {/* Dimming Overlay */}
-            <div className="fixed inset-0 bg-black opacity-90 z-40 transition-opacity duration-300 ease-in-out"></div>
+            <div className="fixed inset-0 bg-black opacity-20 z-40 transition-opacity duration-300 ease-in-out"></div>
 
             {/* Actual Cookie Banner Content (Solid Background) */}
             <div className="fixed bottom-0 left-0 right-0 bg-gray-900 border-t border-gray-600 text-white p-4 shadow-lg z-50 flex flex-col sm:flex-row justify-between items-center transition-opacity duration-300 ease-in-out">
