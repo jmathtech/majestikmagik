@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Montserrat } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 const siteUrl = "https://www.majestikmagik.com"; // Ensure this is set in your environment variables
 const imageUrl = `${siteUrl}/img/screenshot.png`; // Construct absolute URL
@@ -108,6 +109,27 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} Montserrat antialiased body-gradient-bg`}
       >
         {children}
+
+        <Script
+          strategy="afterInteractive" // Loads after the page is interactive
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16649126006"
+        />
+        <Script
+          id="google-analytics-init" // Unique ID for the inline script
+          strategy="afterInteractive"
+        >
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            // Ensure page_path is correctly set for client-side routing
+            gtag('config', 'AW-16649126006', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
+
       </body>
     </html>
   );
