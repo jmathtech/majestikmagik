@@ -364,8 +364,8 @@ export default function Home() {
               <p className="p-4 text-sm text-center text-gray-500">
                 We offer <b>FREE consultation</b> and a range of services to help you achieve your online goals. Our services include:
               </p>
-              <p className="text-xs mb-10 text-blue-800">NOTE: We can write a custom invoice if one of these packages does not meet your requirements. For example: Small tweaks to current website, custom code for Shopify ecommerce, training only, etc.</p>
-
+              <p className="text-sm mb-10 text-blue-600">NOTE: We can write a custom invoice if one of these packages does not meet your requirements. For example: Small tweaks to current website, custom code for Shopify ecommerce, training only, etc.</p>
+              <div className="text-center font-bold text-white m-8">Technical Support Services</div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
 
@@ -389,9 +389,9 @@ export default function Home() {
                   </ul>
                   <hr className="text-gray-800 mt-4 mb-4" />
                   <div className="flex items-center justify-between mt-auto">
-                    <span className="text-2xl font-bold cursor-pointer text-green-500 animate-flipIn">$49/mo</span>
+                    <span className="text-2xl font-bold cursor-pointer text-blue-500 animate-flipIn">$49/mo</span>
                     <Link href="https://checkout.majestikmagik.com/b/dRmcN48Yo0aFb9Agerf7i04" passHref>
-                      <button className="transition duration-300 ease-in-out bg-gradient-to-r bg-blue-500 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Subscribe Now</button>
+                      <button className="transition duration-300 ease-in-out bg-gradient-to-r cursor-pointer bg-blue-500 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Subscribe Now</button>
                     </Link>
                   </div>
                 </div>
@@ -419,9 +419,9 @@ export default function Home() {
                   <hr className="text-gray-800 mt-4 mb-4" />
                   <div className="flex items-center justify-between mt-auto">
 
-                    <span className="text-2xl font-bold cursor-pointer text-green-500 animate-flipIn">$99/mo</span>
+                    <span className="text-2xl font-bold cursor-pointer text-blue-500 animate-flipIn">$99/mo</span>
                     <Link href="https://checkout.majestikmagik.com/b/5kQbJ0caA5uZdhId2ff7i05" passHref>
-                      <button className="transition duration-300 ease-in-out bg-gradient-to-r bg-blue-500 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Subscribe Now</button>
+                      <button className="transition duration-300 ease-in-out bg-gradient-to-r cursor-pointer bg-blue-500 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Subscribe Now</button>
                     </Link>
                   </div>
                 </div>
@@ -448,15 +448,15 @@ export default function Home() {
                   </ul>
                   <hr className="text-gray-800 mt-4 mb-4" />
                   <div className="flex items-center justify-between mt-auto">
-                    <span className="text-2xl font-bold cursor-pointer text-green-500 animate-flipIn">$199/mo</span>
+                    <span className="text-2xl font-bold cursor-pointer text-blue-500 animate-flipIn">$199/mo</span>
                     <Link href="https://checkout.majestikmagik.com/b/14AdR8eiI0aFelMe6jf7i06" passHref>
-                      <button className="transition duration-300 ease-in-out bg-gradient-to-r bg-blue-500 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Subscribe Now</button>
+                      <button className="transition duration-300 ease-in-out bg-gradient-to-r cursor-pointer bg-blue-500 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Subscribe Now</button>
                     </Link>
                   </div>
                 </div>
-
-
-
+              </div>
+              <div className="text-center font-bold text-white m-8">Website Design & Development Services</div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Starter Spark */}
                 <div className="border border-gray-700 mb-10 rounded-lg p-4 shadow-md bg-gray-900 transition duration-300 ease-in-out transform hover:scale-103 flex flex-col">
                   <Image src="/img/webdesign_01.png" alt="Starter Spark" width={192} height={192} className="w-full mb-4" />
