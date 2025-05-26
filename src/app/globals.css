@@ -183,6 +183,34 @@ body {
   background: linear-gradient(to right, #1346a7, #551b8b);
 }
 
+
+/* Custom check mark style */
+
+.custom-checklist {
+  list-style: none;
+  padding-left: 0;
+}
+
+.custom-checklist li {
+  position: relative;
+  padding-left: 25px;
+  line-height: 1.5;
+}
+
+.custom-checklist li::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url('/img/check-mark.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 /* --- Base Body & Theme Styles --- */
 :root {
   /* Keep your light/dark theme variables */

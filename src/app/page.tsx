@@ -236,7 +236,7 @@ export default function Home() {
           ">
               Crafting Digital Excellence
             </h2>
-            <p className="text-md md:text-lg text-gray-400 mb-8 max-w-2xl font-semibold mx-auto"> {/* Subheading styling */}
+            <p className="text-md md:text-lg text-gray-300 mb-8 max-w-2xl font-semibold mx-auto"> {/* Subheading styling */}
               Overcome digital hurdles with impactful and scalable web solutions designed for growth.
             </p>
             <Link
@@ -254,7 +254,7 @@ export default function Home() {
           {/* Portfolio Section */}
           <section id="portfolio" className="mb-26">
             <h2 className="text-4xl font-bold text-center">Website Portfolio</h2>
-            <p className="text-md text-gray-500 mb-6 text-center">
+            <p className="text-md text-gray-300 mb-6 text-center">
               Explore my latest web development projects for real clients.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -263,7 +263,7 @@ export default function Home() {
                 <h3 className="font-semibold text-lg">CearcoChemicals.com</h3>
                 <Image src="/img/cearcochemicals_screenshot.webp" alt="CearcoChemicals.com" width={500} height={300} className="rounded-md mt-4 mb-4 cursor-pointer" onClick={() => (window.location.href = "https://cearcochemicals.com")} />
 
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-gray-300">
                   Cleaning Equipment & Repair Company is a locally owned business out of Richmond, Virginia. CEARCO has been established since 1981. We make specialty blended cleaning solutions that are not powdered- based. All of our specialty blended solutions are liquid-based. With this said, we have remained faithful to the original formulas.
                   <br /><br />
                   <b>Website Project:</b><br />
@@ -283,7 +283,7 @@ export default function Home() {
                 <h3 className="font-semibold text-lg">ParrisGainer.com</h3>
                 <Image src="/img/parrisgainer_screenshot.webp" alt="ParrisGainer.com" width={500} height={300} className="rounded-md mt-4 mb-4 cursor-pointer" onClick={() => (window.location.href = "https://parrisgainer.com")} />
 
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-gray-300">
                   Parris Gainer relocated to Richmond VA in 2007 where she continued her private practice and community work. Parris Gainer earned her Master of Social Work (MSW), and Master of Education (M.Ed.) both from the University of Pittsburgh. She has a Masters of Divinity from Pittsburgh Theological Seminary and Doctor of Divinity from Samuel DeWitt Proctor School of Theology. Dr. Parris Gainer has extensive work experience in program administration, community and school mental health, behavior modification and resolution counseling.
                   <br /><br />
                   <b>Website Project:</b><br />
@@ -302,7 +302,7 @@ export default function Home() {
               <div className="border border-gray-700 rounded-lg p-6 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-103">
                 <h3 className="font-semibold text-lg">Cleaning.MajestikMagik.com</h3>
                 <Image src="/img/cleaningmajestikmagik.webp" alt="Cleaning Majestik Magik" width={500} height={300} className="rounded-md mt-4 mb-4 cursor-pointer" onClick={() => (window.location.href = "https://cleaning.majestikmagik.com")} />
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-gray-300">
                   Let&apos;s bring cleanliness & comfort to your space.
                   <br /><br />
                   <b>Website Project:</b><br />
@@ -328,7 +328,7 @@ export default function Home() {
                   <source src="https://user-images.githubusercontent.com/36749450/182264129-b7336ab1-84e3-46f1-a5e9-2cef906c0cd5.mp4" type="video/mp4" />
                   Your browser does not support the video tag. {/* Fallback text */}
                 </video>
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-gray-300">
                   An ecommerce website for a clothing store. A custom front-end ReactJS E-Commerce website for a tailored suits shop.
                   <br /><br />
                   <b>Website Project:</b><br />
@@ -350,7 +350,7 @@ export default function Home() {
             <h2 className="text-4xl font-bold mb-6 text-center"> Ask About Our Free Mockup Design</h2>
             <div className="border border-gray-700 rounded-lg p-6 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-103">
               <h3 className="font-semibold text-lg text-center">Get Inspiration From Our Design Free Mockups</h3>
-              <p className="p-4 text-sm text-center text-gray-500">
+              <p className="p-4 text-sm text-center text-gray-300">
                 Want to see your design ideas come to life? Ask us about our free mockup options! We&apos;ll take your concept and create a custom mockup design, giving you a realistic preview. To help you visualize the final product, we&apos;ll send you a link where you can view the mockup design. Get inspired by our diverse range of free mockups and discover the potential of your ideas.
               </p>
               <Image src="/img/mockup-website-design.jpg" alt="Free Mockup Website Design" width={1280} height={1024} className="mt-4 mb-4 rounded-lg justify-center" />
@@ -361,22 +361,21 @@ export default function Home() {
           <section id="services" className="mb-26">
             <h2 className="text-4xl font-bold mb-8 text-center text-white">Our Services</h2>
             <div className="border border-gray-700 rounded-lg p-6 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-101">
-              <p className="p-4 text-sm text-center text-gray-500">
+              <p className="p-4 text-md text-center text-gray-300">
                 We offer <b>FREE consultation</b> and a range of services to help you achieve your online goals. Our services include:
               </p>
-              <p className="text-sm mb-10 text-blue-600">NOTE: We can write a custom invoice if one of these packages does not meet your requirements. For example: Small tweaks to current website, custom code for Shopify ecommerce, training only, etc.</p>
-              <div className="text-center font-bold text-white m-8">Technical Support Services</div>
+               <div className="text-center font-bold text-white m-8">Technical Support Services</div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
 
                 {/* Tier 1: Basic Maintenance */}
-                <div className="border border-gray-700 mb-10 rounded-lg p-4 shadow-md bg-gray-900 transition duration-300 ease-in-out transform hover:scale-103 flex flex-col">
+                <div className="border border-gray-700 mb-10 rounded-lg p-4 shadow-md bg-[#0d2e4f] transition duration-300 ease-in-out transform hover:scale-103 flex flex-col">
                   <Image src="/img/web-maintenance_01.png" alt="Basic Maintenance" width={192} height={192} className="w-full mb-4" />
-                  <h3 className="text-xl font-semibold mb-2 text-white">Basic Maintenance</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-white">Basic Maintenance Plan</h3>
                   <p className="text-gray-400 mb-4">Perfect for active personal sites and small blogs. Ensures your website stays updated and secure with fundamental maintenance.</p>
                   <p className="text-gray-400 mb-2 font-semibold">Best For: Personal Websites, Basic Blogs</p>
                   <hr className="text-gray-800 mt-4 mb-4" />
-                  <ul className="text-gray-400 mb-2 space-y-1 list-disc list-inside">
+                  <ul className="text-gray-400 mb-2 space-y-1 list-disc list-inside custom-checklist">
                     <li>Core WordPress Updates</li>
                     <li>Plugin & Theme Updates</li>
                     <li>Weekly Database Backups</li>
@@ -397,14 +396,14 @@ export default function Home() {
                 </div>
 
                 {/* Tier 2: Standard/Growth Plan */}
-                <div className="border border-gray-700 mb-10 rounded-lg p-4 shadow-md bg-gray-900 transition duration-300 ease-in-out transform hover:scale-103 relative flex flex-col">
+                <div className="border border-gray-700 mb-10 rounded-lg p-4 shadow-md bg-[#0d2e4f] transition duration-300 ease-in-out transform hover:scale-103 relative flex flex-col">
                   <span className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-black text-sm font-bold py-1 px-2 rounded-full">Best Deal</span>
                   <Image src="/img/web-maintenance_02.png" alt="Standard/Growth Plan" width={192} height={192} className="w-full mb-4" />
                   <h3 className="text-xl font-semibold mb-2 text-white">Standard/Growth Plan</h3>
                   <p className="text-gray-400 mb-4">Ideal for active small business websites and active blogs. Includes advanced security, performance boosts, and limited content updates.</p>
                   <p className="text-gray-400 mb-2 font-semibold">Best For: Small Businesses, Growing Blogs</p>
                   <hr className="text-gray-800 mt-4 mb-4" />
-                  <ul className="text-gray-400 mb-2 space-y-1 list-disc list-inside">
+                  <ul className="text-gray-400 mb-2 space-y-1 list-disc list-inside custom-checklist">
                     <li>All Basic Maintenance features</li>
                     <li>Daily File & Database Backups</li>
                     <li>Advanced Security Monitoring & Hardening</li>
@@ -427,13 +426,13 @@ export default function Home() {
                 </div>
 
                 {/* Tier 3: Premium/Proactive/E-commerce Plan */}
-                <div className="border border-gray-700 mb-10 rounded-lg p-4 shadow-md bg-gray-900 transition duration-300 ease-in-out transform hover:scale-103 flex flex-col">
+                <div className="border border-gray-700 mb-10 rounded-lg p-4 shadow-md bg-[#0d2e4f] transition duration-300 ease-in-out transform hover:scale-103 flex flex-col">
                   <Image src="/img/web-maintenance_03.png" alt="Premium/Proactive/E-commerce Plan" width={192} height={192} className="w-full mb-4" />
                   <h3 className="text-xl font-semibold mb-2 text-white">Premium/Proactive/E-commerce Plan</h3>
                   <p className="text-gray-400 mb-4">Comprehensive support for active e-commerce and high-traffic sites. Maximum security, performance, and dedicated strategic partnership.</p>
                   <p className="text-gray-400 mb-2 font-semibold">Best For: E-commerce, High-Traffic Sites, Critical Websites</p>
                   <hr className="text-gray-800 mt-4 mb-4" />
-                  <ul className="text-gray-400 mb-2 space-y-1 list-disc list-inside">
+                  <ul className="text-gray-400 mb-2 space-y-1 list-disc list-inside custom-checklist">
                     <li>All Standard/Growth Plan features</li>
                     <li>Real-time Security Monitoring</li>
                     <li>24/7 Uptime & Performance Monitoring</li>
@@ -458,14 +457,14 @@ export default function Home() {
               <div className="text-center font-bold text-white m-8">Website Design & Development Services</div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Starter Spark */}
-                <div className="border border-gray-700 mb-10 rounded-lg p-4 shadow-md bg-gray-900 transition duration-300 ease-in-out transform hover:scale-103 flex flex-col">
+                <div className="border border-gray-700 mb-10 rounded-lg p-4 shadow-md bg-[#0d2e4f] transition duration-300 ease-in-out transform hover:scale-103 flex flex-col">
                   <Image src="/img/webdesign_01.png" alt="Starter Spark" width={192} height={192} className="w-full mb-4" />
 
                   <h3 className="text-xl font-semibold mb-2 text-white">Starter Spark</h3>
                   <p className="text-gray-400 mb-4">Ideal for launching a basic online presence. Get a simple, responsive website (up to 3 sections) with essential features like a contact form, basic SEO, and analytics to get you started.</p>
                   <p className="text-gray-400 mb-2 font-semibold">Best For: Simple Landing Pages, Small Businesses</p>
                   <hr className="text-gray-800 mt-4 mb-4" />
-                  <ul className="text-gray-400 mb-2 space-y-1 list-disc list-inside">
+                  <ul className="text-gray-400 mb-2 space-y-1 list-disc list-inside custom-checklist">
                     <li>Custom Website Design: Basic, Up to 3 Sections</li>
                     <li>Responsive Design: Included</li>
                     <li>Content Integration: Basic Text & Images</li>
@@ -498,7 +497,7 @@ export default function Home() {
                 </div>
 
                 {/* Magik Weaver */}
-                <div className="border border-gray-700 mb-10 rounded-lg p-4 shadow-md bg-gray-900 transition duration-300 ease-in-out transform hover:scale-103 relative flex flex-col">
+                <div className="border border-gray-700 mb-10 rounded-lg p-4 shadow-md bg-[#0d2e4f] transition duration-300 ease-in-out transform hover:scale-103 relative flex flex-col">
                   <span className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-black text-sm font-bold py-1 px-2 rounded-full">Best Deal</span>
                   <div className="flex justify-center mb-2">
                     {/* You can add an icon here if you have one */}
@@ -511,7 +510,7 @@ export default function Home() {
                   <p className="text-gray-400 mb-4">Perfect for growing businesses needing a more engaging online presence. Includes a modern, responsive website (up to 7 sections), comprehensive API & content integration, enhanced SEO, social media integration, and basic e-commerce capabilities.</p>
                   <p className="text-gray-400 mb-2 font-semibold">Best For: Growing Businesses, Custom Features</p>
                   <hr className="text-gray-800 mt-4 mb-4" />
-                  <ul className="text-gray-400 mb-2 space-y-1 list-disc list-inside">
+                  <ul className="text-gray-400 mb-2 space-y-1 list-disc list-inside custom-checklist">
                     <li>Custom Website Design: Modern, Up to 7 Sections</li>
                     <li>Responsive Design: Included</li>
                     <li>AWS / Google Cloud Integration: Included (Instance fees may apply outside of scope) </li>
@@ -547,13 +546,13 @@ export default function Home() {
                 </div>
 
                 {/* Grand Architect */}
-                <div className="border border-gray-700 mb-10 rounded-lg p-4 shadow-md bg-gray-900 transition duration-300 ease-in-out transform hover:scale-103 flex flex-col">
+                <div className="border border-gray-700 mb-10 rounded-lg p-4 shadow-md bg-[#0d2e4f] transition duration-300 ease-in-out transform hover:scale-103 flex flex-col">
                   <Image src="/img/webdesign_03.png" alt="Grand Architect" width={192} height={192} className="w-full mb-4" />
                   <h3 className="text-xl font-semibold mb-2 text-white">Grand Architect</h3>
                   <p className="text-gray-400 mb-4">For complex projects and businesses requiring a fully customized and scalable online solution. Offers a bespoke, responsive website with unlimited sections, advanced content management options (including Headless CMS), in-depth SEO strategy, full social media integration, and ongoing priority support.</p>
                   <p className="text-gray-400 mb-2 font-semibold">Best For: Complex Projects, Ongoing Support</p>
                   <hr className="text-gray-800 mt-4 mb-4" />
-                  <ul className="text-gray-400 mb-2 space-y-1 list-disc list-inside">
+                  <ul className="text-gray-400 mb-2 space-y-1 list-disc list-inside custom-checklist">
                     <li>Custom Website Design: Bespoke, Unlimited Sections</li>
                     <li>Responsive Design: Included</li>
                     <li>AWS / Google Cloud Integration: Included (Instance fees may apply outside of scope) </li>
