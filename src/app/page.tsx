@@ -1,10 +1,17 @@
 'use client';
 
+/* Majestik Magik - Home Page */
 import Image from 'next/image';
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
+
+
+/* Font Awesome Icons */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faUpwork } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 
 export default function Home() {
@@ -18,11 +25,36 @@ export default function Home() {
 
   // Feature-specific state
   const [showCookieBanner, setShowCookieBanner] = useState(false);
+  const [isAnnual, setIsAnnual] = useState(false);
 
   // Pricing display state
   const [showStarterSparkPrice, setShowStarterSparkPrice] = useState(false);
   const [showMagikWeaverPrice, setShowMagikWeaverPrice] = useState(false);
   const [showGrandArchitectPrice, setShowGrandArchitectPrice] = useState(false);
+
+  // Define your base monthly prices
+  const prices = {
+    basic: {
+      monthlyPrice: 49.99,
+      monthlyLink: "https://checkout.majestikmagik.com/b/dRmcN48Yo0aFb9Agerf7i04",
+      annualLink: "https://checkout.majestikmagik.com/b/4gM8wOdeEf5z4Lc3rFf7i09", // <--- Replace with actual ANNUAL link for Basic
+    },
+    standard: {
+      monthlyPrice: 99.99,
+      monthlyLink: "https://checkout.majestikmagik.com/b/5kQbJ0caA5uZdhId2ff7i05",
+      annualLink: "https://checkout.majestikmagik.com/b/00w5kC7Uk6z3elMgerf7i07", // <--- Replace with actual ANNUAL link for Standard
+    },
+    premium: {
+      monthlyPrice: 199.99,
+      monthlyLink: "https://checkout.majestikmagik.com/b/14AdR8eiI0aFelMe6jf7i06",
+      annualLink: "https://checkout.majestikmagik.com/b/aFa3cufmMbTn3H81jxf7i0a", // <--- Replace with actual ANNUAL link for Premium
+    },
+  };
+
+  // Calculate annual prices (with a hypothetical 10% discount for annual plans)
+  const getAnnualPrice = (monthlyPrice: number) => {
+    return (monthlyPrice * 12 * 0.999).toFixed(0); // 10% discount for annual
+  };
 
   // -- START: Cookie Banner Logic --
   useEffect(() => {
@@ -145,46 +177,48 @@ export default function Home() {
           <nav className="hidden lg:flex justify-center gap-10 py-2"> {/* Reduced gap slightly, added 'hidden md:flex' */}
             <Link
               href="#portfolio"
-              className={`px-4 py-2 rounded-md font-normal transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
+              className={`px-4 py-4 rounded-md font-normal transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
 
               Portfolio
             </Link>
             <Link
               href="#design"
-              className={`px-4 py-2 rounded-md font-normal transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
+              className={`px-4 py-4 rounded-md font-normal transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
 
               Design
             </Link>
             <Link
               href="#services"
-              className={`px-4 py-2 rounded-md font-normal transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
+              className={`px-4 py-4 rounded-md font-normal transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
 
               Services
             </Link>
             <Link
               href="#testimonials"
-              className={`px-4 py-2 rounded-md font-normal transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
+              className={`px-4 py-4 rounded-md font-normal transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
 
               Testimonials
             </Link>
             <Link
               href="#contact"
-              className={`px-4 py-2 rounded-md font-normal transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
+              className={`px-4 py-4 rounded-md font-normal transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
 
               Contact
             </Link>
+            <Link href="https://www.facebook.com/majestikmagik" target="_blank" rel="noopener noreferrer" className="p-3 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}><FontAwesomeIcon icon={faFacebook} className="text-white text-2xl" /></Link>
+            <Link href="https://www.instagram.com/majestikmagik" target="_blank" rel="noopener noreferrer" className="p-3 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}><FontAwesomeIcon icon={faInstagram} className="text-white text-2xl" /></Link>
+
             <Link
               href="https://www.github.com/jmathtech"
               target="_blank" // Added target="_blank" for external link
               rel="noopener noreferrer" // Added rel for security
-              className={`px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
+              className={`p-3 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
 
               <FontAwesomeIcon icon={faGithub} className="text-white text-2xl" />
             </Link>
             <Link href="https://www.upwork.com/freelancers/~01bfab6a82f6cc6c6c?mp_source=share" target="_blank" rel="noopener noreferrer" // Added rel for security
-              className={`px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
-              <Image src="img/upwork-white.svg" alt="Upwork Logo" width={isScrolled ? 22 : 23} height={isScrolled ? 22 : 23} className="transition-all duration-600 ease-in-out" />
-            </Link>
+              className={`p-4 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
+              <FontAwesomeIcon icon={faUpwork} className="text-white text-2xl" /> </Link>
           </nav>
 
           {/* Hamburger Menu Button (Visible only on small screens) */}
@@ -216,9 +250,10 @@ export default function Home() {
           <Link href="#services" className="px-4 py-2 rounded-md font-normal transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Services</Link>
           <Link href="#testimonials" className="px-4 py-2 rounded-md font-normal transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Testimonials</Link>
           <Link href="#contact" className="px-4 py-2 rounded-md font-normal transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Contact</Link>
+          <Link href="https://www.facebook.com/majestikmagik" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}><FontAwesomeIcon icon={faFacebook} className="text-white text-2xl" /></Link>
+          <Link href="https://www.instagram.com/majestikmagik" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}><FontAwesomeIcon icon={faInstagram} className="text-white text-2xl" /></Link>
           <Link href="https://www.github.com/jmathtech" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}><FontAwesomeIcon icon={faGithub} className="text-white text-2xl" /></Link>
-          <Link href="https://www.upwork.com/freelancers/~01bfab6a82f6cc6c6c?mp_source=share" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>
-            <Image src="img/upwork-white.svg" alt="Upwork Logo" width={22} height={22} className="transition-all duration-600 ease-in-out inline-block" />
+          <Link href="https://www.upwork.com/freelancers/~01bfab6a82f6cc6c6c?mp_source=share" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}><FontAwesomeIcon icon={faUpwork} className="text-white text-2xl" />
           </Link>
         </nav>
 
@@ -236,8 +271,8 @@ export default function Home() {
           ">
               Crafting Digital Excellence
             </h2>
-            <p className="text-md md:text-lg text-gray-300 mb-8 max-w-2xl font-semibold mx-auto"> {/* Subheading styling */}
-              Overcome digital hurdles with impactful and scalable web solutions designed for growth.
+            <p className="text-lg lg:text-xl text-gray-300 mb-8 max-w-2xl font-semibold mx-auto"> {/* Subheading styling */}
+              Overcome digital hurdles with accelerating, impactful and scalable web solutions designed for growth.
             </p>
             <Link
               href="#services"
@@ -253,7 +288,7 @@ export default function Home() {
 
           {/* Portfolio Section */}
           <section id="portfolio" className="mb-26">
-            <h2 className="text-4xl font-bold text-center">Website Portfolio</h2>
+            <h2 className="text-5xl font-bold text-center mb-4">Website Portfolio</h2>
             <p className="text-md text-gray-300 mb-6 text-center">
               Explore my latest web development projects for real clients.
             </p>
@@ -284,7 +319,7 @@ export default function Home() {
                 <Image src="/img/parrisgainer_screenshot.webp" alt="ParrisGainer.com" width={500} height={300} className="rounded-md mt-4 mb-4 cursor-pointer" onClick={() => (window.location.href = "https://parrisgainer.com")} />
 
                 <p className="text-sm text-gray-300">
-                  Parris Gainer relocated to Richmond VA in 2007 where she continued her private practice and community work. Parris Gainer earned her Master of Social Work (MSW), and Master of Education (M.Ed.) both from the University of Pittsburgh. She has a Masters of Divinity from Pittsburgh Theological Seminary and Doctor of Divinity from Samuel DeWitt Proctor School of Theology. Dr. Parris Gainer has extensive work experience in program administration, community and school mental health, behavior modification and resolution counseling.
+                  Parris Gainer relocated to Richmond VA in 2007 where she continued her private practice and community work. Dr. Parris Gainer has extensive work experience in program administration, community and school mental health, behavior modification and resolution counseling.
                   <br /><br />
                   <b>Website Project:</b><br />
                   Made with the React JS framework, Tailwind CSS, and Wordpress CMS.
@@ -347,7 +382,7 @@ export default function Home() {
 
           {/* Mockup Section */}
           <section id="design" className="mb-26">
-            <h2 className="text-4xl font-bold mb-6 text-center"> Ask About Our Free Mockup Design</h2>
+            <h2 className="text-5xl font-bold mb-6 text-center"> Ask About Our Free Mockup Design</h2>
             <div className="border border-gray-700 rounded-lg p-6 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-103">
               <h3 className="font-semibold text-lg text-center">Get Inspiration From Our Design Free Mockups</h3>
               <p className="p-4 text-sm text-center text-gray-300">
@@ -359,12 +394,33 @@ export default function Home() {
 
           {/* Services Section */}
           <section id="services" className="mb-26">
-            <h2 className="text-4xl font-bold mb-8 text-center text-white">Our Services</h2>
+            <h2 className="text-5xl font-bold mb-8 text-center text-white">Our Services</h2>
             <div className="border border-gray-700 rounded-lg p-6 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-101">
-              <p className="p-4 text-md text-center text-gray-300">
+              <p className="p-4 text-lg text-center text-gray-300">
                 We offer <b>FREE consultation</b> and a range of services to help you achieve your online goals. Our services include:
               </p>
-               <div className="text-center font-bold text-white m-8">Technical Support Services</div>
+
+              <div className="text-center font-bold text-white text-xl m-6">Technical Support Services</div>
+              {/* Monthly/Annual Switch */}
+              <div className="flex justify-center mb-10">
+                <div className="relative inline-flex rounded-full bg-gray-800 p-1">
+                  <button
+                    className={`px-6 py-2 rounded-full text-sm font-medium transition-colors cursor-pointer duration-300 ${!isAnnual ? 'bg-blue-500 text-white' : 'text-gray-400 hover:text-white'
+                      }`}
+                    onClick={() => setIsAnnual(false)}
+                  >
+                    Monthly
+                  </button>
+                  <button
+                    className={`px-6 py-2 rounded-full text-sm font-medium transition-colors cursor-pointer duration-300 ${isAnnual ? 'bg-blue-500 text-white' : 'text-gray-400 hover:text-white'
+                      }`}
+                    onClick={() => setIsAnnual(true)}
+                  >
+                    Annually
+                  </button>
+                </div>
+              </div>
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
 
@@ -388,9 +444,12 @@ export default function Home() {
                   </ul>
                   <hr className="text-gray-800 mt-4 mb-4" />
                   <div className="flex items-center justify-between mt-auto">
-                    <span className="text-2xl font-bold cursor-pointer text-blue-500 animate-flipIn">$49/mo</span>
-                    <Link href="https://checkout.majestikmagik.com/b/dRmcN48Yo0aFb9Agerf7i04" passHref>
-                      <button className="transition duration-300 ease-in-out bg-gradient-to-r cursor-pointer bg-blue-500 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Subscribe Now</button>
+                    <span className="text-2xl font-bold text-blue-500">
+                      ${isAnnual ? getAnnualPrice(prices.basic.monthlyPrice) : prices.basic.monthlyPrice}
+                      {isAnnual ? '/yr' : '/mo'}
+                    </span>
+                    <Link href={isAnnual ? prices.basic.annualLink : prices.basic.monthlyLink} passHref>
+                      <button className="transition duration-300 ease-in-out bg-gradient-to-r cursor-pointer bg-blue-500 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Subscribe</button>
                     </Link>
                   </div>
                 </div>
@@ -417,10 +476,12 @@ export default function Home() {
                   </ul>
                   <hr className="text-gray-800 mt-4 mb-4" />
                   <div className="flex items-center justify-between mt-auto">
-
-                    <span className="text-2xl font-bold cursor-pointer text-blue-500 animate-flipIn">$99/mo</span>
-                    <Link href="https://checkout.majestikmagik.com/b/5kQbJ0caA5uZdhId2ff7i05" passHref>
-                      <button className="transition duration-300 ease-in-out bg-gradient-to-r cursor-pointer bg-blue-500 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Subscribe Now</button>
+                    <span className="text-2xl font-bold text-blue-500">
+                      ${isAnnual ? getAnnualPrice(prices.standard.monthlyPrice) : prices.standard.monthlyPrice}
+                      {isAnnual ? '/yr' : '/mo'}
+                    </span>
+                    <Link href={isAnnual ? prices.standard.annualLink : prices.standard.monthlyLink} passHref>
+                      <button className="transition duration-300 ease-in-out bg-gradient-to-r cursor-pointer bg-blue-500 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Subscribe</button>
                     </Link>
                   </div>
                 </div>
@@ -447,14 +508,18 @@ export default function Home() {
                   </ul>
                   <hr className="text-gray-800 mt-4 mb-4" />
                   <div className="flex items-center justify-between mt-auto">
-                    <span className="text-2xl font-bold cursor-pointer text-blue-500 animate-flipIn">$199/mo</span>
-                    <Link href="https://checkout.majestikmagik.com/b/14AdR8eiI0aFelMe6jf7i06" passHref>
-                      <button className="transition duration-300 ease-in-out bg-gradient-to-r cursor-pointer bg-blue-500 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Subscribe Now</button>
+                    <span className="text-2xl font-bold text-blue-500">
+                      ${isAnnual ? getAnnualPrice(prices.premium.monthlyPrice) : prices.premium.monthlyPrice}
+                      {isAnnual ? '/yr' : '/mo'}
+                    </span>
+                    <Link href={isAnnual ? prices.premium.annualLink : prices.premium.monthlyLink} passHref>
+                      <button className="transition duration-300 ease-in-out bg-gradient-to-r cursor-pointer bg-blue-500 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Subscribe</button>
                     </Link>
                   </div>
                 </div>
+
               </div>
-              <div className="text-center font-bold text-white m-8">Website Design & Development Services</div>
+              <div className="text-center font-bold text-white text-xl m-8">Website Design & Development Services</div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Starter Spark */}
                 <div className="border border-gray-700 mb-10 rounded-lg p-4 shadow-md bg-[#0d2e4f] transition duration-300 ease-in-out transform hover:scale-103 flex flex-col">
@@ -591,7 +656,7 @@ export default function Home() {
 
           {/* Testimonials Section */}
           <section id="testimonials" className="mb-26"> {/* Increased bottom margin */}
-            <h2 className="text-4xl font-bold mb-6 text-center">What Clients Say</h2> {/* Centered title, increased margin */}
+            <h2 className="text-5xl font-bold mb-6 text-center">What Clients Say</h2> {/* Centered title, increased margin */}
 
             {/* Testimonials Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -637,7 +702,7 @@ export default function Home() {
           <section
             id="contact"
             className="text-center">
-            <h2 className="text-4xl font-bold mb-6">Get In Touch</h2>
+            <h2 className="text-5xl font-bold mb-6">Get In Touch</h2>
             <div className=" bg-black border border-gray-700 text-white p-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-103"
             >
               <p className="mb-12 font-bold">Do you have a web design project you want to take to the next level? <br /> Contact us for a free consultation today!</p>
@@ -655,13 +720,13 @@ export default function Home() {
           </section>
 
 
-          <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 text-center gap-4 text-xs text-gray-200">
-            <Link href="/privacy-policy" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-md'}`}>Privacy Policy</Link>
-            <Link href="/refund-policy" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-md'}`}>Refund Policy</Link>
-            <Link href="/cookie-policy" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-md'}`}>Cookie Policy</Link>
-            <Link href="/intellectual-property-policy" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-md'}`}>Intellectual Property Policy</Link>
-            <Link href="/cyber-security" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-md'}`}>Cyber Security</Link>
-            <Link href="/terms-of-service" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-md'}`}>Terms of Service</Link>
+          <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 text-center gap-4 text-sm text-gray-200">
+            <Link href="/privacy-policy" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-sm'}`}>Privacy Policy</Link>
+            <Link href="/refund-policy" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-sm'}`}>Refund Policy</Link>
+            <Link href="/cookie-policy" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-sm'}`}>Cookie Policy</Link>
+            <Link href="/intellectual-property-policy" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-sm'}`}>Intellectual Property Policy</Link>
+            <Link href="/cyber-security" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-sm'}`}>Cyber Security</Link>
+            <Link href="/terms-of-service" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:underline ${isScrolled ? 'text-xs' : 'text-sm'}`}>Terms of Service</Link>
           </div>
         </main>
       </div>
@@ -671,10 +736,10 @@ export default function Home() {
         showCookieBanner && (
           <>
             {/* Dimming Overlay */}
-            <div className="fixed inset-0 bg-black opacity-20 z-40 transition-opacity duration-300 ease-in-out"></div>
+            <div className="fixed inset-0 bg-black opacity-30 z-40 transition-opacity duration-300 ease-in-out"></div>
 
             {/* Actual Cookie Banner Content (Solid Background) */}
-            <div className="fixed bottom-0 left-0 right-0 bg-gray-900 border-t border-gray-600 text-white p-4 shadow-lg z-50 flex flex-col sm:flex-row justify-between items-center transition-opacity duration-300 ease-in-out">
+            <div className="fixed bottom-0 left-0 right-0 bg-[#0d2e4f] border-t border-gray-600 text-white p-8 shadow-lg z-50 flex flex-col sm:flex-row justify-between items-center transition-opacity duration-300 ease-in-out">
               <p className="text-xs mb-2 sm:mb-0 sm:mr-4">
                 We use cookies to enhance your experience and analyze site traffic. By clicking “Accept” or continuing to use this site, you consent to our use of cookies. Learn more in our Cookie Policy.
               </p>
