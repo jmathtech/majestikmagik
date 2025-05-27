@@ -90,7 +90,7 @@ const RocketScene: React.FC = () => {
         console.error('Error loading rocket model:', error);
       }
     );
-  }, []); // No dependencies, initialize once
+  }, [rocketZ]); // No dependencies, initialize once
 
   const animate = useCallback(() => {
     animationFrameIdRef.current = requestAnimationFrame(animate);
@@ -103,7 +103,7 @@ const RocketScene: React.FC = () => {
 
     if (rocket && camera && renderer && scene && currentMount) {
       const speed = 0.05; // Adjust speed of rocket
-      const fadeZone = 5; // Distance from edge where fading starts (in Three.js units)
+      const fadeZone = 2; // Distance from edge where fading starts (in Three.js units)
 
       const vFOV = THREE.MathUtils.degToRad(camera.fov);
       const currentRocketZ = rocket.position.z;
@@ -111,8 +111,8 @@ const RocketScene: React.FC = () => {
       const visibleWidthAtZ = visibleHeightAtZ * camera.aspect;
 
       // Calculate the visible left and right edges in Three.js coordinates
-      const leftEdge = -(visibleWidthAtZ / 2);
-      const rightEdge = (visibleWidthAtZ / 2);
+      const leftEdge = -(visibleWidthAtZ / 3);
+      const rightEdge = (visibleWidthAtZ / 3);
 
       rocket.position.x += speed; // Move rocket from left to right
       rocket.rotation.y += 0.010; // Gentle rotation (adjust for speed of spin)
