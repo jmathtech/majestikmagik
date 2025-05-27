@@ -159,14 +159,13 @@ export default function Home() {
               font-extrabold
               relative
               transition-all duration-300 ease-in-out
-              ${isScrolled ? 'text-lg' : 'text-xl'}
+              ${isScrolled ? 'text-xl' : 'text-2xl'}
             `}>
-                  <span className="absolute inset-0 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent opacity-100 transition-opacity duration-600 hover:opacity-0">
+                  
+                  <span className="bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent opacity-100 transition-opacity duration-2000 hover:opacity-40 hover:from-blue-400 hover:to-purple-900">
                     Majestik Magik
                   </span>
-                  <span className="bg-gradient-to-r from-white to-gray-800 bg-clip-text text-transparent opacity-0 transition-opacity duration-900 hover:opacity-100">
-                    Majestik Magik
-                  </span>
+                  
                 </h1>
               </Link>
 
