@@ -52,24 +52,35 @@ const RocketScene: React.FC = () => {
         const loadedRocket = gltf.scene;
         loadedRocket.scale.set(0.3, 0.3, 0.3); // Adjust scale as needed
 
+        // *** IMPORTANT: Enable transparency for all materials in the model ***
+        loadedRocket.traverse((obj) => {
+          if (obj instanceof THREE.Mesh) {
+            // Check if material is an array or single material
+            if (Array.isArray(obj.material)) {
+              obj.material.forEach(mat => {
+                mat.transparent = true;
+                mat.opacity = 1; // Start fully opaque
+              });
+            } else if (obj.material instanceof THREE.Material) {
+              obj.material.transparent = true;
+              obj.material.opacity = 1; // Start fully opaque
+            }
+          }
+        });
+
         const vFOV = THREE.MathUtils.degToRad(camera.fov);
         const visibleHeightAtZ = 2 * Math.tan(vFOV / 2) * Math.abs(camera.position.z - rocketZ);
         const visibleWidthAtZ = visibleHeightAtZ * camera.aspect;
 
-        // *** MODIFICATION START ***
-        // Initial position: Start off-screen to the left
         loadedRocket.position.set(
           -(visibleWidthAtZ / 2) - 3, // Start off-screen left by a bit
           (Math.random() - 0.5) * (visibleHeightAtZ / 3), // Randomize Y-position
           rocketZ
         );
 
-        // Rotation to point diagonally right
-        // Adjust these values to fine-tune the diagonal angle
-        loadedRocket.rotation.z = Math.PI / 12; // Tilt slightly nose-up (or down, depending on model orientation)
-        loadedRocket.rotation.y = -Math.PI / 8; // Adjust yaw to point towards screen bottom-right
-        loadedRocket.rotation.x = Math.PI / 12; // Adjust pitch for a slight upward angle relative to its own axis
-        // *** MODIFICATION END ***
+        loadedRocket.rotation.z = Math.PI / 12; // Tilt slightly nose-up
+        loadedRocket.rotation.y = -Math.PI / 8; // Adjust yaw
+        loadedRocket.rotation.x = Math.PI / 12; // Adjust pitch
 
         scene.add(loadedRocket);
         rocketRef.current = loadedRocket;
@@ -88,27 +99,67 @@ const RocketScene: React.FC = () => {
     const camera = cameraRef.current;
     const renderer = rendererRef.current;
     const scene = sceneRef.current;
+    const currentMount = mountRef.current; // Get current mount for clientWidth/Height
 
-    if (rocket && camera && renderer && scene) {
+    if (rocket && camera && renderer && scene && currentMount) {
       const speed = 0.05; // Adjust speed of rocket
+      const fadeZone = 5; // Distance from edge where fading starts (in Three.js units)
 
       const vFOV = THREE.MathUtils.degToRad(camera.fov);
       const currentRocketZ = rocket.position.z;
       const visibleHeightAtZ = 2 * Math.tan(vFOV / 2) * Math.abs(camera.position.z - currentRocketZ);
       const visibleWidthAtZ = visibleHeightAtZ * camera.aspect;
 
-      // *** MODIFICATION START ***
+      // Calculate the visible left and right edges in Three.js coordinates
+      const leftEdge = -(visibleWidthAtZ / 2);
+      const rightEdge = (visibleWidthAtZ / 2);
+
       rocket.position.x += speed; // Move rocket from left to right
-      rocket.rotation.y += 0.005; // Gentle rotation (adjust for speed of spin)
+      rocket.rotation.y += 0.010; // Gentle rotation (adjust for speed of spin)
+
+      // --- Fade In/Out Logic ---
+      let targetOpacity = 1;
+
+      // Fade in from left
+      if (rocket.position.x < leftEdge + fadeZone) {
+        targetOpacity = THREE.MathUtils.mapLinear(
+          rocket.position.x,
+          leftEdge - 2, // Start fading from further left (off-screen)
+          leftEdge + fadeZone, // End fading in here
+          0, 1
+        );
+      }
+      // Fade out to right
+      else if (rocket.position.x > rightEdge - fadeZone) {
+        targetOpacity = THREE.MathUtils.mapLinear(
+          rocket.position.x,
+          rightEdge - fadeZone, // Start fading out here
+          rightEdge + 2, // End fading out to further right (off-screen)
+          1, 0
+        );
+      }
+
+      // Apply opacity to all materials of the rocket
+      rocket.traverse((obj) => {
+        if (obj instanceof THREE.Mesh) {
+          if (Array.isArray(obj.material)) {
+            obj.material.forEach(mat => {
+              mat.opacity = targetOpacity;
+            });
+          } else if (obj.material instanceof THREE.Material) {
+            obj.material.opacity = targetOpacity;
+          }
+        }
+      });
+      // --- End Fade In/Out Logic ---
+
 
       // Reset rocket position when it goes off-screen right
-      if (rocket.position.x > (visibleWidthAtZ / 2) + 3) { // Adjust threshold as needed
-        rocket.position.x = -(visibleWidthAtZ / 2) - 3; // Reset to off-screen left
-        rocket.position.y = (Math.random() - 0.5) * (visibleHeightAtZ / 3); // Randomize Y
+      if (rocket.position.x > rightEdge + 3) { // Adjust threshold as needed
+        rocket.position.x = leftEdge - 3; // Reset to off-screen left
+        rocket.position.y = (Math.random() - 0.3) * (visibleHeightAtZ / 3); // Randomize Y
         rocket.rotation.y = Math.random() * Math.PI; // Randomize rotation (optional)
       }
-      // *** MODIFICATION END ***
-
       renderer.render(scene, camera);
     }
   }, []);
