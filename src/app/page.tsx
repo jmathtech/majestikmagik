@@ -688,6 +688,7 @@ export default function Home() {
               <p className="mb-12 font-bold">Do you have a web design project you want to take to the next level? <br /> Contact us for a free consultation today!</p>
               <p className="mb-2">Majestik Magik</p>
               <p className="mb-2">405 E. Laburnum Ave Ste #3</p>
+              <p className="mb-2">Richmond, VA 23222</p>
               <p className="mb-2"><Link href="mailto:jamil.matheny@majestikmagik.com" className="hover:text-gray-600 transition duration-900 ease-in-out">jamil.matheny@majestikmagik.com</Link></p>
               <p className="mb-4">804.362.7561</p>
               
