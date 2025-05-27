@@ -50,7 +50,7 @@ const RocketScene: React.FC = () => {
       '/models/rocket.glb', // Path relative to the public folder
       (gltf) => {
         const loadedRocket = gltf.scene;
-        loadedRocket.scale.set(0.3, 0.3, 0.3); // Adjust scale as needed
+        loadedRocket.scale.set(0.4, 0.4, 0.4); // Adjust scale as needed
 
         // *** IMPORTANT: Enable transparency for all materials in the model ***
         loadedRocket.traverse((obj) => {
