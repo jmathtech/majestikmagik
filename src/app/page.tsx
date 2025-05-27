@@ -4,7 +4,7 @@
 import Image from 'next/image';
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
-
+import RocketScene from './components/RocketScene';
 
 /* Font Awesome Icons */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -161,11 +161,11 @@ export default function Home() {
               transition-all duration-300 ease-in-out
               ${isScrolled ? 'text-xl' : 'text-2xl'}
             `}>
-                  
+
                   <span className="bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent opacity-100 transition-opacity duration-2000 hover:opacity-40 hover:from-blue-400 hover:to-purple-900">
                     Majestik Magik
                   </span>
-                  
+
                 </h1>
               </Link>
 
@@ -242,27 +242,30 @@ export default function Home() {
         <main className="max-w-7xl mx-auto py-8 px-4 ">
 
           {/* === Hero Section Start === */}
-          <section className="text-center py-16 md:py-24 lg:py-32 mb-12"> {/* Added padding and bottom margin */}
-            <h2 className="text-4xl md:text-5xl lg:text-8xl mb-4 font-bold
+          <section className="text-center py-16 md:py-24 lg:py-32 mb-12 relative"> {/* Added padding and bottom margin */}
+            <RocketScene />
+            <div className="relative z-10">
+              <h2 className="text-4xl md:text-5xl lg:text-8xl mb-4 font-bold
              bg-gradient-to-r from-blue-400 via-blue-400 to-purple-900 
              [-webkit-background-clip:text] 
              bg-clip-text text-transparent
              select-none
           ">
-              Crafting Digital Excellence
-            </h2>
-            <p className="text-lg lg:text-xl text-gray-300 mb-8 max-w-2xl font-semibold mx-auto"> {/* Subheading styling */}
-              Overcome digital hurdles with accelerating, impactful and scalable web solutions designed for growth.
-            </p>
-            <Link
-              href="#services"
-              className="inline-flex items-center bg-gradient-to-r bg-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105" // Styled CTA button
-            >
-              Get Started
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 ml-2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-              </svg>
-            </Link>
+                Crafting Digital Excellence
+              </h2>
+              <p className="text-lg lg:text-xl text-gray-300 mb-8 max-w-2xl font-semibold mx-auto"> {/* Subheading styling */}
+                Overcome digital hurdles with accelerating, impactful and scalable web solutions designed for growth.
+              </p>
+              <Link
+                href="#services"
+                className="inline-flex items-center bg-gradient-to-r bg-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105" // Styled CTA button
+              >
+                Get Started
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 ml-2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>
+              </Link>
+            </div>
           </section>
           {/* === Hero Section End === */}
 
@@ -691,7 +694,7 @@ export default function Home() {
               <p className="mb-2">Richmond, VA 23222</p>
               <p className="mb-2"><Link href="mailto:jamil.matheny@majestikmagik.com" className="hover:text-gray-600 transition duration-900 ease-in-out">jamil.matheny@majestikmagik.com</Link></p>
               <p className="mb-4">804.362.7561</p>
-              
+
               <iframe
                 src="https://climate.stripe.com/badge/QjbCfj?theme=dark&size=large&locale=en-US"
                 className="block mx-auto w-[280px] h-[112px] md:w-[380px] md:h-[82px]"
