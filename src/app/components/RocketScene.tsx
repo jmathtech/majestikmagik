@@ -38,9 +38,9 @@ const RocketScene: React.FC = () => {
     rendererRef.current = renderer;
 
     // Lights
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.01);
     scene.add(ambientLight);
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 1.5);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.35);
     directionalLight.position.set(5, 10, 7);
     scene.add(directionalLight);
 
