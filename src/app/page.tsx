@@ -226,7 +226,7 @@ export default function Home() {
         {/* Mobile Navigation Menu (Appears below header when open) */}
         <nav
           ref={menuRef} // Attach the menu ref
-          className={`lg:hidden fixed inset-x-0 bg-black text-white flex flex-col items-center gap-4 py-16 transition-transform duration-600 ease-in-out transform z-10 ${isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full' // Slide down/up animation
+          className={`lg:hidden fixed inset-x-0 bg-black text-white flex flex-col items-center gap-4 py-16 transition-transform duration-600 ease-in-out transform z-15 ${isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full' // Slide down/up animation
             } ${isScrolled ? 'top-12' : 'top-16' // Adjust padding based on scroll state
             }`}
         >
