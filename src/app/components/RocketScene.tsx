@@ -12,7 +12,7 @@ const RocketScene: React.FC = () => {
   const rocketRef = useRef<THREE.Group | null>(null);
   const animationFrameIdRef = useRef<number | null>(null);
 
-  const rocketZ = -10; // Z-position of the rocket (further back)
+  const rocketZ = -15; // Z-position of the rocket (further back)
   const cameraZ = 5;   // Z-position of the camera
 
   const initializeScene = useCallback((currentMount: HTMLDivElement) => {
@@ -40,7 +40,7 @@ const RocketScene: React.FC = () => {
     // Lights
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.01);
     scene.add(ambientLight);
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.35);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.55);
     directionalLight.position.set(5, 10, 7);
     scene.add(directionalLight);
 
@@ -78,9 +78,9 @@ const RocketScene: React.FC = () => {
           rocketZ
         );
 
-        loadedRocket.rotation.z = Math.PI / 12; // Tilt slightly nose-up
-        loadedRocket.rotation.y = -Math.PI / 8; // Adjust yaw
-        loadedRocket.rotation.x = Math.PI / 12; // Adjust pitch
+        loadedRocket.rotation.z = Math.PI / 2.5; // Tilt slightly nose-up
+        loadedRocket.rotation.y = -Math.PI / 1; // Adjust yaw
+        loadedRocket.rotation.x = Math.PI / 18; // Adjust pitch
 
         scene.add(loadedRocket);
         rocketRef.current = loadedRocket;
@@ -102,7 +102,7 @@ const RocketScene: React.FC = () => {
     const currentMount = mountRef.current; // Get current mount for clientWidth/Height
 
     if (rocket && camera && renderer && scene && currentMount) {
-      const speed = 0.05; // Adjust speed of rocket
+      const speed = 0.08; // Adjust speed of rocket
       const fadeZone = 2; // Distance from edge where fading starts (in Three.js units)
 
       const vFOV = THREE.MathUtils.degToRad(camera.fov);
@@ -115,8 +115,7 @@ const RocketScene: React.FC = () => {
       const rightEdge = (visibleWidthAtZ / 3);
 
       rocket.position.x += speed; // Move rocket from left to right
-      rocket.rotation.y += 0.010; // Gentle rotation (adjust for speed of spin)
-
+     
       // --- Fade In/Out Logic ---
       let targetOpacity = 1;
 
@@ -157,8 +156,8 @@ const RocketScene: React.FC = () => {
       // Reset rocket position when it goes off-screen right
       if (rocket.position.x > rightEdge + 3) { // Adjust threshold as needed
         rocket.position.x = leftEdge - 3; // Reset to off-screen left
-        rocket.position.y = (Math.random() - 0.3) * (visibleHeightAtZ / 3); // Randomize Y
-        rocket.rotation.y = Math.random() * Math.PI; // Randomize rotation (optional)
+        rocket.position.y = (Math.random() - 0.6) * (visibleHeightAtZ / 3); // Randomize Y
+      // rocket.rotation.y = Math.random() * Math.PI; // Randomize rotation (optional)
       }
       renderer.render(scene, camera);
     }
