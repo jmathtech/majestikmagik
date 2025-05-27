@@ -205,20 +205,6 @@ export default function Home() {
 
               Contact
             </Link>
-            <Link href="https://www.facebook.com/majestikmagik" target="_blank" rel="noopener noreferrer" className="p-3 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}><FontAwesomeIcon icon={faFacebook} className="text-white text-2xl" /></Link>
-            <Link href="https://www.instagram.com/majestikmagik" target="_blank" rel="noopener noreferrer" className="p-3 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}><FontAwesomeIcon icon={faInstagram} className="text-white text-2xl" /></Link>
-
-            <Link
-              href="https://www.github.com/jmathtech"
-              target="_blank" // Added target="_blank" for external link
-              rel="noopener noreferrer" // Added rel for security
-              className={`p-3 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
-
-              <FontAwesomeIcon icon={faGithub} className="text-white text-2xl" />
-            </Link>
-            <Link href="https://www.upwork.com/freelancers/~01bfab6a82f6cc6c6c?mp_source=share" target="_blank" rel="noopener noreferrer" // Added rel for security
-              className={`p-4 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
-              <FontAwesomeIcon icon={faUpwork} className="text-white text-2xl" /> </Link>
           </nav>
 
           {/* Hamburger Menu Button (Visible only on small screens) */}
@@ -250,11 +236,6 @@ export default function Home() {
           <Link href="#services" className="px-4 py-2 rounded-md font-normal transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Services</Link>
           <Link href="#testimonials" className="px-4 py-2 rounded-md font-normal transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Testimonials</Link>
           <Link href="#contact" className="px-4 py-2 rounded-md font-normal transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Contact</Link>
-          <Link href="https://www.facebook.com/majestikmagik" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}><FontAwesomeIcon icon={faFacebook} className="text-white text-2xl" /></Link>
-          <Link href="https://www.instagram.com/majestikmagik" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}><FontAwesomeIcon icon={faInstagram} className="text-white text-2xl" /></Link>
-          <Link href="https://www.github.com/jmathtech" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}><FontAwesomeIcon icon={faGithub} className="text-white text-2xl" /></Link>
-          <Link href="https://www.upwork.com/freelancers/~01bfab6a82f6cc6c6c?mp_source=share" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}><FontAwesomeIcon icon={faUpwork} className="text-white text-2xl" />
-          </Link>
         </nav>
 
 
@@ -710,6 +691,7 @@ export default function Home() {
               <p className="mb-2">405 E. Laburnum Ave Ste #3</p>
               <p className="mb-2"><Link href="mailto:jamil.matheny@majestikmagik.com" className="hover:text-gray-600 transition duration-900 ease-in-out">jamil.matheny@majestikmagik.com</Link></p>
               <p className="mb-4">804.362.7561</p>
+              
               <iframe
                 src="https://climate.stripe.com/badge/QjbCfj?theme=dark&size=large&locale=en-US"
                 className="block mx-auto w-[280px] h-[112px] md:w-[380px] md:h-[82px]"
@@ -726,7 +708,17 @@ export default function Home() {
             <Link href="/cookie-policy" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-sm'}`}>Cookie Policy</Link>
             <Link href="/intellectual-property-policy" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-sm'}`}>Intellectual Property Policy</Link>
             <Link href="/cyber-security" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-sm'}`}>Cyber Security</Link>
-            <Link href="/terms-of-service" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:underline ${isScrolled ? 'text-xs' : 'text-sm'}`}>Terms of Service</Link>
+            <Link href="/terms-of-service" className={`p-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-xs' : 'text-sm'}`}>Terms of Service</Link>
+          </div>
+          <div className="mt-8 text-center text-white">
+            <Link href="https://www.facebook.com/majestikmagik" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}><FontAwesomeIcon icon={faFacebook} className="text-white text-2xl" /></Link>
+            <Link href="https://www.instagram.com/majestikmagik" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}><FontAwesomeIcon icon={faInstagram} className="text-white text-2xl" /></Link>
+            <Link href="https://www.github.com/jmathtech" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}><FontAwesomeIcon icon={faGithub} className="text-white text-2xl" /></Link>
+            <Link href="https://www.upwork.com/freelancers/~01bfab6a82f6cc6c6c?mp_source=share" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-md transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}><FontAwesomeIcon icon={faUpwork} className="text-white text-2xl" />
+            </Link>
+          </div>
+          <div className="text-center mt-4 text-sm text-gray-200">
+            <p>&copy; {new Date().getFullYear()} Majestik Magik. All rights reserved.</p>
           </div>
         </main>
       </div>
