@@ -239,7 +239,7 @@ export default function Home() {
 
 
         {/* Main Content */}
-        <main className="max-w-6xl mx-auto py-8 px-4 ">
+        <main className="max-w-7xl mx-auto py-8 px-4 ">
 
           {/* === Hero Section Start === */}
           <section className="text-center py-16 md:py-24 lg:py-32 mb-12"> {/* Added padding and bottom margin */}
@@ -276,7 +276,7 @@ export default function Home() {
 
               <div className="border border-gray-700 rounded-lg p-6 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-103">
                 <h3 className="font-semibold text-lg">CearcoChemicals.com</h3>
-                <Image src="/img/cearcochemicals_screenshot.webp" alt="CearcoChemicals.com" width={500} height={300} className="rounded-md mt-4 mb-4 cursor-pointer" onClick={() => (window.location.href = "https://cearcochemicals.com")} />
+                <Image src="/img/cearcochemicals_screenshot.webp" alt="CearcoChemicals.com" width={570} height={370} className="rounded-md mt-4 mb-4 cursor-pointer" onClick={() => (window.location.href = "https://cearcochemicals.com")} />
 
                 <p className="text-sm text-gray-300">
                   Cleaning Equipment & Repair Company is a locally owned business out of Richmond, Virginia. CEARCO has been established since 1981. We make specialty blended cleaning solutions that are not powdered- based. All of our specialty blended solutions are liquid-based. With this said, we have remained faithful to the original formulas.
@@ -296,7 +296,7 @@ export default function Home() {
 
               <div className="border border-gray-700 rounded-lg p-6 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-103">
                 <h3 className="font-semibold text-lg">ParrisGainer.com</h3>
-                <Image src="/img/parrisgainer_screenshot.webp" alt="ParrisGainer.com" width={500} height={300} className="rounded-md mt-4 mb-4 cursor-pointer" onClick={() => (window.location.href = "https://parrisgainer.com")} />
+                <Image src="/img/parrisgainer_screenshot.webp" alt="ParrisGainer.com" width={570} height={370} className="rounded-md mt-4 mb-4 cursor-pointer" onClick={() => (window.location.href = "https://parrisgainer.com")} />
 
                 <p className="text-sm text-gray-300">
                   Parris Gainer relocated to Richmond VA in 2007 where she continued her private practice and community work. Dr. Parris Gainer has extensive work experience in program administration, community and school mental health, behavior modification and resolution counseling.
@@ -316,7 +316,7 @@ export default function Home() {
 
               <div className="border border-gray-700 rounded-lg p-6 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-103">
                 <h3 className="font-semibold text-lg">Cleaning.MajestikMagik.com</h3>
-                <Image src="/img/cleaningmajestikmagik.webp" alt="Cleaning Majestik Magik" width={500} height={300} className="rounded-md mt-4 mb-4 cursor-pointer" onClick={() => (window.location.href = "https://cleaning.majestikmagik.com")} />
+                <Image src="/img/cleaningmajestikmagik.webp" alt="Cleaning Majestik Magik" width={570} height={370} className="rounded-md mt-4 mb-4 cursor-pointer" onClick={() => (window.location.href = "https://cleaning.majestikmagik.com")} />
                 <p className="text-sm text-gray-300">
                   Let&apos;s bring cleanliness & comfort to your space.
                   <br /><br />
@@ -335,8 +335,8 @@ export default function Home() {
               <div className="border border-gray-700 rounded-lg p-6 shadow-md bg-black transition duration-300 ease-in-out transform hover:scale-103">
                 <h3 className="font-semibold text-lg">Zeus Suit Shop (Mock Design)</h3>
                 <video
-                  width="500" // Keep width
-                  height="300" // Keep height (adjust aspect ratio if needed)
+                  width="570" // Keep width
+                  height="370" // Keep height (adjust aspect ratio if needed)
                   controls // Add controls (play/pause, volume, etc.)
                   className="rounded-md mt-4 mb-4" // Keep styling
                 >
