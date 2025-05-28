@@ -102,7 +102,7 @@ const RocketScene: React.FC = () => {
     const currentMount = mountRef.current; // Get current mount for clientWidth/Height
 
     if (rocket && camera && renderer && scene && currentMount) {
-      const speed = 0.15; // Adjust speed of rocket
+      const speed = 0.25; // Adjust speed of rocket
       const fadeZone = 2; // Distance from edge where fading starts (in Three.js units)
 
       const vFOV = THREE.MathUtils.degToRad(camera.fov);
