@@ -243,7 +243,7 @@ export default function Home() {
 
           {/* === Hero Section Start === */}
           <section className="text-center py-16 md:py-24 lg:py-32 mb-12 relative"> {/* Added padding and bottom margin */}
-
+            <RocketScene />
             <div className="relative z-10">
               <h2 className="text-4xl md:text-5xl lg:text-8xl mb-4 font-bold
              bg-gradient-to-r from-blue-400 via-blue-400 to-purple-900 
@@ -252,7 +252,7 @@ export default function Home() {
              select-none
           ">
                 Crafting Digital Excellence
-              </h2><RocketScene />
+              </h2>
               <p className="text-lg lg:text-xl text-gray-300 mb-8 max-w-2xl font-semibold mx-auto"> {/* Subheading styling */}
                 Overcome digital hurdles with accelerating, impactful and scalable web solutions designed for growth.
               </p>
