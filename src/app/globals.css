@@ -214,8 +214,10 @@ body {
 /* --- Base Body & Theme Styles --- */
 :root {
   /* Keep your light/dark theme variables */
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -232,13 +234,6 @@ body {
   }
 }
 
-/* Apply theme variables */
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
 html {
   scroll-behavior: smooth;

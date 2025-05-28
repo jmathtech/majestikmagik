@@ -38,16 +38,16 @@ const RocketScene: React.FC = () => {
     rendererRef.current = renderer;
 
     // Lights
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.05);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.002);
     scene.add(ambientLight);
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.75);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.12);
     directionalLight.position.set(5, 10, 5);
     scene.add(directionalLight);
 
     // GLTF Loader
     const loader = new GLTFLoader();
     loader.load(
-      '/models/rocket.glb', // Path relative to the public folder
+      '/models/rocket-ship.glb', // Path relative to the public folder
       (gltf) => {
         const loadedRocket = gltf.scene;
         loadedRocket.scale.set(0.7, 0.7, 0.7); // Adjust scale as needed
