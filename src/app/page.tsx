@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import RocketScene from './components/RocketScene';
+import MoonScene from './components/MoonScene';
 
 /* Font Awesome Icons */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -243,8 +244,15 @@ export default function Home() {
 
           {/* === Hero Section Start === */}
           <section className="text-center py-16 md:py-24 lg:py-32 mb-12 relative"> {/* Added padding and bottom margin */}
-            <RocketScene />
-            <div className="relative z-10">
+
+            <div className="absolute inset-0 flex justify-center items-center z-5"> {/* z-0 relative to its parent (the z-10 div) */}
+              {/* Adjust size of the moon as needed. It will be centered within the 'inset-0' div. */}
+              <div style={{ width: '900px', height: '900px' }}> {/* Example size, adjust as needed */}
+                <MoonScene modelPath="/models/moon.glb" spinSpeed={0.0007} />
+              </div>
+            </div>
+            <div className="relative z-10 flex flex-col items-center">
+              <RocketScene />
               <h2 className="text-4xl md:text-5xl lg:text-8xl mb-4 font-bold
              bg-gradient-to-r from-blue-400 via-blue-400 to-purple-900 
              [-webkit-background-clip:text] 
