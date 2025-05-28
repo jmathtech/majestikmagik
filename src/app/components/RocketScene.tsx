@@ -12,8 +12,8 @@ const RocketScene: React.FC = () => {
   const rocketRef = useRef<THREE.Group | null>(null);
   const animationFrameIdRef = useRef<number | null>(null);
 
-  const rocketZ = -15; // Z-position of the rocket (further back)
-  const cameraZ = 5;   // Z-position of the camera
+  const rocketZ = -20; // Z-position of the rocket (further back)
+  const cameraZ = 2;   // Z-position of the camera
 
   const initializeScene = useCallback((currentMount: HTMLDivElement) => {
     // Scene
@@ -22,9 +22,9 @@ const RocketScene: React.FC = () => {
 
     // Camera
     const camera = new THREE.PerspectiveCamera(
-      75,
+      85,
       currentMount.clientWidth / currentMount.clientHeight,
-      0.1,
+      1,
       1000
     );
     camera.position.z = cameraZ;
@@ -38,10 +38,10 @@ const RocketScene: React.FC = () => {
     rendererRef.current = renderer;
 
     // Lights
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.01);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.05);
     scene.add(ambientLight);
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.55);
-    directionalLight.position.set(5, 10, 7);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.75);
+    directionalLight.position.set(5, 10, 5);
     scene.add(directionalLight);
 
     // GLTF Loader
@@ -50,7 +50,7 @@ const RocketScene: React.FC = () => {
       '/models/rocket.glb', // Path relative to the public folder
       (gltf) => {
         const loadedRocket = gltf.scene;
-        loadedRocket.scale.set(0.4, 0.4, 0.4); // Adjust scale as needed
+        loadedRocket.scale.set(0.7, 0.7, 0.7); // Adjust scale as needed
 
         // *** IMPORTANT: Enable transparency for all materials in the model ***
         loadedRocket.traverse((obj) => {
@@ -78,7 +78,7 @@ const RocketScene: React.FC = () => {
           rocketZ
         );
 
-        loadedRocket.rotation.z = Math.PI / 2.5; // Tilt slightly nose-up
+        loadedRocket.rotation.z = Math.PI / 2.1; // Tilt slightly nose-up
         loadedRocket.rotation.y = -Math.PI / 1; // Adjust yaw
         loadedRocket.rotation.x = Math.PI / 18; // Adjust pitch
 
@@ -102,7 +102,7 @@ const RocketScene: React.FC = () => {
     const currentMount = mountRef.current; // Get current mount for clientWidth/Height
 
     if (rocket && camera && renderer && scene && currentMount) {
-      const speed = 0.08; // Adjust speed of rocket
+      const speed = 0.25; // Adjust speed of rocket
       const fadeZone = 2; // Distance from edge where fading starts (in Three.js units)
 
       const vFOV = THREE.MathUtils.degToRad(camera.fov);
