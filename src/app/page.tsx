@@ -291,7 +291,7 @@ export default function Home() {
                          hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-600
                          transition-all duration-300 ease-in-out transform hover:scale-102"
               >
-                <div className="bg-black h-full rounded-lg p-6 shadow-md">
+                <div className="bg-black h-full rounded-xl p-6 shadow-md">
                   <h3 className="font-semibold text-lg">CearcoChemicals.com</h3>
                   <Image src="/img/cearcochemicals_screenshot.webp" alt="CearcoChemicals.com" width={570} height={370} className="rounded-md mt-4 mb-4 cursor-pointer" onClick={() => (window.location.href = "https://cearcochemicals.com")} />
 
@@ -318,7 +318,7 @@ export default function Home() {
                          hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-600
                          transition-all duration-300 ease-in-out transform hover:scale-102"
               >
-                <div className="bg-black h-full rounded-lg p-6 shadow-md">
+                <div className="bg-black h-full rounded-xl p-6 shadow-md">
                   <h3 className="font-semibold text-lg">ParrisGainer.com</h3>
                   <Image src="/img/parrisgainer_screenshot.webp" alt="ParrisGainer.com" width={570} height={370} className="rounded-md mt-4 mb-4 cursor-pointer" onClick={() => (window.location.href = "https://parrisgainer.com")} />
 
@@ -345,7 +345,7 @@ export default function Home() {
                          hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-600
                          transition-all duration-300 ease-in-out transform hover:scale-102"
               >
-                <div className="bg-black h-full rounded-lg p-6 shadow-md">
+                <div className="bg-black h-full rounded-xl p-6 shadow-md">
                   <h3 className="font-semibold text-lg">Cleaning.MajestikMagik.com</h3>
                   <Image src="/img/cleaningmajestikmagik.webp" alt="Cleaning Majestik Magik" width={570} height={370} className="rounded-md mt-4 mb-4 cursor-pointer" onClick={() => (window.location.href = "https://cleaning.majestikmagik.com")} />
                   <p className="text-sm text-gray-300">
@@ -370,7 +370,7 @@ export default function Home() {
                          hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-600
                          transition-all duration-300 ease-in-out transform hover:scale-102"
               >
-                <div className="bg-black h-full rounded-lg p-6 shadow-md">
+                <div className="bg-black h-full rounded-xl p-6 shadow-md">
                   <h3 className="font-semibold text-lg">Zeus Suit Shop (Mock Design)</h3>
                   <video
                     width="570" // Keep width
