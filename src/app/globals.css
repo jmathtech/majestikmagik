@@ -156,14 +156,14 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-@keyframes moveGradientCircle {
+/*@keyframes moveGradientCircle {
   0% { transform: translate(0, 0) rotate(0deg); opacity: 0.5; }
   25% { transform: translate(40vw, 30vh) rotate(90deg); }
   50% { transform: translate(10vw, 70vh) rotate(180deg); opacity: 1; }
   75% { transform: translate(60vw, 10vh) rotate(270deg); }
   100% { transform: translate(0, 0) rotate(360deg); opacity: 1; }
 }
-
+*/
 /* For Webkit browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
   height: 8px;

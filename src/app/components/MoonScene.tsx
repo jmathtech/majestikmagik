@@ -5,7 +5,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 interface MoonSceneProps {
-  modelPath: string; // Path to the .glb model, e.g., '/models/moon.glb'
+  modelPath: string; // Path to the .glb model, e.g., '/models/Moon.glb'
   spinSpeed?: number; // Optional: controls rotation speed, positive for one direction, negative for other
   
 }
@@ -18,7 +18,7 @@ const MoonScene: React.FC<MoonSceneProps> = ({
   const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
   const cameraRef = useRef<THREE.PerspectiveCamera | null>(null);
   const sceneRef = useRef<THREE.Scene | null>(null);
-  const modelRef = useRef<THREE.Group | null>(null); // For the loaded moon model
+  const modelRef = useRef<THREE.Group | null>(null); // For the loaded Moon model
   const animationFrameIdRef = useRef<number | null>(null);
 
   // Initial camera Z position - how far the camera is from the scene's origin
@@ -33,7 +33,7 @@ const MoonScene: React.FC<MoonSceneProps> = ({
     const camera = new THREE.PerspectiveCamera(
       55, // Field of View (degrees)
       currentMount.clientWidth / currentMount.clientHeight, // Aspect Ratio
-      0.1, // Near clipping plane
+      0.2, // Near clipping plane
       1000 // Far clipping plane
     );
     camera.position.z = cameraZ;

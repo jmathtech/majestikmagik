@@ -40,7 +40,7 @@ const RocketScene: React.FC = () => {
     // Lights
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.002);
     scene.add(ambientLight);
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.49);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.89);
     directionalLight.position.set(5, 10, 5);
     scene.add(directionalLight);
 
@@ -50,7 +50,7 @@ const RocketScene: React.FC = () => {
       '/models/rocket-ship.glb', // Path relative to the public folder
       (gltf) => {
         const loadedRocket = gltf.scene;
-        loadedRocket.scale.set(0.7, 0.7, 0.7); // Adjust scale as needed
+        loadedRocket.scale.set(0.3, 0.3, 0.3); // Adjust scale as needed
 
         // *** IMPORTANT: Enable transparency for all materials in the model ***
         loadedRocket.traverse((obj) => {
