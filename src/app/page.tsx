@@ -293,7 +293,7 @@ export default function Home() {
               >
                 <div className="bg-black h-full rounded-xl p-6 shadow-md">
                   <h3 className="font-semibold text-lg">CearcoChemicals.com</h3>
-                  <Image src="/img/cearcochemicals_screenshot.webp" alt="CearcoChemicals.com" width={570} height={370} className="rounded-md mt-4 mb-4 cursor-pointer" onClick={() => (window.location.href = "https://cearcochemicals.com")} />
+                  <Image src="/img/cearcochemicals_screenshot1.webp" alt="CearcoChemicals.com" width={570} height={370} className="rounded-md mt-4 mb-4 cursor-pointer" onClick={() => (window.location.href = "https://cearcochemicals.com")} />
 
                   <p className="text-sm text-gray-300">
                     Cleaning Equipment & Repair Company is a locally owned business out of Richmond, Virginia. CEARCO has been established since 1981. We make specialty blended cleaning solutions that are not powdered- based. All of our specialty blended solutions are liquid-based. With this said, we have remained faithful to the original formulas.
