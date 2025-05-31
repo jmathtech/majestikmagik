@@ -123,13 +123,12 @@ const MoonScene: React.FC<MoonSceneProps> = ({
       }
 
       const currentRenderer = rendererRef.current;
-      const currentScene = sceneRef.current;
-      const mountedElement = mountRef.current; // Use the ref's value at the time of cleanup
+      const currentScene = sceneRef.current; // Use the ref's value at the time of cleanup
 
       // Dispose of Three.js objects to free resources
       if (currentRenderer) {
-        if (currentRenderer.domElement && mountedElement && mountedElement.contains(currentRenderer.domElement)) {
-            mountedElement.removeChild(currentRenderer.domElement);
+        if (currentRenderer.domElement && currentMount && currentMount.contains(currentRenderer.domElement)) {
+            currentMount.removeChild(currentRenderer.domElement);
         }
         currentRenderer.dispose();
         rendererRef.current = null;
