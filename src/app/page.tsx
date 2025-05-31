@@ -770,7 +770,6 @@ export default function Home() {
                   className="block mx-auto w-[280px] h-[112px] md:w-[380px] md:h-[82px]"
                   title="Stripe Climate Badge"
                 ></iframe>
-                <p className="text-xs text-zinc-800 mt-4 text-end">Designed by Jamil Matheny</p>
               </div>
             </div>
           </section>
