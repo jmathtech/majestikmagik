@@ -146,10 +146,10 @@ export default function Home() {
           <div className="flex items-center space-x-4">
             <div className="relative group">
               <Image
-                src="/img/logo.webp"
+                src="/img/majestikmagik_logo.png"
                 alt="Majestik Magik Logo"
-                width={isScrolled ? 30 : 40} // Smaller width when scrolled
-                height={isScrolled ? 30 : 40} // Smaller height when scrolled
+                width={isScrolled ? 40 : 50} // Smaller width when scrolled
+                height={isScrolled ? 40 : 50} // Smaller height when scrolled
                 className={`transition-all duration-600 ease-in-out ${isScrolled ? '' : 'group-hover:scale-125'}`} // Adjust hover effect slightly if needed
               />
 
@@ -182,16 +182,10 @@ export default function Home() {
               Portfolio
             </Link>
             <Link
-              href="#design"
+              href="#pricing"
               className={`px-4 py-4 rounded-md font-normal transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
 
-              Design
-            </Link>
-            <Link
-              href="#services"
-              className={`px-4 py-4 rounded-md font-normal transition-all duration-600 ease-in-out hover:bg-gray-700 ${isScrolled ? 'text-sm' : 'text-md'}`}>
-
-              Services
+              Pricing
             </Link>
             <Link
               href="#testimonials"
@@ -232,8 +226,7 @@ export default function Home() {
             }`}
         >
           <Link href="#portfolio" className="px-4 py-2 rounded-md font-normal transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Portfolio</Link>
-          <Link href="#design" className="px-4 py-2 rounded-md font-normal transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Design</Link>
-          <Link href="#services" className="px-4 py-2 rounded-md font-normal transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Services</Link>
+          <Link href="#pricing" className="px-4 py-2 rounded-md font-normal transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Pricing</Link>
           <Link href="#testimonials" className="px-4 py-2 rounded-md font-normal transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Testimonials</Link>
           <Link href="#contact" className="px-4 py-2 rounded-md font-normal transition-all duration-600 ease-in-out hover:bg-gray-700 w-full text-center" onClick={toggleMobileMenu}>Contact</Link>
         </nav>
@@ -400,28 +393,8 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Mockup Section */}
-          <section id="design" className="mb-26">
-            <h2 className="text-4xl font-bold mb-6 text-center"> Ask About Our Free Mockup Design</h2>
-            <div
-              className="relative rounded-lg p-px
-                         bg-gray-700             
-                         hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-600
-                         transition-all duration-300 ease-in-out transform hover:scale-102"
-            >
-              {/* Inner div for content with its own background */}
-              <div className="bg-black rounded-lg p-6 shadow-md">
-                <h3 className="font-semibold text-lg text-center">Get Inspiration From Our Design Free Mockups</h3>
-                <p className="p-4 text-sm text-center text-gray-300">
-                  Want to see your design ideas come to life? Ask us about our free mockup options! We&apos;ll take your concept and create a custom mockup design, giving you a realistic preview. To help you visualize the final product, we&apos;ll send you a link where you can view the mockup design. Get inspired by our diverse range of free mockups and discover the potential of your ideas.
-                </p>
-                <Image src="/img/mockup-website-design.jpg" alt="Free Mockup Website Design" width={1280} height={1024} className="mt-4 mb-4 rounded-lg justify-center" />
-              </div>
-            </div>
-          </section>
-
           {/* Services Section */}
-          <section id="services" className="mb-26">
+          <section id="pricing" className="mb-26">
             <h2 className="text-4xl font-bold mb-8 text-center text-white">Our Services</h2>
             <div
               className="relative rounded-lg p-px
@@ -583,7 +556,7 @@ export default function Home() {
                     <hr className="text-gray-800 mt-4 mb-4" />
                     <div className="flex items-center justify-between mt-auto">
                       {showStarterSparkPrice ? (
-                        <span onClick={() => setShowStarterSparkPrice(false)} className="text-2xl font-bold cursor-pointer text-blue-500 animate-flipIn">${(1500).toLocaleString()}</span>
+                        <span onClick={() => setShowStarterSparkPrice(false)} className="text-2xl font-bold cursor-pointer text-blue-500 animate-flipIn">${(699.99).toLocaleString()}</span>
                       ) : (
                         <button
                           onClick={() => setShowStarterSparkPrice(true)}
@@ -631,7 +604,7 @@ export default function Home() {
                     <hr className="text-gray-800 mt-4 mb-4" />
                     <div className="flex items-center justify-between mt-auto">
                       {showMagikWeaverPrice ? (
-                        <span onClick={() => setShowMagikWeaverPrice(false)} className="text-2xl cursor-pointer font-bold text-blue-500 animate-flipIn">${(4000).toLocaleString()}</span>
+                        <span onClick={() => setShowMagikWeaverPrice(false)} className="text-2xl cursor-pointer font-bold text-blue-500 animate-flipIn">${(2199.99).toLocaleString()}</span>
                       ) : (
                         <button
                           onClick={() => setShowMagikWeaverPrice(true)}
@@ -673,7 +646,7 @@ export default function Home() {
                     <hr className="text-gray-800 mt-4 mb-4" />
                     <div className="flex items-center justify-between mt-auto">
                       {showGrandArchitectPrice ? (
-                        <span onClick={() => setShowGrandArchitectPrice(false)} className="text-2xl font-bold cursor-pointer text-blue-500 animate-flipIn">${(8000).toLocaleString()}</span>
+                        <span onClick={() => setShowGrandArchitectPrice(false)} className="text-2xl font-bold cursor-pointer text-blue-500 animate-flipIn">${(5999.99).toLocaleString()}</span>
                       ) : (
                         <button
                           onClick={() => setShowGrandArchitectPrice(true)}
@@ -691,7 +664,7 @@ export default function Home() {
 
           {/* Testimonials Section */}
           <section id="testimonials" className="mb-26"> {/* Increased bottom margin */}
-            <h2 className="text-4xl font-bold mb-6 text-center">What Clients Say</h2> {/* Centered title, increased margin */}
+            <h2 className="text-4xl font-bold mb-6 text-center">What Our Clients Say</h2> {/* Centered title, increased margin */}
 
             {/* Testimonials Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -750,7 +723,7 @@ export default function Home() {
           <section
             id="contact"
             className="text-center">
-            <h2 className="text-4xl font-bold mb-6">Get In Touch</h2>
+            <h2 className="text-4xl font-bold mb-6">Contact Us</h2>
             <div
               className="relative rounded-lg p-px
                          bg-gray-700             
