@@ -258,7 +258,7 @@ export default function Home() {
                 Overcome digital hurdles with accelerating, impactful and scalable web solutions designed for growth.
               </p>
               <Link
-                href="#services"
+                href="#pricing"
                 className="inline-flex items-center bg-gradient-to-r bg-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105" // Styled CTA button
               >
                 Get Started
