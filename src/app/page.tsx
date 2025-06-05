@@ -236,6 +236,8 @@ export default function Home() {
 
           {/* === Hero Section Start === */}
           <section className="text-center py-16 md:py-24 lg:py-32 mb-12 relative"> {/* Added padding and bottom margin */}
+            
+            {/* Background Moon Scene */}
             <div className="absolute inset-0 flex justify-center items-center z-5"> {/* z-0 relative to its parent (the z-10 div) */}
               {/* Adjust size of the moon as needed. It will be centered within the 'inset-0' div. */}
               <div style={{ width: '900px', height: '900px' }}> {/* Example size, adjust as needed */}
