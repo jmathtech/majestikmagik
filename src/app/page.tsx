@@ -4,7 +4,6 @@
 import Image from 'next/image';
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
-import RocketScene from './components/RocketScene';
 import MoonScene from './components/MoonScene';
 
 /* Font Awesome Icons */
@@ -245,7 +244,6 @@ export default function Home() {
               </div>
             </div>
             <div className="relative z-10 flex flex-col items-center">
-              <RocketScene />
               <h2 className="text-4xl md:text-5xl lg:text-8xl mb-4 font-bold
              bg-gradient-to-r from-blue-400 via-blue-400 to-purple-900 
              [-webkit-background-clip:text] 
